@@ -73,9 +73,9 @@
   }
 
   &-primary {
-    padding: 16px 25px;
+    padding: 13px 24px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1;
     color: var(--primary);
     background-color: var(--white);
@@ -92,8 +92,8 @@
 
 
     &:hover {
-      color: var(--white);
-      background-color: var(--action);
+      color: var(--primary);
+      background-color: var(--white);
       border-color: var(--primary);
     }
 
@@ -114,7 +114,7 @@
       color: var(--white);
 
       &:hover {
-        background-color: var(--black);
+        background-color: var(--primary);
         color: white;
       }
     }
@@ -129,27 +129,27 @@
 
   &-circle {
     text-align: center;
-    width: 70px;
-    height: 70px;
+    width: 44px;
+    height: 44px;
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1;
     color: var(--black);
     border-radius: 100%;
     display: flex;
     gap: 10px;
     align-items: center;
     justify-content: center;
-    background-color: #F9F9F9;
-
-    @media #{$lg} {
-      width: 50px;
-      height: 50px;
-    }
+    background-color: var(--white);
+    border: 1px solid var(--primary);
 
     &:hover {
-      background-color: var(--primary);
+      background-color: var(--white);
+      border-color: var(--primary);
+    }
 
+    i {
+      transform: rotate(-45deg);
     }
   }
 
@@ -715,7 +715,7 @@ btn-text-flip
 
   >*:nth-child(1) {
     transform: scale3d(0.5, 0.5, 1);
-    margin-right: -70px;
+    margin-right: -44px;
   }
 
   >*:nth-child(2) {
@@ -739,7 +739,7 @@ btn-text-flip
 
     >*:nth-child(3) {
       transform: scale3d(0.5, 0.5, 1);
-      margin-left: -70px;
+      margin-left: -44px;
     }
   }
 }

@@ -4324,30 +4324,87 @@ FEATURES STYLES 3
 .about-area .about-thumb .circle-text:before {
   border-color: transparent;
 }
-
-/* counter area style  */
-.counter-item .number {
+.about-area .counter-item {
+  position: relative;
+}
+.about-area .counter-item:hover .number {
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
+}
+.about-area .counter-item .number {
   font-size: 76px;
   font-weight: 500;
   line-height: 1.15;
+  transition: all 5s;
 }
-
-.counter-item .text {
+@media only screen and (max-width: 1399px) {
+  .about-area .counter-item .number {
+    font-size: 56px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .about-area .counter-item .number {
+    font-size: 46px;
+  }
+}
+.about-area .counter-item .text {
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
   margin-top: 15px;
 }
-
-.counter-wrapper {
+@media only screen and (max-width: 1399px) {
+  .about-area .counter-item .text {
+    margin-top: 5px;
+  }
+}
+.about-area .counter-item:not(:first-child):before {
+  content: url(../imgs/shape/shape-4.png);
+  position: absolute;
+  right: calc(100% + 92px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media only screen and (max-width: 1399px) {
+  .about-area .counter-item:not(:first-child):before {
+    right: calc(100% + 62px);
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .about-area .counter-item:not(:first-child):before {
+    right: calc(100% + 42px);
+  }
+}
+@media only screen and (max-width: 991px) {
+  .about-area .counter-item:not(:first-child):before {
+    display: none;
+  }
+}
+.about-area .counter-wrapper {
   display: grid;
   gap: 40px 60px;
   grid-template-columns: auto auto auto auto;
   justify-content: space-between;
 }
-
-.counter-wrapper-box {
+@media only screen and (max-width: 991px) {
+  .about-area .counter-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 575px) {
+  .about-area .counter-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+.about-area .counter-wrapper-box {
   padding-top: 28px;
-  border-top: 1px solid #E0E0E0;
+  border-top: 1px solid rgba(14, 15, 17, 0.031372549);
   margin-top: 105px;
+}
+@media only screen and (max-width: 991px) {
+  .about-area .counter-wrapper-box {
+    margin-top: 60px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1102,31 +1102,91 @@
             }
         }
     }
-}
 
-/* counter area style  */
-.counter-item .number {
-    font-size: 76px;
-    font-weight: 500;
-    line-height: 1.15;
-}
 
-.counter-item .text {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 24px;
-    margin-top: 15px;
-}
+    .counter-item {
+        position: relative;
 
-.counter-wrapper {
-    display: grid;
-    gap: 40px 60px;
-    grid-template-columns: auto auto auto auto;
-    justify-content: space-between;
-}
+        &:hover {
+            .number {
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 1px;
+            }
+        }
 
-.counter-wrapper-box {
-    padding-top: 28px;
-    border-top: 1px solid #E0E0E0;
-    margin-top: 105px;
+        .number {
+            font-size: 76px;
+            font-weight: 500;
+            line-height: 1.15;
+            transition: all 5s;
+
+            @media #{$xl} {
+                font-size: 56px;
+            }
+
+            @media #{$lg} {
+                font-size: 46px;
+            }
+        }
+
+        .text {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-top: 15px;
+
+            @media #{$xl} {
+                margin-top: 5px;
+            }
+        }
+
+        &:not(:first-child) {
+            &:before {
+                content: url(../imgs/shape/shape-4.png);
+                position: absolute;
+                right: calc(100% + 92px);
+                top: 50%;
+                transform: translateY(-50%);
+
+                @media #{$xl} {
+                    right: calc(100% + 62px);
+                }
+
+                @media #{$lg} {
+                    right: calc(100% + 42px);
+                }
+
+                @media #{$md} {
+                    display: none;
+                }
+            }
+        }
+    }
+
+
+    .counter-wrapper {
+        display: grid;
+        gap: 40px 60px;
+        grid-template-columns: auto auto auto auto;
+        justify-content: space-between;
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .counter-wrapper-box {
+        padding-top: 28px;
+        border-top: 1px solid #0E0F1108;
+        margin-top: 105px;
+
+        @media #{$md} {
+            margin-top: 60px;
+        }
+    }
 }

@@ -1308,3 +1308,36 @@
 
 
 }
+
+/* service area style  */
+.service-area {
+    background-color: var(--primary);
+
+    .section-header {
+        display: grid;
+        gap: 30px 60px;
+        grid-template-columns: 1fr auto;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        @media #{$sm} {
+            grid-template-columns: 1fr;
+        }
+
+        .title-wrapper {
+            margin-top: 12px;
+        }
+
+        .btn-wrapper {
+            margin-bottom: 5px;
+        }
+    }
+
+    .section-subtitle {
+        color: var(--white);
+    }
+
+    .section-title {
+        color: var(--white);
+    }
+}

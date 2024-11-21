@@ -1049,7 +1049,7 @@
         }
 
         .title-wrapper {
-            margin-top: 10px;
+            margin-top: 12px;
         }
 
         .text-wrapper {
@@ -1189,4 +1189,97 @@
             margin-top: 60px;
         }
     }
+}
+
+/* process area style  */
+.process-area {
+    .section-header {
+        display: grid;
+        gap: 30px 60px;
+        grid-template-columns: 1fr auto;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .btn-wrapper {
+            margin-bottom: 5px;
+        }
+    }
+
+    .process-wrapper-box {
+        border-top: 1px solid rgba(14, 15, 17, 0.1);
+        padding-top: 70px;
+        margin-top: 25px;
+
+        @media #{$xl} {
+            padding-top: 40px;
+        }
+    }
+
+    .process-wrapper {
+        display: grid;
+        gap: 40px 30px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .process-box {
+        border: 1px solid rgba(14, 15, 17, 0.08);
+        border-radius: 10px;
+        margin-top: 22px;
+        position: relative;
+        padding: 44px 30px 37px;
+        transition: all 0.5s;
+
+        &:hover {
+            border-color: var(--primary);
+
+            .number {
+                border-color: var(--primary);
+                background-color: var(--theme);
+            }
+        }
+
+        span.number {
+            font-size: 18px;
+            color: var(--primary);
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(14, 15, 17, 0.08);
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: -22px;
+            right: 40px;
+            background-color: var(--white);
+            transition: all 0.5s;
+        }
+
+        .thumb {
+            width: 90px;
+            height: 90px;
+            border: 1px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title {
+            font-size: 26px;
+            font-weight: 500;
+            line-height: 1.30;
+        }
+
+        .text {
+            margin-top: 21px;
+        }
+
+        .content {
+            margin-top: 36px;
+        }
+
+    }
+
+
 }

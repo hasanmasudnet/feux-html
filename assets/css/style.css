@@ -4542,4 +4542,48 @@ FEATURES STYLES 3
 }
 .service-area .section-title {
   color: var(--white);
+}
+.service-area .services-wrapper-box {
+  margin-top: 39px;
+}
+.service-area .service-box {
+  border-top: 1px solid rgba(95, 96, 98, 0.3);
+  padding-top: 50px;
+}
+.service-area .service-box-inner {
+  display: grid;
+  gap: 20px 60px;
+  grid-template-columns: 1fr 850px;
+}
+.service-area .number {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 54px;
+  color: #5F6062;
+}
+.service-area h3.title {
+  font-size: 90px;
+  font-weight: 600;
+  line-height: 54px;
+  color: #5F6062;
+}
+.service-area p.text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #5F6062;
+  max-width: 478px;
+  margin-top: 36px;
+}
+.service-area ul.service-list {
+  margin-top: 26px;
+}
+.service-area ul.service-list li {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 34px;
+  color: #5F6062;
+  border-bottom: 1px solid #5F6062;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }/*# sourceMappingURL=style.css.map */

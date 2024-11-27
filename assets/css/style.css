@@ -4644,8 +4644,8 @@ FEATURES STYLES 3
 }
 .work-area .works-wrapper-box {
   border-top: 1px solid #5F6062;
-  padding-top: 80px;
-  margin-top: 80px;
+  padding-top: 70px;
+  margin-top: 25px;
 }
 .work-area .works-wrapper > *:not(:first-child) {
   margin-top: 70px;
@@ -4729,4 +4729,115 @@ FEATURES STYLES 3
   font-size: 28px;
   font-weight: 600;
   margin-left: 4px;
+}
+
+/* team area style  */
+.team-area .section-header {
+  display: grid;
+  gap: 30px 60px;
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media only screen and (max-width: 767px) {
+  .team-area .section-header {
+    grid-template-columns: 1fr;
+  }
+}
+.team-area .section-header .title-wrapper {
+  margin-top: 12px;
+}
+.team-area .section-header .btn-wrapper {
+  margin-bottom: 5px;
+}
+.team-area .team-wrapper-box {
+  border-top: 1px solid rgba(14, 15, 17, 0.1);
+  padding-top: 70px;
+  margin-top: 25px;
+}
+.team-area .team-wrapper {
+  display: grid;
+  gap: 40px 30px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.team-area .team-box:hover .thumb:after {
+  opacity: 0;
+}
+.team-area .team-box:hover .thumb img {
+  transform: scale(1);
+}
+.team-area .team-box:hover .number {
+  color: var(--white);
+}
+.team-area .team-box:hover .icon img {
+  filter: grayscale(1) brightness(10);
+  transform: rotate(-45deg);
+}
+.team-area .team-box:hover .post {
+  color: var(--white);
+}
+.team-area .team-box .thumb {
+  position: relative;
+  border-radius: 8px;
+  z-index: 1;
+  overflow: hidden;
+}
+.team-area .team-box .thumb:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--theme);
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+.team-area .team-box .thumb img {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+.team-area .team-box .number {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 34px;
+  display: inline-block;
+  transition: all 0.5s;
+}
+.team-area .team-box .icon {
+  width: 43px;
+  position: absolute;
+  top: 30px;
+  right: 34px;
+  z-index: 2;
+}
+.team-area .team-box .icon img {
+  width: 100%;
+  transition: all 0.5s;
+  transform: none;
+}
+.team-area .team-box .post {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+  text-transform: uppercase;
+  position: absolute;
+  right: 25px;
+  bottom: 44px;
+  z-index: 2;
+  writing-mode: vertical-lr;
+  transition: all 0.5s;
+}
+.team-area .team-box .name {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 34px;
+}
+.team-area .team-box .content {
+  margin-top: 23px;
+}
+.team-area .team-box .number {
+  position: absolute;
+  top: 35px;
+  left: 34px;
+  z-index: 2;
 }/*# sourceMappingURL=style.css.map */

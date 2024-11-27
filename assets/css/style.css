@@ -4840,4 +4840,198 @@ FEATURES STYLES 3
   top: 35px;
   left: 34px;
   z-index: 2;
+}
+
+/* text slider area style  */
+.text-slider-area .text-slider-active .swiper-slide {
+  width: auto;
+}
+.text-slider-area .text-slider {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: var(--primary);
+  transform: rotate(-1.5deg);
+}
+.text-slider-area .text-slider .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+.text-slider-area .text-slider-box {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.text-slider-area .text-slider-item .title {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  font-size: 90px;
+  font-weight: 600;
+  line-height: 2.11;
+  color: var(--white);
+}
+@media only screen and (max-width: 1199px) {
+  .text-slider-area .text-slider-item .title {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .text-slider-area .text-slider-item .title {
+    font-size: 30px;
+  }
+}
+.text-slider-area .text-slider-item .title img {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+/* awards area style  */
+.awards-area .section-header {
+  display: grid;
+  gap: 30px 60px;
+  grid-template-columns: 1fr 426px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media only screen and (max-width: 767px) {
+  .awards-area .section-header {
+    grid-template-columns: 1fr;
+  }
+}
+.awards-area .section-header .title-wrapper {
+  margin-top: 12px;
+}
+.awards-area .section-header .text-wrapper {
+  margin-bottom: 5px;
+}
+.awards-area .awards-wrapper-box {
+  border-top: 1px solid rgba(14, 15, 17, 0.1);
+  padding-top: 70px;
+  margin-top: 25px;
+}
+.awards-area .awards-wrapper {
+  border-top: 1px solid rgba(14, 15, 17, 0.1);
+}
+.awards-area .award-box {
+  display: grid;
+  gap: 10px 50px;
+  grid-template-columns: 1fr auto 240px 280px;
+  border-bottom: 1px solid rgba(14, 15, 17, 0.1);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: all 0.5s;
+}
+.awards-area .award-box:hover {
+  border-color: var(--theme);
+}
+.awards-area .award-box:hover .thumb img {
+  transform: rotate(-20deg) scale(1);
+  opacity: 1;
+}
+.awards-area .award-box .title {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 34px;
+}
+.awards-area .award-box .year {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 34px;
+  display: inline-block;
+}
+.awards-area .award-box .thumb {
+  position: relative;
+}
+.awards-area .award-box .thumb img {
+  position: absolute;
+  max-width: 240px;
+  top: -63px;
+  border-radius: 6px;
+  transform: rotate(-20deg) scale(0.8);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.awards-area .award-box .category {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 34px;
+  display: inline-block;
+  text-align: right;
+}
+
+/* blog area style  */
+.blog-area .section-header {
+  display: grid;
+  gap: 30px 60px;
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media only screen and (max-width: 767px) {
+  .blog-area .section-header {
+    grid-template-columns: 1fr;
+  }
+}
+.blog-area .section-header .title-wrapper {
+  margin-top: 12px;
+}
+.blog-area .section-header .btn-wrapper {
+  margin-bottom: 5px;
+}
+.blog-area .blogs-wrapper-box {
+  border-top: 1px solid rgba(14, 15, 17, 0.1);
+  padding-top: 70px;
+  margin-top: 25px;
+}
+.blog-area .blogs-wrapper {
+  display: grid;
+  gap: 40px 30px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.blog:hover .tag {
+  opacity: 1;
+}
+.blog:hover .thumb img {
+  transform: scale(1.1);
+}
+.blog .thumb {
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+.blog .thumb img {
+  width: 100%;
+  transition: all 0.5s;
+}
+.blog .tag {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  color: var(--white);
+  display: inline-block;
+  border: 1px solid var(--white);
+  border-radius: 30px;
+  padding: 9px 18px;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 30px;
+  left: 34px;
+  opacity: 0;
+  transition: all 0.5s;
+  z-index: 1;
+}
+.blog .date {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  display: inline-block;
+  opacity: 0.7;
+}
+.blog .title {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 34px;
+  margin-top: 6px;
+}
+.blog .content {
+  margin-top: 18px;
 }/*# sourceMappingURL=style.css.map */

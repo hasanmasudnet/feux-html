@@ -96,47 +96,63 @@
 
 
   <!-- Header area start -->
-  <header class="header-area">
-    <div class="header-main">
+  <header class="header-area-2">
+    <div class="header-main header-sticky">
       <div class="container large">
-        <div class="header-area-inner">
+        <div class="header-area-2-inner">
           <div class="header-logo">
             <a href="index.html">
               <img src="assets/imgs/logo/logo.png" class="normal-logo" alt="Site Logo">
             </a>
           </div>
-          <div class="site-category">DIGITAL AGENCY ®</div>
-          <div class="header-nav">
+          <div class="header-nav pos-center">
             <nav class="main-menu">
               <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li class="menu-item-has-children">
+                  <a href="index.html">Home</a>
+                  <ul class="dp-menu">
+                    <li><a href="index.html">Demo 01</a></li>
+                    <li><a href="index-02.html">Demo 02</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="index.html">Service</a>
+                  <ul class="dp-menu">
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="service-details.html">Service Details</a></li>
+                  </ul>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="menu-item-has-children">
+                  <a href="#">Blog</a>
+                  <ul class="dp-menu">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="blog-details.html">Blog Details</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="#">Pages</a>
+                  <ul class="dp-menu">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="service-details.html">Service Details</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="project-details.html">Project Details</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="blog-details.html">Blog Details</a></li>
+                  </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
               </ul>
             </nav>
           </div>
-          <div class="social-links">
-            <ul>
-              <li>
-                <a href="#">Linkedin</a>
-              </li>
-              <li>
-                <a href="#">Twitter</a>
-              </li>
-              <li>
-                <a href="#">Instagram</a>
-              </li>
-            </ul>
+          <div class="header-button">
+            <a href="about.html" class="t-btn t-btn-primary btn-text-flip"> <span data-text="Learn More">Learn
+                More</span> <i class="fa-solid fa-arrow-right"></i></a>
           </div>
-          <div class="office-location">
-            <ul>
-              <li><a href="#">New York, US</a></li>
-            </ul>
-          </div>
-          <div class="header-offcanvas">
+          <div class="header-offcanvas d-xl-none">
             <button class="side-toggle">
-              <img src="assets/imgs/icon/icon-4.png" alt="image"></button>
+              <i class="fa-solid fa-bars"></i></button>
           </div>
         </div>
       </div>

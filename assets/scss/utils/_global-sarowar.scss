@@ -1,20 +1,3 @@
-.container {
-  &.large {
-    @media (min-width: 1600px) {
-      max-width: 1550px;
-    }
-  }
-
-  &.full-hd {
-    @media (min-width: 1600px) {
-      max-width: 1920px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-}
-
 .circle-text {
   width: 140px;
   height: 140px;

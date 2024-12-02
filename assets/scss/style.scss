@@ -126,11 +126,20 @@
 }
 
 
+
 .container {
     &.large {
         @media (min-width: 1600px) {
-            max-width: 1550px;
+            max-width: 1750px;
         }
+    }
+
+    &.full-hd {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
     }
 
 }
@@ -402,9 +411,114 @@
     top: 0;
     left: 0;
     width: 100%;
+    border-top: 1px solid rgba(14, 15, 17, 0.08);
+    padding-top: 14px;
+    margin-top: 20px;
 
 
-    &__inner {
+    &-inner {
+        display: grid;
+        gap: 0 130px;
+        grid-template-columns: auto 1fr auto auto 140px auto;
+        justify-content: space-between;
+    }
+
+    .header-logo {
+        width: 101px;
+        margin-top: 6px;
+
+
+        @media #{$xl} {
+            width: 101px;
+        }
+
+        @media #{$md} {
+            width: 101px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .site-category {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        color: var(--primary);
+    }
+
+    .main-menu li a {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        padding: 0;
+
+        &:hover {
+            color: var(--action);
+        }
+    }
+
+    .social-links {
+        li {
+            &:not(:first-child) {
+                margin-top: 6px;
+            }
+
+            a {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+
+                &:hover {
+                    color: var(--action);
+                }
+            }
+        }
+    }
+
+    .office-location {
+        li {
+
+            a {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+
+                &:hover {
+                    color: var(--action);
+                }
+            }
+        }
+    }
+
+    .main-menu>ul {
+        display: block;
+
+        >li {
+            &:not(:first-child) {
+                margin-top: 6px;
+            }
+        }
+    }
+
+    .header-offcanvas {
+        margin-top: 6px;
+    }
+
+
+}
+
+
+/* header area 2 style  */
+.header-area-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+
+    &-inner {
         display: flex;
         align-items: center;
         gap: 20px;
@@ -420,7 +534,7 @@
         }
     }
 
-    .header__logo {
+    .header-logo {
         width: 101px;
 
 
@@ -437,7 +551,7 @@
         }
     }
 
-    .header__nav {
+    .header-nav {
         margin-right: -50%;
     }
 
@@ -455,7 +569,7 @@
         color: var(--primary);
     }
 
-    .header__meta {
+    .header-meta {
         @media #{$xs} {
             display: none;
         }
@@ -471,7 +585,7 @@
 
     }
 
-    .header__navicon {
+    .header-offcanvas {
         i {
             font-size: 22px;
         }
@@ -782,6 +896,10 @@
         @media #{$sm} {
             font-size: 16px;
         }
+
+        &:before {
+            display: none;
+        }
     }
 
     .section-title {
@@ -842,7 +960,7 @@
     .section-content-wrapper {
 
         margin-top: 12px;
-        border-top: 1px solid #0E0F1108;
+        border-top: 1px solid rgba(14, 15, 17, 0.08);
     }
 
     .section-content {
@@ -852,6 +970,7 @@
         gap: 40px 100px;
         grid-template-columns: 1fr 433px;
         align-items: flex-start;
+        z-index: 1;
 
         @media #{$lg} {
             padding-top: 24px;
@@ -871,7 +990,7 @@
             content: "";
             width: 1px;
             height: 100%;
-            background-color: #0E0F1108;
+            background-color: rgba(14, 15, 17, 0.08);
             top: 0;
             left: -220px;
         }
@@ -881,7 +1000,7 @@
             content: "";
             width: 1px;
             height: 100%;
-            background-color: #0E0F1108;
+            background-color: rgba(14, 15, 17, 0.08);
             top: 0;
             left: -120px;
         }
@@ -891,7 +1010,7 @@
             content: "";
             width: 1px;
             height: 100%;
-            background-color: #0E0F1108;
+            background-color: rgba(14, 15, 17, 0.08);
             top: 0;
             right: -120px;
         }
@@ -901,7 +1020,7 @@
             content: "";
             width: 1px;
             height: 100%;
-            background-color: #0E0F1108;
+            background-color: rgba(14, 15, 17, 0.08);
             top: 0;
             right: -220px;
         }
@@ -1217,7 +1336,7 @@
 
     .counter-wrapper-box {
         padding-top: 28px;
-        border-top: 1px solid #0E0F1108;
+        border-top: 1px solid rgba(14, 15, 17, 0.08);
         margin-top: 105px;
 
         @media #{$md} {

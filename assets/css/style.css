@@ -3377,13 +3377,13 @@ FEATURES STYLES 3
 }
 
 .section-spacing {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 @media only screen and (max-width: 1919px) {
   .section-spacing {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 90px;
+    padding-bottom: 90px;
   }
 }
 @media only screen and (max-width: 1399px) {
@@ -3400,11 +3400,11 @@ FEATURES STYLES 3
 }
 
 .section-spacing-top {
-  padding-top: 120px;
+  padding-top: 100px;
 }
 @media only screen and (max-width: 1919px) {
   .section-spacing-top {
-    padding-top: 100px;
+    padding-top: 90px;
   }
 }
 @media only screen and (max-width: 1399px) {
@@ -3419,11 +3419,11 @@ FEATURES STYLES 3
 }
 
 .section-spacing-bottom {
-  padding-bottom: 120px;
+  padding-bottom: 100px;
 }
 @media only screen and (max-width: 1919px) {
   .section-spacing-bottom {
-    padding-bottom: 100px;
+    padding-bottom: 90px;
   }
 }
 @media only screen and (max-width: 1399px) {
@@ -4244,7 +4244,7 @@ FEATURES STYLES 3
 }
 
 /* hero area 2 style  */
-.hero-area-2 h1.section-title {
+.hero-area-2 .section-title {
   font-size: 342px;
   font-weight: 700;
   line-height: 354px;
@@ -4259,13 +4259,20 @@ FEATURES STYLES 3
   border-right: 1px solid var(--primary);
   display: inline-block;
 }
-.hero-area-2 .section-subtitle *:before {
+.hero-area-2 .section-subtitle:before {
   display: none;
 }
-.hero-area-2 p.text {
+.hero-area-2 .section-content {
+  display: grid;
+  gap: 20px 60px;
+  grid-template-columns: 150px 1fr 515px;
+  align-items: flex-end;
+}
+.hero-area-2 .section-content .text {
   font-size: 54px;
   font-weight: 400;
   line-height: 66px;
+  max-width: 684px;
 }
 .hero-area-2 .hero-thumb {
   border-radius: 8px;
@@ -4274,7 +4281,7 @@ FEATURES STYLES 3
 .hero-area-2 .hero-thumb img {
   border-radius: 8px;
 }
-.hero-area-2 a.circle-text {
+.hero-area-2 .hero-thumb .circle-text {
   position: absolute;
   top: 50%;
   left: 0;
@@ -4283,39 +4290,45 @@ FEATURES STYLES 3
   height: 172px;
   padding: 0;
 }
-.hero-area-2 .section-content {
-  padding-bottom: 100px;
-}
 .hero-area-2 .section-header {
   display: grid;
   gap: 20px 60px;
   grid-template-columns: 150px 1fr;
-  margin-top: 26px;
+  margin-top: 46px;
 }
 .hero-area-2 .social-links {
   display: inline-flex;
   flex-direction: column;
   gap: 32px 20px;
   margin-top: 115px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 .hero-area-2 .social-links a {
   position: relative;
   display: inline-flex;
 }
-.hero-area-2 .social-links a:before {
+.hero-area-2 .social-links a:hover img {
+  opacity: 1;
+}
+.hero-area-2 .social-links a img {
+  opacity: 0.1;
+  transition: all 0.5s;
+}
+.hero-area-2 .social-links a:not(:first-child):before {
   position: absolute;
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.1;
 }
 .hero-area-2 .subtitle-wrapper {
   margin-top: 36px;
-}
-.hero-area-2 .section-content {
-  display: grid;
-  gap: 20px 60px;
-  grid-template-columns: 150px 1fr 515px;
-  align-items: flex-end;
-}
-.hero-area-2 p.text {
-  max-width: 684px;
 }
 .hero-area-2 .text-wrapper {
   margin-bottom: 21px;
@@ -4418,6 +4431,52 @@ FEATURES STYLES 3
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px 50px;
+}
+
+/* brand area 2 style  */
+.brand-area-2 .section-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  padding: 0 20px;
+  display: inline-block;
+  background-color: #FFFAF4;
+}
+.brand-area-2 .title-wrapper {
+  max-width: 850px;
+  margin-inline: auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.brand-area-2 .title-wrapper:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--primary);
+  opacity: 0.08;
+  top: 14px;
+  left: 0;
+  z-index: -1;
+}
+.brand-area-2 .section-header {
+  margin-top: 13px;
+}
+.brand-area-2 .brands-wrapper-box {
+  margin-top: 52px;
+}
+.brand-area-2 .brand-item:hover img {
+  opacity: 1;
+}
+.brand-area-2 .brand-item img {
+  opacity: 0.3;
+  transition: all 0.5s;
+}
+.brand-area-2 .brands-wrapper {
+  display: flex;
+  gap: 20px 50px;
+  justify-content: space-between;
 }
 
 /* about area style  */

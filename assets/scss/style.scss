@@ -1079,7 +1079,107 @@
 }
 
 /* hero area 2 style  */
-.hero-area-2 {}
+.hero-area-2 {
+    h1.section-title {
+        font-size: 342px;
+        font-weight: 700;
+        line-height: 354px;
+        letter-spacing: -0.01em;
+    }
+
+    .section-subtitle {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        padding: 3px 14px;
+        border-left: 1px solid var(--primary);
+        border-right: 1px solid var(--primary);
+        display: inline-block;
+
+        *:before {
+            display: none;
+        }
+    }
+
+    p.text {
+        font-size: 54px;
+        font-weight: 400;
+        line-height: 66px;
+    }
+
+    .hero-thumb {
+        border-radius: 8px;
+        position: relative;
+    }
+
+    .hero-thumb img {
+        border-radius: 8px;
+    }
+
+    a.circle-text {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+        width: 172px;
+        height: 172px;
+        padding: 0;
+    }
+
+    .section-content {
+        padding-bottom: 100px;
+    }
+
+    .section-header {
+        display: grid;
+        gap: 20px 60px;
+        grid-template-columns: 150px 1fr;
+        margin-top: 26px;
+    }
+
+    .social-links {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 32px 20px;
+        margin-top: 115px;
+    }
+
+    .social-links a {
+        position: relative;
+        display: inline-flex;
+    }
+
+    .social-links a:before {
+        position: absolute;
+    }
+
+    .subtitle-wrapper {
+        margin-top: 36px;
+    }
+
+    .section-content {
+        display: grid;
+        gap: 20px 60px;
+        grid-template-columns: 150px 1fr 515px;
+        align-items: flex-end;
+    }
+
+    p.text {
+        max-width: 684px;
+    }
+
+    .text-wrapper {
+        margin-bottom: 21px;
+    }
+
+    .hero-shape {
+        margin-bottom: 64px;
+    }
+
+    .section-content-wrapper {
+        background-image: linear-gradient(180deg, #fff 88px, #F5F0EA 88px, #F5F0EA 100%);
+    }
+}
 
 /* brand area style  */
 .brand-area {

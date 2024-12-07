@@ -2,6 +2,27 @@
 
 @import "components/index";
 
+.body-design-studio {
+    background-color: #FFFAF4;
+
+    .section-subtitle {
+        display: flex;
+        align-items: center;
+        color: var(--primary);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+        text-transform: uppercase;
+
+        &:before {
+            content: url(../imgs/shape/shape-14.png);
+            margin-inline-end: 14px;
+            width: auto;
+            height: auto;
+            background-color: transparent;
+        }
+    }
+}
 
 .section-subtitle {
     font-size: 18px;
@@ -1200,7 +1221,7 @@
     }
 
     .section-content-wrapper {
-        background-image: linear-gradient(180deg, #fff 88px, #F5F0EA 88px, #F5F0EA 100%);
+        background-image: linear-gradient(180deg, #FFFAF4 88px, #F5F0EA 88px, #F5F0EA 100%);
     }
 }
 
@@ -1528,6 +1549,71 @@
         @media #{$md} {
             margin-top: 60px;
         }
+    }
+}
+
+/* about area 2 style  */
+.about-area-2 {
+    .section-header {
+        margin-top: 18px;
+    }
+
+    .section-content-wrapper {
+        border-top: 1px solid rgba(14, 15, 17, 0.08);
+        margin-top: 22px;
+        padding-top: 70px;
+        display: grid;
+        gap: 40px 60px;
+        grid-template-columns: 1fr 550px;
+        justify-content: space-between;
+    }
+
+    .thumb {
+        max-width: 630px;
+        border-radius: 6px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+
+    .section-content {
+        margin-top: 9px;
+    }
+
+    .text-wrapper {
+        margin-top: 23px;
+    }
+
+    .feature-list {
+        display: grid;
+        gap: 10px 40px;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 37px;
+    }
+
+
+    .feature-list-item {
+        display: flex;
+        gap: 20px;
+
+        .icon {
+            width: 64px;
+            min-width: 64px;
+        }
+
+        .text {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 26px;
+            margin-top: 4px;
+        }
+    }
+
+    .btn-wrapper {
+        margin-top: 50px;
     }
 }
 

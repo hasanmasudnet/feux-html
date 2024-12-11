@@ -5789,4 +5789,38 @@ FEATURES STYLES 3
   line-height: 34px;
   margin-top: -5px;
   color: var(--white);
+}
+
+/* cta area style  */
+.cta-area {
+  background-color: var(--black);
+}
+.cta-area-inner {
+  padding-top: 88px;
+  padding-bottom: 15px;
+}
+.cta-area .section-title {
+  font-size: 76px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--white);
+}
+.cta-area .title-wrapper {
+  margin-top: 14px;
+}
+.cta-area .section-subtitle {
+  color: var(--white);
+}
+.cta-area .section-subtitle:before {
+  filter: invert(1) brightness(10);
+}
+.cta-area .section-header {
+  display: grid;
+  gap: 20px 60px;
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.cta-area .section-header .btn-wrapper {
+  margin-bottom: 20px;
 }/*# sourceMappingURL=style.css.map */

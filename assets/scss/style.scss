@@ -2954,3 +2954,44 @@
     }
 
 }
+
+/* cta area style  */
+.cta-area {
+    background-color: var(--black);
+
+    &-inner {
+        padding-top: 88px;
+        padding-bottom: 15px;
+    }
+
+    .section-title {
+        font-size: 76px;
+        font-weight: 600;
+        line-height: 1.10;
+        color: var(--white);
+    }
+
+    .title-wrapper {
+        margin-top: 14px;
+    }
+
+    .section-subtitle {
+        color: var(--white);
+
+        &:before {
+            filter: invert(1) brightness(10);
+        }
+    }
+
+    .section-header {
+        display: grid;
+        gap: 20px 60px;
+        grid-template-columns: 1fr auto;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .btn-wrapper {
+            margin-bottom: 20px;
+        }
+    }
+}

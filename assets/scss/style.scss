@@ -2561,6 +2561,98 @@
     }
 }
 
+/* awards area 2 style  */
+.awards-area-2 {
+    .title-wrapper {
+        margin-top: 17px;
+    }
+
+    .section-header {
+        margin-top: 17px;
+    }
+
+    .awards-wrapper-box {
+        border-top: 1px solid rgba(14, 15, 17, 0.08);
+        margin-top: 13px;
+        padding-top: 10px;
+    }
+
+    .group-title {
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 34px;
+        margin-top: 53px;
+    }
+
+
+    .award-box {
+        padding-top: 50px;
+        padding-bottom: 33px;
+        display: grid;
+        gap: 20px 30px;
+        grid-template-columns: 1fr 200px;
+        border-bottom: 1px solid rgba(14, 15, 17, 0.08);
+        position: relative;
+
+        &:hover {
+            .thumb {
+                opacity: 1;
+                visibility: visible;
+                scale: 1;
+            }
+        }
+
+        .title {
+            font-size: 76px;
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        .category {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 26px;
+            display: inline-block;
+            margin-top: 13px;
+        }
+
+        .year {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 26px;
+            display: inline-block;
+            margin-top: 4px;
+            text-align: right;
+        }
+
+        .thumb {
+            border-radius: 6px;
+            overflow: hidden;
+            display: inline-block;
+            position: absolute;
+            right: calc(100% + 30px);
+            width: 190px;
+            top: 0;
+            scale: 0.8;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s;
+        }
+
+    }
+
+
+    .site-group {
+        display: grid;
+        gap: 20px 30px;
+        grid-template-columns: 410px 1fr;
+        align-items: flex-start;
+        border-bottom: 1px solid rgba(14, 15, 17, 0.08);
+    }
+
+
+}
+
 /* blog area style  */
 .blog-area {
 

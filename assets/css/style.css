@@ -4528,6 +4528,10 @@ FEATURES STYLES 3
   margin-left: 40px;
   margin-top: -28px;
 }
+.hero-area-3 .image-wrapper {
+  border-radius: 40px;
+  overflow: hidden;
+}
 
 /* brand area style  */
 .brand-area {

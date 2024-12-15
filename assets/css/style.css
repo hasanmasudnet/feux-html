@@ -4920,6 +4920,10 @@ FEATURES STYLES 3
   display: grid;
   gap: 20px 60px;
   grid-template-columns: 380px 1fr;
+  align-items: flex-end;
+}
+.about-area-3 .section-content-wrapper .btn-wrapper {
+  margin-bottom: 8px;
 }
 .about-area-3 .counter-wrapper {
   display: grid;
@@ -5130,6 +5134,54 @@ FEATURES STYLES 3
 }
 .process-area-2 .process-box .process-list li:not(:first-child) {
   margin-top: 20px;
+}
+
+/* process area 3 style  */
+.process-area-3 .section-header {
+  margin-top: 5px;
+}
+.process-area-3 .title-wrapper {
+  margin-top: 11px;
+}
+.process-area-3 .process-wrapper-box {
+  margin-top: 58px;
+  margin-bottom: 20px;
+}
+.process-area-3 .process-box {
+  background-color: #E4E4E4;
+  border: 1px solid #E4E4E4;
+  border-radius: 8px;
+  padding: 31px 30px 40px;
+  transition: all 0.5s;
+}
+.process-area-3 .process-box:hover {
+  border-color: var(--primary);
+  background-color: transparent;
+}
+.process-area-3 .process-box .title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+}
+.process-area-3 .process-box .text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 29px;
+}
+.process-area-3 .process-box .number {
+  font-size: 124px;
+  font-weight: 400;
+  line-height: 89px;
+  letter-spacing: -0.01em;
+  margin-top: 92px;
+  display: inline-block;
+  color: #D0D0D0;
+}
+.process-area-3 .process-wrapper {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /* service area style  */

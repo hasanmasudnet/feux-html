@@ -3363,16 +3363,56 @@ FEATURES STYLES 3
 .body-ai-agency h5,
 .body-ai-agency h6 {
   line-height: 1.2;
-  font-family: var(--font_poppins);
   font-weight: 500;
 }
 .body-ai-agency .section-subtitle {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  padding: 9px 17px;
+  border: 1px solid rgba(14, 15, 17, 0.1);
+  display: inline-block;
+  border-radius: 50px;
 }
 .body-ai-agency .section-subtitle:before {
   display: none;
+}
+.body-ai-agency .section-title {
+  font-size: 54px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.body-ai-agency .t-btn-circle {
+  width: 52px;
+  height: 52px;
+}
+.body-ai-agency .t-btn-circle i {
+  font-size: 18px;
+}
+.body-ai-agency .t-btn-group {
+  display: inline-flex;
+}
+.body-ai-agency .t-btn-group > *:nth-child(1) {
+  transform: scale3d(0.5, 0.5, 1);
+  margin-right: -52px;
+}
+.body-ai-agency .t-btn-group > *:nth-child(2) {
+  transform: scale3d(1, 1, 1);
+}
+.body-ai-agency .t-btn-group > *:nth-child(3) {
+  transform: scale3d(1, 1, 1);
+  margin-left: 0;
+}
+.body-ai-agency .t-btn-group:hover > *:nth-child(1) {
+  transform: scale3d(1, 1, 1);
+  margin-right: 0;
+}
+.body-ai-agency .t-btn-group:hover > *:nth-child(2) {
+  transform: scale3d(1, 1, 1);
+}
+.body-ai-agency .t-btn-group:hover > *:nth-child(3) {
+  transform: scale3d(0.5, 0.5, 1);
+  margin-left: -52px;
 }
 
 .section-subtitle {
@@ -5175,6 +5215,39 @@ FEATURES STYLES 3
   gap: 0 0;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
+}
+
+/* about area 4 style  */
+.about-area-4 .section-content-wrapper {
+  display: grid;
+  gap: 40px 60px;
+  grid-template-columns: 360px 1fr;
+  align-items: flex-end;
+}
+.about-area-4 .thumb {
+  opacity: 0.5;
+  margin-bottom: 38px;
+}
+.about-area-4 .section-content .title-wrapper {
+  margin-top: 17px;
+}
+.about-area-4 .section-content .btn-wrapper {
+  margin-top: 42px;
+  max-width: 664px;
+  margin-left: auto;
+}
+.about-area-4 .section-content .text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+.about-area-4 .section-content .text:not(:first-child) {
+  margin-top: 19px;
+}
+.about-area-4 .section-content .text-wrapper {
+  margin-top: 24px;
+  max-width: 664px;
+  margin-left: auto;
 }
 
 /* process area style  */

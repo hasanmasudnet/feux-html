@@ -166,4 +166,18 @@
     });
   }
 
+  // text slider 
+  if ('.text-slider-active-2') {
+    var text_slider_active_2 = new Swiper(".text-slider-active-2", {
+      slidesPerView: 'auto',
+      loop: true,
+      autoplay: true,
+      spaceBetween: 0,
+      speed: 15000,
+      autoplay: {
+        delay: 1,
+      },
+    });
+  }
+
 })(jQuery);

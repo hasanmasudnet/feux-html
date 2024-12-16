@@ -2,7 +2,11 @@
 
 @import "components/index";
 
-.body-design-studio {
+.body-digital-agency {
+    background-color: #F2F2F2;
+}
+
+.body-design-agency {
     --action: #FD5D39;
     background-color: #FFFAF4;
 
@@ -38,6 +42,31 @@
         line-height: 1.22;
         font-family: var(--font_poppins);
         font-weight: 400;
+    }
+
+    .section-subtitle {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.body-ai-agency {
+    background-color: #FFFFFF;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        line-height: 1.20;
+        font-family: var(--font_poppins);
+        font-weight: 500;
     }
 
     .section-subtitle {
@@ -710,6 +739,93 @@
 
     .header-offcanvas {
         text-align: right;
+    }
+
+}
+
+/* header area 4 style  */
+.header-area-4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 24px;
+
+
+    &-inner {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        height: 100px;
+        background-color: rgba(14, 15, 17, 0.05);
+        border-radius: 100px;
+        padding: 24px 44px;
+
+
+        @media #{$lg} {
+            height: 70px;
+        }
+
+        &>*:first-child {
+            margin-inline-end: auto;
+        }
+    }
+
+    .header-logo {
+        width: 101px;
+
+
+        @media #{$xl} {
+            width: 101px;
+        }
+
+        @media #{$md} {
+            width: 101px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .header-nav {
+        margin-right: -50%;
+    }
+
+    .main-menu li a {
+        font-size: 18px;
+        font-weight: 400;
+        padding: 17px 17px;
+
+        &:hover {
+            color: var(--action);
+        }
+    }
+
+
+    .main-menu li.menu-item-has-children>a:after {
+        content: "\2b";
+        font-family: var(--font_awesome);
+        margin-inline-start: 6px;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .t-btn-primary {
+        padding: 17px 24px;
+
+        @media #{$md} {
+            padding: 11px 20px;
+
+        }
+
+    }
+
+    .header-offcanvas {
+        i {
+            font-size: 22px;
+        }
     }
 
 }
@@ -1422,7 +1538,7 @@
 .brand-area {
     background-color: var(--black);
 
-    &-innner {
+    &-inner {
         padding-top: 81px;
         padding-bottom: 90px;
         display: grid;

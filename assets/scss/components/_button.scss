@@ -109,8 +109,10 @@
       }
     }
 
+
     &.bg-active {
       background-color: var(--action);
+      border-color: var(--action);
       color: var(--black);
 
       &:hover {

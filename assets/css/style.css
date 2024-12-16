@@ -5283,6 +5283,90 @@ FEATURES STYLES 3
   opacity: 0.2;
 }
 
+/* service area 3 style  */
+.services-area-3 {
+  background-color: #181A1E;
+  border-radius: 40px;
+}
+.services-area-3 .section-header {
+  display: grid;
+  gap: 20px 60px;
+  grid-template-columns: 1fr auto;
+  align-items: flex-end;
+  margin-top: 13px;
+}
+.services-area-3 .section-header .btn-wrapper {
+  margin-bottom: 12px;
+}
+.services-area-3 .section-header .title-wrapper {
+  margin-top: 11px;
+}
+.services-area-3 .section-subtitle {
+  color: var(--white);
+}
+.services-area-3 .section-title {
+  color: var(--white);
+}
+.services-area-3 .services-wrapper-box {
+  border-top: 1px solid rgba(95, 96, 98, 0.3);
+  margin-top: 28px;
+}
+.services-area-3 .service-box {
+  border-bottom: 1px solid rgba(95, 96, 98, 0.3);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.services-area-3 .service-box:hover .number {
+  color: var(--white);
+}
+.services-area-3 .service-box:hover .title {
+  color: var(--white);
+}
+.services-area-3 .service-box:hover .t-btn-primary {
+  border-color: var(--white);
+  background-color: var(--white);
+  color: var(--primary);
+}
+.services-area-3 .service-box:hover .video {
+  opacity: 1;
+}
+.services-area-3 .service-box-inner {
+  display: grid;
+  gap: 20px 60px;
+  grid-template-columns: 50px 1fr 300px;
+  align-items: flex-start;
+}
+.services-area-3 .service-box .number {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  display: inline-block;
+  color: #5F6062;
+  margin-top: 24px;
+  transition: all 0.5s;
+}
+.services-area-3 .service-box .title {
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 120px;
+  letter-spacing: -0.01em;
+  color: #5F6062;
+  transition: all 0.5s;
+}
+.services-area-3 .service-box .video {
+  border-radius: 8px;
+  overflow: hidden;
+  opacity: 0.3;
+  transition: all 0.5s;
+}
+.services-area-3 .service-box .t-btn-primary {
+  color: #5F6062;
+  border-color: #5F6062;
+  background-color: transparent;
+  margin-top: 29px;
+  transition: all 0.5s;
+}
+
 /* work area style  */
 .work-area {
   background-color: var(--primary);

@@ -2292,6 +2292,116 @@
 
 }
 
+/* service area 3 style  */
+.services-area-3 {
+    background-color: #181A1E;
+    border-radius: 40px;
+
+    .section-header {
+        display: grid;
+        gap: 20px 60px;
+        grid-template-columns: 1fr auto;
+        align-items: flex-end;
+        margin-top: 13px;
+
+        .btn-wrapper {
+            margin-bottom: 12px;
+        }
+
+        .title-wrapper {
+            margin-top: 11px;
+        }
+    }
+
+    .section-subtitle {
+        color: var(--white);
+    }
+
+    .section-title {
+        color: var(--white);
+    }
+
+    .services-wrapper-box {
+        border-top: 1px solid rgba(95, 96, 98, 0.3);
+        margin-top: 28px;
+    }
+
+    .service-box {
+        border-bottom: 1px solid rgba(95, 96, 98, 0.3);
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        &:hover {
+            .number {
+                color: var(--white);
+            }
+
+            .title {
+                color: var(--white);
+            }
+
+            .t-btn-primary {
+                border-color: var(--white);
+                background-color: var(--white);
+                color: var(--primary);
+            }
+
+            .video {
+                opacity: 1;
+            }
+        }
+
+        &-inner {
+            display: grid;
+            gap: 20px 60px;
+            grid-template-columns: 50px 1fr 300px;
+            align-items: flex-start;
+        }
+
+        .number {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 28px;
+            display: inline-block;
+            color: #5F6062;
+            margin-top: 24px;
+            transition: all 0.5s;
+        }
+
+        .title {
+            font-size: 100px;
+            font-weight: 400;
+            line-height: 120px;
+            letter-spacing: -0.01em;
+            color: #5F6062;
+            transition: all 0.5s;
+
+        }
+
+        .video {
+            border-radius: 8px;
+            overflow: hidden;
+            opacity: 0.30;
+            transition: all 0.5s;
+
+        }
+
+        .t-btn-primary {
+            color: #5F6062;
+            border-color: #5F6062;
+            background-color: transparent;
+            margin-top: 29px;
+            transition: all 0.5s;
+
+        }
+
+    }
+
+
+
+
+}
+
 /* work area style  */
 .work-area {
     background-color: var(--primary);

@@ -16,6 +16,7 @@
 /*----------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Space+Grotesk:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 :root {
   --primary: #0E0F11;
   --secondary: #0E0F11;
@@ -36,6 +37,7 @@
   --font_instrumentsans: "Instrument Sans", sans-serif;
   --font_awesome: "Font Awesome 6 Free";
   --font_poppins: "Poppins", sans-serif;
+  --font_dmsans: "DM Sans", serif;
 }
 
 * {
@@ -3415,6 +3417,64 @@ FEATURES STYLES 3
   margin-left: -52px;
 }
 
+.body-marketing-agency {
+  --action: #8B93FF;
+  background-color: #F0F2F4;
+  font-family: var(--font_dmsans);
+}
+.body-marketing-agency h1,
+.body-marketing-agency h2,
+.body-marketing-agency h3,
+.body-marketing-agency h4,
+.body-marketing-agency h5,
+.body-marketing-agency h6 {
+  line-height: 1.18;
+  font-family: var(--font_dmsans);
+  font-weight: 300;
+}
+.body-marketing-agency .section-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+.body-marketing-agency .section-subtitle:before {
+  width: 16px;
+  height: 16px;
+  background-color: var(--action);
+  border-radius: 4px;
+  margin-inline-end: 10px;
+}
+.body-marketing-agency .section-title {
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.18;
+}
+@media only screen and (max-width: 1919px) {
+  .body-marketing-agency .section-title {
+    font-size: 42px;
+  }
+}
+@media only screen and (max-width: 1399px) {
+  .body-marketing-agency .section-title {
+    font-size: 38px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .body-marketing-agency .section-title {
+    font-size: 34px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .body-marketing-agency .section-title {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .body-marketing-agency .section-title {
+    font-size: 30px;
+  }
+}
+
 .section-subtitle {
   font-size: 18px;
   font-weight: 400;
@@ -4842,7 +4902,7 @@ FEATURES STYLES 3
 .hero-area-5 {
   background-color: var(--primary);
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
 .hero-area-5 .area-bg {
   position: absolute;
@@ -4892,12 +4952,23 @@ FEATURES STYLES 3
   line-height: 52px;
   color: var(--white);
 }
+.hero-area-5 .section-subtitle:before {
+  display: none;
+}
 .hero-area-5 .section-title {
   font-size: 180px;
-  font-weight: 500;
+  font-weight: 250;
   line-height: 192px;
   letter-spacing: -0.01em;
   color: var(--white);
+}
+.hero-area-5 .section-title span {
+  font-weight: 500;
+  background: linear-gradient(236.85deg, #FFFFFF 13.97%, #FF9292 53.87%, #FF48E7 79.9%, #8800FF 104.89%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 .hero-area-5 .section-content .text {
   font-size: 24px;
@@ -4935,6 +5006,37 @@ FEATURES STYLES 3
 }
 .hero-area-5 .circle-text:before {
   border: none;
+}
+.hero-area-5 .social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 34px;
+}
+.hero-area-5 .social-links a {
+  color: var(--white);
+  font-size: 18px;
+  opacity: 0.5;
+  position: relative;
+  transition: all 0.5s;
+}
+.hero-area-5 .social-links a:hover {
+  opacity: 1;
+}
+.hero-area-5 .social-links a:hover:before {
+  opacity: 0.4;
+}
+.hero-area-5 .social-links a:not(:first-child):before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: var(--white);
+  border-radius: 50%;
+  opacity: 0.4;
+  left: 50%;
+  top: -19px;
+  transform: translateX(-50%);
 }
 
 /* brand area style  */
@@ -5428,6 +5530,59 @@ FEATURES STYLES 3
   margin-left: auto;
 }
 
+/* about area 5 style  */
+.about-area-5 .section-content-wrapper {
+  margin-top: 18px;
+  display: grid;
+  gap: 10px 60px;
+  grid-template-columns: 1fr 760px;
+  align-items: flex-start;
+}
+.about-area-5 .content-shape-1 {
+  margin-top: 138px;
+}
+.about-area-5 .content-shape-1 img {
+  opacity: 0.1;
+}
+.about-area-5 .content-first {
+  margin-top: 8px;
+}
+.about-area-5 .section-content .btn-wrapper {
+  margin-top: 49px;
+}
+.about-area-5 .counter-wrapper-box {
+  margin-top: 20px;
+  display: grid;
+  gap: 40px 60px;
+  grid-template-columns: 1fr 760px;
+}
+.about-area-5 .counter-wrapper {
+  margin-top: 25px;
+}
+.about-area-5 .counter-thumb {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.about-area-5 .counter-thumb img {
+  width: 100%;
+}
+.about-area-5 .counter-item:not(:first-child) {
+  margin-top: 64px;
+}
+.about-area-5 .counter-item .number {
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 56px;
+  letter-spacing: -0.01em;
+  display: inline-block;
+}
+.about-area-5 .counter-item .text {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 34px;
+  margin-top: 17px;
+}
+
 /* process area style  */
 .process-area .section-header {
   display: grid;
@@ -5715,6 +5870,7 @@ FEATURES STYLES 3
 .process-area-4 .accordion {
   --bs-accordion-border-radius: 45px;
   --bs-accordion-inner-border-radius: 45px;
+  counter-reset: accordion;
 }
 .process-area-4 .accordion-item:not(:first-child) {
   margin-top: 24px;
@@ -5725,6 +5881,33 @@ FEATURES STYLES 3
   background-color: var(--primary);
   padding-left: 90px;
   position: relative;
+}
+.process-area-4 .accordion-item:before {
+  counter-increment: accordion;
+  content: counter(accordion, decimal-leading-zero);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  width: 90px;
+  height: calc(100% + 2px);
+  display: inline-flex;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 45px;
+  justify-content: center;
+  padding-top: 27px;
+  position: absolute;
+  left: -1px;
+  top: -1px;
+}
+.process-area-4 .accordion-item.active {
+  border-color: var(--action);
+}
+.process-area-4 .accordion-item.active:before {
+  background-color: var(--action);
+  border-color: var(--action);
+  color: var(--black);
 }
 .process-area-4 .accordion-button {
   background-color: transparent;

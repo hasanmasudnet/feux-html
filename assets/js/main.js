@@ -180,4 +180,9 @@
     });
   }
 
+  // faq number active 
+  $('.accordion-active .accordion-item').on("click", function () {
+    $(this).addClass('active').siblings().removeClass('active');
+  });
+
 })(jQuery);

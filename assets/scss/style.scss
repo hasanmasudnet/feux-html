@@ -3477,6 +3477,137 @@
     }
 }
 
+/* service area 5 style  */
+.service-area-5 {
+    border-top: 1px solid var(--primary);
+
+    .section-header {
+        display: grid;
+        gap: 20px 60px;
+        grid-template-columns: 1fr auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .services-wrapper-box {
+        margin-top: 70px;
+    }
+
+    .services-wrapper {
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        padding: 50px 50px 50px 60px;
+        display: grid;
+        gap: 40px 80px;
+        grid-template-columns: 1fr 580px;
+        align-items: flex-start;
+
+        .area-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+
+
+    .nav {
+        margin-top: 60px;
+    }
+
+    .service-box {
+        background-color: #F4F4F3;
+        border-radius: 10px;
+        padding: 60px 60px 60px;
+        position: relative;
+        z-index: 1;
+
+        .area-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.14;
+            }
+        }
+
+        .thumb {
+            width: 109px;
+            height: 98px;
+            background-color: var(--action);
+            border-radius: 10px;
+            padding: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 40px;
+            margin-top: 35px;
+        }
+
+        .text {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 28px;
+            opacity: 0.70;
+            margin-top: 14px;
+        }
+
+        .feature-list {
+            margin-top: 38px;
+
+            li {
+                font-size: 24px;
+                font-weight: 300;
+                line-height: 34px;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    width: 16px;
+                    height: 16px;
+                    border: 1px solid var(--primary);
+                    display: inline-block;
+                    border-radius: 50%;
+                    margin-right: 14px;
+                    margin-top: 9px;
+                }
+
+                &:not(:first-child) {
+                    margin-top: 8px;
+                }
+            }
+        }
+
+        .btn-wrapper {
+            margin-top: 56px;
+        }
+    }
+
+}
+
 /* work area style  */
 .work-area {
     background-color: var(--primary);

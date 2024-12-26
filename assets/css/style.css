@@ -6422,6 +6422,31 @@ btn-text-flip
   margin-top: 7px;
 }
 
+/* work area 5 style  */
+.work-area-5 {
+  background-color: var(--primary);
+}
+.work-area-5 .section-header {
+  margin-top: 14px;
+  display: grid;
+  gap: 20px 60px;
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.work-area-5 .section-header .btn-wrapper {
+  margin-bottom: 11px;
+}
+.work-area-5 .section-header .title-wrapper {
+  margin-top: 14px;
+}
+.work-area-5 .section-subtitle {
+  color: var(--white);
+}
+.work-area-5 .section-title {
+  color: var(--white);
+}
+
 /* team area style  */
 .team-area .section-header {
   display: grid;

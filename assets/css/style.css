@@ -6144,6 +6144,7 @@ btn-text-flip
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 23px;
   transition: all 0.5s;
+  cursor: pointer;
 }
 .service-area-5 .service-name .title {
   font-size: 44px;
@@ -6171,10 +6172,10 @@ btn-text-flip
   border-radius: 0;
   background-color: transparent;
 }
-.service-area-5 .nav-pills .nav-link.active .service-name {
+.service-area-5 .nav-pills .nav-link.active .service-name, .service-area-5 .nav-pills .nav-link:hover .service-name {
   border-color: var(--white);
 }
-.service-area-5 .nav-pills .nav-link.active .service-name .title {
+.service-area-5 .nav-pills .nav-link.active .service-name .title, .service-area-5 .nav-pills .nav-link:hover .service-name .title {
   opacity: 1;
 }
 
@@ -7072,6 +7073,7 @@ btn-text-flip
   border-radius: 50px;
   border: 1px solid rgba(14, 15, 17, 0.1);
   transition: all 0.5s;
+  cursor: pointer;
 }
 .team-area-5 .author .name {
   font-size: 30px;
@@ -7128,49 +7130,50 @@ btn-text-flip
 }
 .team-area-5 .social-links a {
   color: var(--black);
-  opacity: 0.5;
   position: relative;
   font-size: 20px;
 }
-.team-area-5 .social-links a:hover {
+.team-area-5 .social-links a:hover i {
   color: var(--action);
   opacity: 1;
-}
-.team-area-5 .social-links a:hover:before {
-  background-color: var(--primary);
-  opacity: 0.5;
 }
 .team-area-5 .social-links a:not(:first-child):before {
   position: absolute;
   content: "";
   width: 4px;
   height: 4px;
+  border-radius: 50%;
   background-color: var(--primary);
   left: 50%;
   transform: translateX(-50%);
   top: -19px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.team-area-5 .social-links a i {
+  opacity: 0.5;
 }
 .team-area-5 .nav-link {
   padding: 0;
 }
-.team-area-5 .nav-link.active {
+.team-area-5 .nav-link.active, .team-area-5 .nav-link:hover {
   background-color: transparent;
 }
-.team-area-5 .nav-link.active .author {
+.team-area-5 .nav-link.active .author, .team-area-5 .nav-link:hover .author {
   background-color: var(--action);
   border-color: transparent;
 }
-.team-area-5 .nav-link.active .author .name {
+.team-area-5 .nav-link.active .author .name, .team-area-5 .nav-link:hover .author .name {
   color: var(--white);
 }
-.team-area-5 .nav-link.active .author .post {
+.team-area-5 .nav-link.active .author .post, .team-area-5 .nav-link:hover .author .post {
   color: var(--white);
 }
-.team-area-5 .nav-link.active .author .post:before {
+.team-area-5 .nav-link.active .author .post:before, .team-area-5 .nav-link:hover .author .post:before {
   background-color: var(--white);
   opacity: 1;
 }
-.team-area-5 .nav-link.active .author .t-btn-circle {
+.team-area-5 .nav-link.active .author .t-btn-circle, .team-area-5 .nav-link:hover .author .t-btn-circle {
   border-color: var(--white);
   color: var(--white);
 }

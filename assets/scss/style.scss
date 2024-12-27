@@ -3669,6 +3669,7 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         padding-bottom: 23px;
         transition: all 0.5s;
+        cursor: pointer;
 
         .title {
             font-size: 44px;
@@ -3701,7 +3702,8 @@
         border-radius: 0;
         background-color: transparent;
 
-        &.active {
+        &.active,
+        &:hover {
 
             .service-name {
                 border-color: var(--white);
@@ -4843,6 +4845,7 @@
         border-radius: 50px;
         border: 1px solid rgba(14, 15, 17, 0.1);
         transition: all 0.5s;
+        cursor: pointer;
 
         .name {
             font-size: 30px;
@@ -4913,17 +4916,13 @@
 
         a {
             color: var(--black);
-            opacity: 0.5;
             position: relative;
             font-size: 20px;
 
             &:hover {
-                color: var(--action);
-                opacity: 1;
-
-                &:before {
-                    background-color: var(--primary);
-                    opacity: 0.5;
+                i {
+                    color: var(--action);
+                    opacity: 1;
                 }
             }
 
@@ -4932,10 +4931,18 @@
                 content: "";
                 width: 4px;
                 height: 4px;
+                border-radius: 50%;
                 background-color: var(--primary);
                 left: 50%;
                 transform: translateX(-50%);
                 top: -19px;
+                opacity: 0.5;
+                pointer-events: none;
+            }
+
+            i {
+                opacity: 0.5;
+
             }
         }
     }
@@ -4944,7 +4951,8 @@
     .nav-link {
         padding: 0;
 
-        &.active {
+        &.active,
+        &:hover {
             background-color: transparent;
 
             .author {

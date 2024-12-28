@@ -193,8 +193,8 @@
 .section-subtitle {
     font-size: 18px;
     font-weight: 400;
-    line-height: 1;
-    display: flex;
+    line-height: 28px;
+    display: inline-flex;
     align-items: center;
     color: var(--primary);
 
@@ -693,6 +693,15 @@
         margin-top: 6px;
     }
 
+    .side-toggle {
+        width: 44px;
+        height: 44px;
+
+        @media #{$xl} {
+            width: 33px;
+            height: 33px;
+        }
+    }
 
 }
 
@@ -1321,7 +1330,6 @@
 
 /* hero area style  */
 .hero-area {
-    padding-top: 130px;
 
     .section-subtitle {
         font-size: 24px;
@@ -1396,6 +1404,9 @@
         }
     }
 
+    .section-header {
+        margin-top: 150px;
+    }
 
     .section-content-wrapper {
 
@@ -1411,6 +1422,7 @@
         grid-template-columns: 1fr 433px;
         align-items: flex-start;
         z-index: 1;
+        margin-bottom: 20px;
 
         @media #{$lg} {
             padding-top: 24px;
@@ -2296,12 +2308,13 @@
 
 /* about area style  */
 .about-area {
-    &-inner {
+    .section-content-wrapper {
         display: grid;
         gap: 40px 60px;
         grid-template-columns: 630px 520px;
         justify-content: space-between;
         align-items: center;
+        margin-top: 20px;
 
         @media #{$xxl} {
             grid-template-columns: 530px 500px;
@@ -2324,7 +2337,7 @@
         }
 
         .title-wrapper {
-            margin-top: 12px;
+            margin-top: 7px;
         }
 
         .text-wrapper {
@@ -2418,14 +2431,21 @@
 
         &:not(:first-child) {
             &:before {
-                content: url(../imgs/shape/shape-4.png);
+                content: "";
+                height: 105px;
+                width: 22px;
+                background-image: url(../imgs/shape/shape-4.png);
+                background-size: contain;
+                background-repeat: no-repeat;
                 position: absolute;
                 right: calc(100% + 92px);
                 top: 50%;
                 transform: translateY(-50%);
 
+
                 @media #{$xl} {
                     right: calc(100% + 62px);
+                    height: 75px;
                 }
 
                 @media #{$lg} {
@@ -2729,13 +2749,14 @@
         grid-template-columns: 1fr auto;
         justify-content: space-between;
         align-items: flex-end;
+        margin-top: 7px;
 
         @media #{$sm} {
             grid-template-columns: 1fr;
         }
 
         .title-wrapper {
-            margin-top: 12px;
+            margin-top: 7px;
         }
 
         .btn-wrapper {
@@ -2747,6 +2768,7 @@
         border-top: 1px solid rgba(14, 15, 17, 0.1);
         padding-top: 70px;
         margin-top: 25px;
+        margin-bottom: 20px;
 
         @media #{$xl} {
             padding-top: 40px;
@@ -3156,13 +3178,14 @@
         grid-template-columns: 1fr auto;
         justify-content: space-between;
         align-items: flex-end;
+        margin-top: 13px;
 
         @media #{$sm} {
             grid-template-columns: 1fr;
         }
 
         .title-wrapper {
-            margin-top: 12px;
+            margin-top: 7px;
         }
 
         .btn-wrapper {
@@ -3727,13 +3750,14 @@
         grid-template-columns: 1fr auto;
         justify-content: space-between;
         align-items: flex-end;
+        margin-top: 13px;
 
         @media #{$sm} {
             grid-template-columns: 1fr;
         }
 
         .title-wrapper {
-            margin-top: 12px;
+            margin-top: 7px;
         }
 
         .btn-wrapper {
@@ -3753,6 +3777,7 @@
         border-top: 1px solid #5F6062;
         padding-top: 70px;
         margin-top: 25px;
+        margin-bottom: 20px;
     }
 
     .works-wrapper {
@@ -3763,6 +3788,10 @@
 
             &:nth-child(2n) {
                 grid-template-columns: 1fr 740px;
+
+                @media #{$xl} {
+                    grid-template-columns: 1fr 570px;
+                }
 
                 .thumb {
                     order: 2;
@@ -3776,6 +3805,10 @@
         gap: 30px 80px;
         grid-template-columns: 740px 1fr;
         align-items: center;
+
+        @media #{$xl} {
+            grid-template-columns: 570px 1fr;
+        }
 
         &:hover {
             .thumb {
@@ -3840,6 +3873,10 @@
 
         .t-btn-group {
             margin-top: 110px;
+
+            @media #{$xl} {
+                margin-top: 60px;
+            }
         }
 
         .title {
@@ -4219,13 +4256,14 @@
         grid-template-columns: 1fr auto;
         justify-content: space-between;
         align-items: flex-end;
+        margin-top: 13px;
 
         @media #{$sm} {
             grid-template-columns: 1fr;
         }
 
         .title-wrapper {
-            margin-top: 12px;
+            margin-top: 7px;
         }
 
         .btn-wrapper {
@@ -4237,6 +4275,7 @@
         border-top: 1px solid rgba(14, 15, 17, 0.1);
         padding-top: 70px;
         margin-top: 25px;
+        margin-bottom: 13px;
     }
 
     .team-wrapper {
@@ -5042,6 +5081,10 @@
             line-height: 2.11;
             color: var(--white);
 
+            @media #{$xl} {
+                font-size: 70px;
+            }
+
             @media #{$lg} {
                 font-size: 50px;
             }
@@ -5054,6 +5097,11 @@
             img {
                 margin-left: 80px;
                 margin-right: 80px;
+                width: 92px;
+
+                @media #{$xl} {
+                    width: 72px;
+                }
             }
         }
     }
@@ -5207,13 +5255,14 @@
         grid-template-columns: 1fr 426px;
         justify-content: space-between;
         align-items: flex-end;
+        margin-top: 13px;
 
         @media #{$sm} {
             grid-template-columns: 1fr;
         }
 
         .title-wrapper {
-            margin-top: 12px;
+            margin-top: 7px;
         }
 
         .text-wrapper {
@@ -5391,13 +5440,14 @@
         grid-template-columns: 1fr auto;
         justify-content: space-between;
         align-items: flex-end;
+        margin-top: 13px;
 
         @media #{$sm} {
             grid-template-columns: 1fr;
         }
 
         .title-wrapper {
-            margin-top: 12px;
+            margin-top: 7px;
         }
 
         .btn-wrapper {
@@ -5409,6 +5459,7 @@
         border-top: 1px solid rgba(14, 15, 17, 0.1);
         padding-top: 70px;
         margin-top: 25px;
+        margin-bottom: 12px;
     }
 
     .blogs-wrapper {

@@ -2,6 +2,11 @@
 
 @import "components/index";
 
+.parallax-view {
+    overflow: hidden;
+}
+
+
 .body-digital-agency {
     background-color: #F2F2F2;
 }
@@ -2171,10 +2176,18 @@
         }
     }
 
-    .brands-wrapper {
-        display: flex;
-        gap: 20px 50px;
-        justify-content: space-between;
+
+    .brand-slider-active {
+        .swiper-wrapper {
+            transition-timing-function: linear !important;
+            display: flex;
+            gap: 20px 135px;
+            align-items: center;
+        }
+
+        .swiper-slide {
+            width: auto;
+        }
     }
 }
 
@@ -2226,11 +2239,19 @@
         margin-bottom: -10px;
     }
 
-    .brands-wrapper {
-        display: flex;
-        gap: 20px 80px;
-        align-items: center;
-        justify-content: center;
+
+
+    .brand-slider-active {
+        .swiper-wrapper {
+            transition-timing-function: linear !important;
+            display: flex;
+            gap: 20px 80px;
+            align-items: center;
+        }
+
+        .swiper-slide {
+            width: auto;
+        }
     }
 
     .brand-item {
@@ -2285,23 +2306,30 @@
         margin-bottom: 20px;
     }
 
-    .brands-wrapper {
-        display: flex;
-        gap: 20px 80px;
-        align-items: center;
-        justify-content: center;
+    .brand-slider-active {
+        .swiper-wrapper {
+            transition-timing-function: linear !important;
+            display: flex;
+            gap: 20px 80px;
+            align-items: center;
+        }
+
+        .swiper-slide {
+            width: auto;
+        }
     }
 
     .brand-item {
         &:hover {
             img {
-                opacity: 1;
+                filter: grayscale(0);
+
             }
         }
 
         img {
-            opacity: 0.30;
             transition: all 0.5s;
+            filter: grayscale(1);
         }
     }
 }
@@ -2441,6 +2469,7 @@
                 right: calc(100% + 92px);
                 top: 50%;
                 transform: translateY(-50%);
+                opacity: 0.08;
 
 
                 @media #{$xl} {

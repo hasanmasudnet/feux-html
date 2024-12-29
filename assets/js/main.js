@@ -180,6 +180,21 @@
     });
   }
 
+  // brand slider 
+  if ('.brand-slider-active') {
+    var brand_slider_active = new Swiper(".brand-slider-active", {
+      slidesPerView: 'auto',
+      loop: true,
+      autoplay: true,
+      spaceBetween: 0,
+      speed: 5000,
+      autoplay: {
+        delay: 1,
+      },
+    });
+  }
+
+
   // faq number active 
   $('.accordion-active .accordion-item').on("click", function () {
     $(this).addClass('active').siblings().removeClass('active');

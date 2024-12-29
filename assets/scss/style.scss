@@ -2115,11 +2115,18 @@
     }
 
 
-    .brands-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 20px 50px;
+
+    .brand-slider-active {
+        .swiper-wrapper {
+            transition-timing-function: linear !important;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px 100px;
+        }
+
+        .swiper-slide {
+            width: auto;
+        }
     }
 }
 
@@ -2197,12 +2204,28 @@
     .brand-item {
         border-right: 1px solid rgba(14, 15, 17, 0.08);
         border-bottom: 1px solid rgba(14, 15, 17, 0.08);
-        width: 100%;
+        border-top: 1px solid rgba(14, 15, 17, 0.08);
+        width: 320px;
         aspect-ratio: 100/100;
-        padding: 20px;
+        padding: 40px;
         display: inline-flex;
         justify-content: center;
         align-items: center;
+
+        @media #{$xxl} {
+            width: 240px;
+        }
+
+        @media #{$xl} {
+            width: 230px;
+        }
+
+        @media #{$lg} {
+            width: 180px;
+            padding: 30px;
+            aspect-ratio: 100/80;
+
+        }
 
         &:hover {
             img {
@@ -2216,10 +2239,15 @@
         }
     }
 
-    .brands-wrapper {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        border-top: 1px solid rgba(14, 15, 17, 0.08);
+
+    .brand-slider-active {
+        .swiper-wrapper {
+            transition-timing-function: linear !important;
+        }
+
+        .swiper-slide {
+            width: auto;
+        }
     }
 
 
@@ -2530,6 +2558,14 @@
         grid-template-columns: 1fr 550px;
         justify-content: space-between;
         margin-bottom: 20px;
+
+        @media #{$xxl} {
+            padding-top: 50px;
+        }
+
+        @media #{$lg} {
+            padding-top: 30px;
+        }
     }
 
     .thumb {
@@ -2799,8 +2835,12 @@
         margin-top: 25px;
         margin-bottom: 20px;
 
-        @media #{$xl} {
-            padding-top: 40px;
+        @media #{$xxl} {
+            padding-top: 50px;
+        }
+
+        @media #{$lg} {
+            padding-top: 30px;
         }
     }
 
@@ -3587,6 +3627,14 @@
         margin-top: 21px;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         padding-top: 70px;
+
+        @media #{$xxl} {
+            padding-top: 50px;
+        }
+
+        @media #{$lg} {
+            padding-top: 30px;
+        }
     }
 }
 
@@ -3809,6 +3857,14 @@
         padding-top: 70px;
         margin-top: 25px;
         margin-bottom: 20px;
+
+        @media #{$xxl} {
+            padding-top: 50px;
+        }
+
+        @media #{$lg} {
+            padding-top: 30px;
+        }
     }
 
     .works-wrapper {
@@ -4307,12 +4363,28 @@
         padding-top: 70px;
         margin-top: 25px;
         margin-bottom: 13px;
+
+        @media #{$xxl} {
+            padding-top: 50px;
+        }
+
+        @media #{$lg} {
+            padding-top: 30px;
+        }
     }
 
     .team-wrapper {
         display: grid;
         gap: 40px 30px;
         grid-template-columns: repeat(3, 1fr);
+
+        @media #{$md} {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media #{$xs} {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     .team-box {
@@ -4360,6 +4432,10 @@
                 top: 0;
                 left: 0;
                 transition: all 0.5s;
+
+                @media #{$md} {
+                    opacity: 0;
+                }
             }
 
             img {
@@ -4371,9 +4447,26 @@
         .number {
             font-size: 26px;
             font-weight: 500;
-            line-height: 34px;
+            line-height: 1.30;
             display: inline-block;
             transition: all 0.5s;
+            position: absolute;
+            top: 35px;
+            left: 34px;
+            z-index: 2;
+
+            @media #{$xl} {
+                font-size: 22px;
+            }
+
+            @media #{$lg} {
+                font-size: 20px;
+                top: 20px;
+            }
+
+            @media #{$md} {
+                color: var(--white);
+            }
 
         }
 
@@ -4384,10 +4477,22 @@
             right: 34px;
             z-index: 2;
 
+            @media #{$lg} {
+                width: 33px;
+                top: 15px;
+                right: 24px;
+
+            }
+
             img {
                 width: 100%;
                 transition: all 0.5s;
                 transform: none;
+
+                @media #{$md} {
+                    filter: grayscale(1) brightness(10);
+                    transform: rotate(-45deg);
+                }
             }
         }
 
@@ -4395,8 +4500,9 @@
         .post {
             font-size: 24px;
             font-weight: 400;
-            line-height: 34px;
+            line-height: 1.41;
             text-transform: uppercase;
+            display: inline-block;
             position: absolute;
             right: 25px;
             bottom: 44px;
@@ -4404,26 +4510,41 @@
             writing-mode: vertical-lr;
             transition: all 0.5s;
 
+            @media #{$xl} {
+                font-size: 20px;
+            }
+
+            @media #{$lg} {
+                font-size: 18px;
+                bottom: 24px;
+            }
+
+            @media #{$md} {
+                color: var(--white);
+            }
         }
 
         .name {
             font-size: 26px;
             font-weight: 500;
-            line-height: 34px;
+            line-height: 1.30;
+
+            @media #{$xl} {
+                font-size: 22px;
+            }
         }
 
 
         .content {
             margin-top: 23px;
+
+            @media #{$lg} {
+                margin-top: 13px;
+            }
         }
 
 
-        .number {
-            position: absolute;
-            top: 35px;
-            left: 34px;
-            z-index: 2;
-        }
+
 
 
     }
@@ -4453,6 +4574,14 @@
         margin-top: 19px;
         padding-top: 70px;
         margin-bottom: 20px;
+
+        @media #{$xxl} {
+            padding-top: 50px;
+        }
+
+        @media #{$lg} {
+            padding-top: 30px;
+        }
     }
 
     .team-wrapper {
@@ -5307,6 +5436,14 @@
         border-top: 1px solid rgba(14, 15, 17, 0.1);
         padding-top: 70px;
         margin-top: 25px;
+
+        @media #{$xxl} {
+            padding-top: 50px;
+        }
+
+        @media #{$lg} {
+            padding-top: 30px;
+        }
     }
 
     .awards-wrapper {
@@ -5493,12 +5630,30 @@
         padding-top: 70px;
         margin-top: 25px;
         margin-bottom: 12px;
+
+        @media #{$xxl} {
+            padding-top: 50px;
+        }
+
+        @media #{$lg} {
+            padding-top: 30px;
+        }
     }
 
     .blogs-wrapper {
         display: grid;
         gap: 40px 30px;
         grid-template-columns: repeat(3, 1fr);
+
+        @media #{$md} {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+
+        @media #{$xs} {
+            grid-template-columns: repeat(1, 1fr);
+
+        }
     }
 
     .blog {
@@ -5555,8 +5710,16 @@
         .title {
             font-size: 26px;
             font-weight: 500;
-            line-height: 34px;
+            line-height: 1.30;
             margin-top: 6px;
+
+            @media #{$xl} {
+                font-size: 22px;
+            }
+
+            @media #{$lg} {
+                font-size: 20px;
+            }
         }
 
         .content {
@@ -5591,6 +5754,15 @@
         margin-top: 19px;
         padding-top: 70px;
         margin-bottom: 20px;
+
+        @media #{$xxl} {
+            padding-top: 50px;
+        }
+
+        @media #{$lg} {
+            padding-top: 30px;
+        }
+
     }
 
     .blog-wrapper {

@@ -5768,6 +5768,7 @@ btn-text-flip
 .service-area .service-box {
   border-top: 1px solid rgba(95, 96, 98, 0.3);
   padding-top: 50px;
+  background-color: var(--primary);
 }
 .service-area .service-box .service-box-inner {
   display: grid;
@@ -6645,20 +6646,20 @@ btn-text-flip
   gap: 40px 30px;
   grid-template-columns: repeat(3, 1fr);
 }
-.team-area .team-box:hover .thumb:after {
+.team-area .team-box:hover .thumb:after, .team-area .team-box.active .thumb:after {
   opacity: 0;
 }
-.team-area .team-box:hover .thumb img {
+.team-area .team-box:hover .thumb img, .team-area .team-box.active .thumb img {
   transform: scale(1);
 }
-.team-area .team-box:hover .number {
+.team-area .team-box:hover .number, .team-area .team-box.active .number {
   color: var(--white);
 }
-.team-area .team-box:hover .icon img {
+.team-area .team-box:hover .icon img, .team-area .team-box.active .icon img {
   filter: grayscale(1) brightness(10);
   transform: rotate(-45deg);
 }
-.team-area .team-box:hover .post {
+.team-area .team-box:hover .post, .team-area .team-box.active .post {
   color: var(--white);
 }
 .team-area .team-box .thumb {

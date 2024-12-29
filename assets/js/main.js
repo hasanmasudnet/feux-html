@@ -185,4 +185,31 @@
     $(this).addClass('active').siblings().removeClass('active');
   });
 
+  // team hover active 
+  $('.team-hover-active .team-box').on("mouseover", function () {
+    $(this).addClass('active').siblings().removeClass('active');
+  });
+
+
+  let tl = gsap.timeline();
+
+  let servicesSpanels = document.querySelectorAll('.services-panel')
+
+  servicesSpanels.forEach((section, index) => {
+    tl.to(section, {
+      scrollTrigger: {
+        trigger: section,
+        pin: section,
+        scrub: 1,
+        start: 'top 10%',
+        end: "bottom 67%",
+        endTrigger: '.services-panel-area',
+        pinSpacing: false,
+        markers: true,
+      },
+    })
+  })
+
+
+
 })(jQuery);

@@ -202,10 +202,10 @@
         pin: section,
         scrub: 1,
         start: 'top 10%',
-        end: "bottom 63%",
+        end: "bottom 70%",
         endTrigger: '.services-panel-area',
         pinSpacing: false,
-        markers: true,
+        markers: false,
       },
     })
   })

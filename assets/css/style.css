@@ -5769,6 +5769,7 @@ btn-text-flip
   border-top: 1px solid rgba(95, 96, 98, 0.3);
   padding-top: 50px;
   background-color: var(--primary);
+  height: 60vh;
 }
 .service-area .service-box .service-box-inner {
   display: grid;

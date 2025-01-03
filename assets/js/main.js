@@ -227,19 +227,26 @@
 
 
   // testimonial active 
-  var swiper = new Swiper(".slide-nav-active", {
+  var swiper = new Swiper(".testimonial-nav-active", {
     loop: true,
     spaceBetween: 10,
     slidesPerView: 3,
     freeMode: true,
     watchSlidesProgress: true,
+
+    breakpoints: {
+      // when window width is >= px
+      768: {
+        direction: "vertical",
+      },
+    }
   });
-  var swiper2 = new Swiper(".slide-content-active", {
+  var swiper2 = new Swiper(".testimonial-content-active", {
     loop: true,
-    spaceBetween: 10,
+    spaceBetween: 30,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".testimonial-button-next",
+      prevEl: ".testimonial-button-prev",
     },
     thumbs: {
       swiper: swiper,

@@ -59,6 +59,9 @@
   });
 
 
+  // nice select activation 
+  $('select').niceSelect();
+
   // Side Info Js
   $(".side-info-close,.offcanvas-overlay").on("click", function () {
     $(".side-info").removeClass("info-open");

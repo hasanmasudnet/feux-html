@@ -4845,7 +4845,7 @@
 
     .section-header {
         display: grid;
-        gap: 30px 60px;
+        gap: 20px 60px;
         grid-template-columns: 1fr auto;
         justify-content: space-between;
         align-items: center;
@@ -4854,13 +4854,61 @@
         @media #{$sm} {
             grid-template-columns: 1fr;
         }
+
+        .total-item {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 30px;
+            color: var(--primary);
+        }
+    }
+
+    .filter-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px 30px;
+    }
+
+    .nice-select {
+        border: 1px solid rgba(14, 15, 17, 0.08);
+        border-radius: 30px;
+        padding: 1px 35px;
+        padding-right: 70px;
+        height: 50px;
+        line-height: 48px;
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--primary);
+        min-width: 185px;
+
+
+        &:after {
+            content: url(../imgs/icon/icon-16.png);
+            border: none;
+            right: 35px;
+            top: 0%;
+            transform-origin: center;
+            width: auto;
+            height: auto;
+            margin-top: 0;
+            transform: rotate(0deg);
+        }
+
+        &.open {
+            &::after {
+                transform: rotate(-180deg);
+            }
+        }
+
     }
 
 
+
     .works-wrapper-box {
-        border-top: 1px solid #5F6062;
+        border-top: 1px solid rgba(14, 15, 17, 0.14);
         padding-top: 70px;
-        margin-top: 25px;
+        margin-top: 30px;
         margin-bottom: 20px;
 
         @media #{$xxl} {
@@ -4875,18 +4923,38 @@
     .works-wrapper {
         >* {
             &:not(:first-child) {
-                margin-top: 70px;
+                margin-top: 60px;
+
+                @media #{$md} {
+                    margin-top: 40px;
+                }
             }
 
             &:nth-child(2n) {
                 grid-template-columns: 1fr 740px;
 
                 @media #{$xl} {
-                    grid-template-columns: 1fr 570px;
+                    grid-template-columns: 1fr 620px;
+                }
+
+                @media #{$lg} {
+                    grid-template-columns: 1fr 500px;
+                }
+
+                @media #{$md} {
+                    grid-template-columns: 370px 1fr;
+                }
+
+                @media #{$sm} {
+                    grid-template-columns: 1fr;
                 }
 
                 .thumb {
                     order: 2;
+
+                    @media #{$md} {
+                        order: unset;
+                    }
                 }
             }
         }
@@ -4899,7 +4967,23 @@
         align-items: center;
 
         @media #{$xl} {
-            grid-template-columns: 570px 1fr;
+            grid-template-columns: 620px 1fr;
+            gap: 30px 60px;
+        }
+
+        @media #{$lg} {
+            grid-template-columns: 500px 1fr;
+            gap: 30px 40px;
+        }
+
+        @media #{$md} {
+            grid-template-columns: 370px 1fr;
+            gap: 30px 30px;
+
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr;
         }
 
         &:hover {
@@ -4934,6 +5018,7 @@
 
             img {
                 width: 100%;
+                aspect-ratio: 100 / 65;
             }
 
         }
@@ -4964,10 +5049,18 @@
 
 
         .t-btn-group {
-            margin-top: 110px;
+            margin-top: 100px;
 
             @media #{$xl} {
                 margin-top: 60px;
+            }
+
+            @media #{$lg} {
+                margin-top: 40px;
+            }
+
+            @media #{$md} {
+                margin-top: 25px
             }
         }
 
@@ -4975,8 +5068,23 @@
             font-size: 44px;
             font-weight: 500;
             line-height: 1.22;
-            color: var(--white);
+            color: var(--primary);
             margin-top: 42px;
+
+            @media #{$xl} {
+                font-size: 40px;
+                margin-top: 36px;
+            }
+
+            @media #{$lg} {
+                font-size: 34px;
+                margin-top: 32px;
+            }
+
+            @media #{$md} {
+                font-size: 26px;
+                margin-top: 22px;
+            }
         }
 
         .number {
@@ -4986,10 +5094,29 @@
             display: inline-block;
             color: #5F6062;
 
+            @media #{$xl} {
+                font-size: 66px;
+
+            }
+
+            @media #{$lg} {
+                font-size: 50px;
+
+            }
+
+            @media #{$md} {
+                font-size: 40px;
+
+            }
+
             .shape {
                 font-size: 28px;
                 font-weight: 600;
                 margin-left: 4px;
+
+                @media #{$lg} {
+                    font-size: 20px;
+                }
             }
         }
     }

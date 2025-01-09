@@ -18,17 +18,30 @@
 (function ($) {
   "use strict";
 
+  var windowOn = $(window);
 
-  // sticky header 
-  let header = document.querySelector('.header-sticky');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 150) {
-      header.classList.add('sticky')
-    } else {
-      header.classList.remove('sticky')
-    }
-  })
+  //  sticky header
+  function pinned_header() {
+    var lastScrollTop = 0;
 
+    windowOn.on('scroll', function () {
+      var currentScrollTop = $(this).scrollTop();
+
+      if (currentScrollTop > lastScrollTop) {
+        $('.header-sticky').removeClass('sticky');
+        $('.header-sticky').addClass('transformed');
+      } else if ($(this).scrollTop() <= 500) {
+        $('.header-sticky').removeClass('sticky');
+        $('.header-sticky').removeClass('transformed');
+      } else {
+        // Scrolling up, remove the class
+        $('.header-sticky').addClass('sticky');
+        $('.header-sticky').removeClass('transformed');
+      }
+      lastScrollTop = currentScrollTop;
+    });
+  }
+  pinned_header();
 
 
   // Smooth active
@@ -40,7 +53,7 @@
         smooth: 0.5,
         effects: device_width < 1025 ? false : true,
         smoothTouch: 0.1,
-        normalizeScroll: false,
+        normalizeScroll: true,
         ignoreMobileResize: true,
       });
     }
@@ -288,6 +301,29 @@
     });
   });
   /////////////////////////////////////////////////////
+
+
+  const items = gsap.utils.toArray(".item");
+
+  items.forEach((item, i) => {
+    const content = item.querySelector(".body");
+    const header = item.querySelector(".header");
+    gsap.to(content, {
+      height: 0,
+      ease: "none",
+      scrollTrigger: {
+        trigger: item,
+        start: "top " + header.clientHeight * i,
+        endTrigger: ".final",
+        end: "top " + header.clientHeight * items.length,
+        pin: true,
+        pinSpacing: false,
+        scrub: true,
+        // markers: { indent: 150 * i },
+        // id: i + 1
+      }
+    });
+  });
 
 
 

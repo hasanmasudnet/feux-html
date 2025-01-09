@@ -2654,20 +2654,14 @@
             border-radius: 8px;
         }
 
-        .circle-text {
+        .btn-wrapper {
             position: absolute;
             left: -80px;
             bottom: -65px;
-            background: transparent;
-            width: 180px;
-            height: 180px;
-            padding: 0;
 
             @media #{$xl} {
                 left: -65px;
                 bottom: -50px;
-                width: 150px;
-                height: 150px;
             }
 
             @media #{$md} {
@@ -2675,6 +2669,18 @@
                 left: 0;
                 bottom: 0;
                 margin-bottom: 30px;
+            }
+        }
+
+        .circle-text {
+            background: transparent;
+            width: 180px;
+            height: 180px;
+            padding: 0;
+
+            @media #{$xl} {
+                width: 150px;
+                height: 150px;
             }
 
             &:before {
@@ -3980,6 +3986,16 @@
         border-top: 1px solid rgba(95, 96, 98, 0.3);
         background-color: var(--primary);
         height: 100vh;
+
+        &:hover {
+            .title {
+                span {
+                    img {
+                        animation: spinner 4s linear infinite;
+                    }
+                }
+            }
+        }
 
         .header {
             display: grid;
@@ -5992,9 +6008,12 @@
     }
 
     .team-box {
+        transition: all 0.5s;
 
         &:hover,
         &.active {
+            transform: scale(1.05);
+
             .thumb {
                 &:after {
                     opacity: 0;

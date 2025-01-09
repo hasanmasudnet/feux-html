@@ -227,24 +227,7 @@
   });
 
 
-  let tl = gsap.timeline();
 
-  let servicesSpanels = document.querySelectorAll('.services-panel')
-
-  servicesSpanels.forEach((section, index) => {
-    tl.to(section, {
-      scrollTrigger: {
-        trigger: section,
-        pin: section,
-        scrub: 1,
-        start: 'top 10%',
-        end: "bottom 70%",
-        endTrigger: '.services-panel-area',
-        pinSpacing: false,
-        markers: false,
-      },
-    })
-  })
 
 
   // testimonial active 
@@ -303,6 +286,7 @@
   /////////////////////////////////////////////////////
 
 
+  // header sticky item 
   const items = gsap.utils.toArray(".item");
 
   items.forEach((item, i) => {
@@ -326,5 +310,49 @@
   });
 
 
+  // hover move btn 
+  const all_btn = gsap.utils.toArray(".btn-move");
+  const all_btn_cirlce = gsap.utils.toArray(".btn-item");
+
+  all_btn.forEach((btn, i) => {
+    $(btn).mousemove(function (e) {
+      callParallax(e);
+    });
+    function callParallax(e) {
+      parallaxIt(e, all_btn_cirlce[i], 80);
+    }
+
+    function parallaxIt(e, target, movement) {
+      var $this = $(btn);
+      var relX = e.pageX - $this.offset().left;
+      var relY = e.pageY - $this.offset().top;
+
+      gsap.to(target, 0.3, {
+        x: ((relX - $this.width() / 2) / $this.width()) * movement,
+        y: ((relY - $this.height() / 2) / $this.height()) * movement,
+        scale: 1.1,
+        ease: Power2.easeOut,
+      });
+    }
+    $(btn).mouseleave(function (e) {
+      gsap.to(all_btn_cirlce[i], 0.3, {
+        x: 0,
+        y: 0,
+        scale: 1,
+        ease: Power2.easeOut,
+      });
+    });
+  });
+
+
+  // gsap.to(".hero-area .hero-thumb", {
+  //   borderRadius: 20,
+  //   scrollTrigger: {
+  //     trigger: ".hero-area .hero-thumb",
+  //     start: "center center",
+  //     end: "top top",
+  //     scrub: true,
+  //   }
+  // });
 
 })(jQuery);

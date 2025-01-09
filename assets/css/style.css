@@ -5311,10 +5311,26 @@ btn-text-flip
 .about-area .about-thumb > img {
   border-radius: 8px;
 }
-.about-area .about-thumb .circle-text {
+.about-area .about-thumb .btn-wrapper {
   position: absolute;
   left: -80px;
   bottom: -65px;
+}
+@media only screen and (max-width: 1399px) {
+  .about-area .about-thumb .btn-wrapper {
+    left: -65px;
+    bottom: -50px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .about-area .about-thumb .btn-wrapper {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 30px;
+  }
+}
+.about-area .about-thumb .circle-text {
   background: transparent;
   width: 180px;
   height: 180px;
@@ -5322,18 +5338,8 @@ btn-text-flip
 }
 @media only screen and (max-width: 1399px) {
   .about-area .about-thumb .circle-text {
-    left: -65px;
-    bottom: -50px;
     width: 150px;
     height: 150px;
-  }
-}
-@media only screen and (max-width: 991px) {
-  .about-area .about-thumb .circle-text {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    margin-bottom: 30px;
   }
 }
 .about-area .about-thumb .circle-text:before {
@@ -6471,6 +6477,9 @@ btn-text-flip
   border-top: 1px solid rgba(95, 96, 98, 0.3);
   background-color: var(--primary);
   height: 100vh;
+}
+.service-area .service-box:hover .title span img {
+  animation: spinner 4s linear infinite;
 }
 .service-area .service-box .header {
   display: grid;
@@ -8184,6 +8193,12 @@ btn-text-flip
   .team-area .team-wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+.team-area .team-box {
+  transition: all 0.5s;
+}
+.team-area .team-box:hover, .team-area .team-box.active {
+  transform: scale(1.05);
 }
 .team-area .team-box:hover .thumb:after, .team-area .team-box.active .thumb:after {
   opacity: 0;

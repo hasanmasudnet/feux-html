@@ -344,7 +344,42 @@
     });
   });
 
+  // Blog animation 
+  gsap.set(".blog-area .blog", { x: 50, opacity: 0 });
 
+  if (device_width < 1023) {
+    const blogList = gsap.utils.toArray(".blog-area .blog")
+    blogList.forEach((item, i) => {
+      let blogTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: item,
+          start: "top center+=200",
+        }
+      })
+      blogTl.to(item, {
+        x: 0,
+        opacity: 1,
+        ease: "power2.out",
+        duration: 1.5,
+      })
+    })
+  }
+  else {
+    gsap.to(".blog-area .blog", {
+      scrollTrigger: {
+        trigger: ".blog-area .blog",
+        start: "top center+=300",
+        markers: false
+      },
+      x: 0,
+      opacity: 1,
+      ease: "power2.out",
+      duration: 2,
+      stagger: {
+        each: 0.3
+      }
+    })
+  }
 
 
 })(jQuery);

@@ -345,14 +345,6 @@
   });
 
 
-  // gsap.to(".hero-area .hero-thumb", {
-  //   borderRadius: 20,
-  //   scrollTrigger: {
-  //     trigger: ".hero-area .hero-thumb",
-  //     start: "center center",
-  //     end: "top top",
-  //     scrub: true,
-  //   }
-  // });
+
 
 })(jQuery);

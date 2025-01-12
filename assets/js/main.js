@@ -19,6 +19,7 @@
   "use strict";
 
   var windowOn = $(window);
+  let mm = gsap.matchMedia();
 
   //  sticky header
   function pinned_header() {
@@ -42,6 +43,10 @@
     });
   }
   pinned_header();
+
+
+
+
 
 
   // Smooth active
@@ -226,6 +231,11 @@
     $(this).addClass('active').siblings().removeClass('active');
   });
 
+  // service hover active 
+  $('.service-hover-active .service-box').on("mouseover", function () {
+    $(this).addClass('active').siblings().removeClass('active');
+  });
+
 
 
 
@@ -287,27 +297,31 @@
 
 
   // header sticky item 
-  const items = gsap.utils.toArray(".item");
+  if (document.querySelectorAll(".services-wrapper-box").length > 0) {
+    mm.add("(min-width: 991px)", () => {
+      const items = gsap.utils.toArray(".item");
 
-  items.forEach((item, i) => {
-    const content = item.querySelector(".body");
-    const header = item.querySelector(".header");
-    gsap.to(content, {
-      height: 0,
-      ease: "none",
-      scrollTrigger: {
-        trigger: item,
-        start: "top " + header.clientHeight * i,
-        endTrigger: ".final",
-        end: "top " + header.clientHeight * items.length,
-        pin: true,
-        pinSpacing: false,
-        scrub: true,
-        // markers: { indent: 150 * i },
-        // id: i + 1
-      }
+      items.forEach((item, i) => {
+        const content = item.querySelector(".body");
+        const header = item.querySelector(".header");
+        gsap.to(content, {
+          height: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: item,
+            start: "top " + header.clientHeight * i,
+            endTrigger: ".final",
+            end: "top " + header.clientHeight * items.length,
+            pin: true,
+            pinSpacing: false,
+            scrub: true,
+            // markers: { indent: 150 * i },
+            // id: i + 1
+          }
+        });
+      });
     });
-  });
+  }
 
 
   // hover move btn 
@@ -345,40 +359,42 @@
   });
 
   // Blog animation 
-  gsap.set(".blog-area .blog", { x: 50, opacity: 0 });
+  if (document.querySelectorAll(".blog-area").length > 0) {
+    gsap.set(".blog-area .blog", { x: 50, opacity: 0 });
 
-  if (device_width < 1023) {
-    const blogList = gsap.utils.toArray(".blog-area .blog")
-    blogList.forEach((item, i) => {
-      let blogTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: item,
-          start: "top center+=200",
-        }
+    if (device_width < 1023) {
+      const blogList = gsap.utils.toArray(".blog-area .blog")
+      blogList.forEach((item, i) => {
+        let blogTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: item,
+            start: "top center+=200",
+          }
+        })
+        blogTl.to(item, {
+          x: 0,
+          opacity: 1,
+          ease: "power2.out",
+          duration: 1.5,
+        })
       })
-      blogTl.to(item, {
+    }
+    else {
+      gsap.to(".blog-area .blog", {
+        scrollTrigger: {
+          trigger: ".blog-area .blog",
+          start: "top center+=300",
+          markers: false
+        },
         x: 0,
         opacity: 1,
         ease: "power2.out",
-        duration: 1.5,
+        duration: 2,
+        stagger: {
+          each: 0.3
+        }
       })
-    })
-  }
-  else {
-    gsap.to(".blog-area .blog", {
-      scrollTrigger: {
-        trigger: ".blog-area .blog",
-        start: "top center+=300",
-        markers: false
-      },
-      x: 0,
-      opacity: 1,
-      ease: "power2.out",
-      duration: 2,
-      stagger: {
-        each: 0.3
-      }
-    })
+    }
   }
 
   // GSAP Fade Animation 
@@ -446,6 +462,210 @@
       gsap.from(item, animation_settings);
     })
   }
+
+
+  /////////////////////////////////////////////////////
+  let text_animation = gsap.utils.toArray(".move-anim");
+
+  if (text_animation) {
+    text_animation.forEach(splitTextLine => {
+      var delay_value = 0.1
+      if (splitTextLine.getAttribute("data-delay")) {
+        delay_value = splitTextLine.getAttribute("data-delay");
+      }
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: splitTextLine,
+          start: 'top 85%',
+          duration: 1,
+          scrub: false,
+          markers: false,
+          toggleActions: 'play none none none'
+        }
+      });
+
+      const itemSplitted = new SplitText(splitTextLine, {
+        type: "lines"
+      });
+      gsap.set(splitTextLine, {
+        perspective: 400
+      });
+      itemSplitted.split({
+        type: "lines"
+      })
+      tl.from(itemSplitted.lines, {
+        duration: 1,
+        delay: delay_value,
+        opacity: 0,
+        rotationX: -80,
+        force3D: true,
+        transformOrigin: "top center -50",
+        stagger: 0.1
+      });
+    });
+  }
+
+  // Full Character Setup 
+  var animation_char_come_items = document.querySelectorAll(".char-anim")
+  animation_char_come_items.forEach((item) => {
+
+    var stagger_value = 0.05
+    var translateX_value = 20
+    var translateY_value = false
+    var onscroll_value = 1
+    var data_delay = 0.1
+    var data_duration = 1
+    var ease_value = "power2.out"
+
+    if (item.getAttribute("data-stagger")) {
+      stagger_value = item.getAttribute("data-stagger");
+    }
+    if (item.getAttribute("data-translateX")) {
+      translateX_value = item.getAttribute("data-translateX");
+    }
+    if (item.getAttribute("data-translateY")) {
+      translateY_value = item.getAttribute("data-translateY");
+    }
+    if (item.getAttribute("data-on-scroll")) {
+      onscroll_value = item.getAttribute("data-on-scroll");
+    }
+    if (item.getAttribute("data-delay")) {
+      data_delay = item.getAttribute("data-delay");
+    }
+    if (item.getAttribute("data-ease")) {
+      ease_value = item.getAttribute("data-ease");
+    }
+    if (item.getAttribute("data-duration")) {
+      data_duration = item.getAttribute("data-duration");
+    }
+
+    if (onscroll_value == 1) {
+      if (translateX_value > 0 && !translateY_value) {
+        let split_char = new SplitText(item, {
+          type: "chars, words"
+        });
+        gsap.from(split_char.chars, {
+          duration: data_duration,
+          delay: data_delay,
+          x: translateX_value,
+          autoAlpha: 0,
+          stagger: stagger_value,
+          ease: ease_value,
+          scrollTrigger: {
+            trigger: item,
+            start: 'top 85%',
+          }
+        });
+      }
+      if (translateY_value > 0 && !translateX_value) {
+        let split_char = new SplitText(item, {
+          type: "chars, words"
+        });
+        gsap.from(split_char.chars, {
+          duration: data_duration,
+          delay: data_delay,
+          y: translateY_value,
+          autoAlpha: 0,
+          ease: ease_value,
+          stagger: stagger_value,
+          scrollTrigger: {
+            trigger: item,
+            start: 'top 85%',
+          }
+        });
+      }
+      if (translateX_value && translateY_value) {
+        let split_char = new SplitText(item, {
+          type: "chars, words"
+        });
+        gsap.from(split_char.chars, {
+          duration: 2,
+          delay: data_delay,
+          y: translateY_value,
+          x: translateX_value,
+          autoAlpha: 0,
+          ease: ease_value,
+          stagger: stagger_value,
+          scrollTrigger: {
+            trigger: item,
+            start: 'top 85%',
+          }
+        });
+      }
+      if (!translateX_value && !translateY_value) {
+        let split_char = new SplitText(item, {
+          type: "chars, words"
+        });
+        gsap.from(split_char.chars, {
+          duration: 1,
+          delay: data_delay,
+          x: 50,
+          autoAlpha: 0,
+          stagger: stagger_value,
+          ease: ease_value,
+          scrollTrigger: {
+            trigger: item,
+            start: 'top 85%',
+          }
+        });
+      }
+    } else {
+      if (translateX_value > 0 && !translateY_value) {
+        let split_char = new SplitText(item, {
+          type: "chars, words"
+        });
+        gsap.from(split_char.chars, {
+          duration: 1,
+          delay: data_delay,
+          x: translateX_value,
+          ease: ease_value,
+          autoAlpha: 0,
+          stagger: stagger_value
+        });
+      }
+      if (translateY_value > 0 && !translateX_value) {
+        let split_char = new SplitText(item, {
+          type: "chars, words"
+        });
+        gsap.from(split_char.chars, {
+          duration: 1,
+          delay: data_delay,
+          y: translateY_value,
+          autoAlpha: 0,
+          ease: ease_value,
+          stagger: stagger_value
+        });
+      }
+      if (translateX_value && translateY_value) {
+        let split_char = new SplitText(item, {
+          type: "chars, words"
+        });
+        gsap.from(split_char.chars, {
+          duration: 1,
+          delay: data_delay,
+          y: translateY_value,
+          x: translateX_value,
+          ease: ease_value,
+          autoAlpha: 0,
+          stagger: stagger_value
+        });
+      }
+      if (!translateX_value && !translateY_value) {
+        let split_char = new SplitText(item, {
+          type: "chars, words"
+        });
+        gsap.from(split_char.chars, {
+          duration: 1,
+          delay: data_delay,
+          ease: ease_value,
+          x: 50,
+          autoAlpha: 0,
+          stagger: stagger_value
+        });
+      }
+    }
+
+  });
 
 
 

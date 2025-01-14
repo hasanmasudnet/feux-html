@@ -236,6 +236,11 @@
     $(this).addClass('active').siblings().removeClass('active');
   });
 
+  // process hover active 
+  $('.process-hover-active .process-box').on("mouseover", function () {
+    $(this).addClass('active').siblings().removeClass('active');
+  });
+
 
 
 

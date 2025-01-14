@@ -4736,6 +4736,9 @@ btn-text-flip
   border-radius: 40px;
   overflow: hidden;
 }
+.hero-area-3 .image-wrapper img {
+  border-radius: 40px;
+}
 
 /* hero area 4 style  */
 .hero-area-4-inner {
@@ -6020,6 +6023,7 @@ btn-text-flip
   background-color: var(--action);
   border-color: transparent;
   border-radius: 8px;
+  transform: scale(1.05);
 }
 .process-area-2 .process-box:hover .number, .process-area-2 .process-box.active .number {
   border-color: var(--white);
@@ -8782,13 +8786,13 @@ btn-text-flip
   border-radius: 8px;
 }
 .team-area-2 .team-box:hover .social-links {
-  opacity: 1;
+  right: 0;
 }
 .team-area-2 .team-box:hover .thumb:before {
-  opacity: 0;
+  left: -100%;
 }
 .team-area-2 .team-box:hover .thumb:after {
-  opacity: 1;
+  top: 0;
 }
 .team-area-2 .team-box .name {
   font-size: 26px;
@@ -8833,11 +8837,10 @@ btn-text-flip
   content: "";
   width: 100%;
   height: 100%;
-  top: 0;
+  top: 100%;
   left: 0;
   background-image: linear-gradient(180deg, rgba(14, 15, 17, 0) 0%, rgba(14, 15, 17, 0.7) 90.13%);
   transition: all 0.5s;
-  opacity: 0;
 }
 .team-area-2 .team-box .social-links {
   background-color: var(--action);
@@ -8848,9 +8851,8 @@ btn-text-flip
   border-radius: 0 8px 0 8px;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -100%;
   z-index: 1;
-  opacity: 0;
   transition: all 0.5s;
 }
 .team-area-2 .team-box .social-links a {
@@ -11153,6 +11155,9 @@ btn-text-flip
   position: absolute;
   bottom: 8px;
   right: 116px;
+}
+.info-area .section-header .area-shape-1 img {
+  animation: spinner 9s linear infinite;
 }
 .info-area .info-wrapper {
   display: grid;

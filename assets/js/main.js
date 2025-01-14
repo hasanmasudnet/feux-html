@@ -55,7 +55,7 @@
   if (device_width > 767) {
     if (document.querySelector("#has_smooth").classList.contains("has-smooth")) {
       const smoother = ScrollSmoother.create({
-        smooth: 0.5,
+        smooth: 0.9,
         effects: device_width < 1025 ? false : true,
         smoothTouch: 0.1,
         normalizeScroll: true,
@@ -359,43 +359,43 @@
   });
 
   // Blog animation 
-  if (document.querySelectorAll(".blog-area").length > 0) {
-    gsap.set(".blog-area .blog", { x: 50, opacity: 0 });
+  // if (document.querySelectorAll(".blog-area").length > 0) {
+  //   gsap.set(".blog-area .blog", { x: 50, opacity: 0 });
 
-    if (device_width < 1023) {
-      const blogList = gsap.utils.toArray(".blog-area .blog")
-      blogList.forEach((item, i) => {
-        let blogTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: item,
-            start: "top center+=200",
-          }
-        })
-        blogTl.to(item, {
-          x: 0,
-          opacity: 1,
-          ease: "power2.out",
-          duration: 1.5,
-        })
-      })
-    }
-    else {
-      gsap.to(".blog-area .blog", {
-        scrollTrigger: {
-          trigger: ".blog-area .blog",
-          start: "top center+=300",
-          markers: false
-        },
-        x: 0,
-        opacity: 1,
-        ease: "power2.out",
-        duration: 2,
-        stagger: {
-          each: 0.3
-        }
-      })
-    }
-  }
+  //   if (device_width < 1023) {
+  //     const blogList = gsap.utils.toArray(".blog-area .blog")
+  //     blogList.forEach((item, i) => {
+  //       let blogTl = gsap.timeline({
+  //         scrollTrigger: {
+  //           trigger: item,
+  //           start: "top center+=200",
+  //         }
+  //       })
+  //       blogTl.to(item, {
+  //         x: 0,
+  //         opacity: 1,
+  //         ease: "power2.out",
+  //         duration: 1.5,
+  //       })
+  //     })
+  //   }
+  //   else {
+  //     gsap.to(".blog-area .blog", {
+  //       scrollTrigger: {
+  //         trigger: ".blog-area .blog",
+  //         start: "top center+=300",
+  //         markers: false
+  //       },
+  //       x: 0,
+  //       opacity: 1,
+  //       ease: "power2.out",
+  //       duration: 2,
+  //       stagger: {
+  //         each: 0.3
+  //       }
+  //     })
+  //   }
+  // }
 
   // GSAP Fade Animation 
   let fadeArray_items = document.querySelectorAll(".fade-anim");
@@ -504,6 +504,167 @@
       });
     });
   }
+
+  // Animation Word
+  let animation_word_anim_items = document.querySelectorAll(".word-anim");
+
+  animation_word_anim_items.forEach((word_anim_item) => {
+
+    var stagger_value = 0.04
+    var translateX_value = false
+    var translateY_value = false
+    var onscroll_value = 1
+    var data_delay = 0.1
+    var data_duration = 0.75
+
+    if (word_anim_item.getAttribute("data-stagger")) {
+      stagger_value = word_anim_item.getAttribute("data-stagger");
+    }
+    if (word_anim_item.getAttribute("data-translateX")) {
+      translateX_value = word_anim_item.getAttribute("data-translateX");
+    }
+
+    if (word_anim_item.getAttribute("data-translateY")) {
+      translateY_value = word_anim_item.getAttribute("data-translateY");
+    }
+
+    if (word_anim_item.getAttribute("data-on-scroll")) {
+      onscroll_value = word_anim_item.getAttribute("data-on-scroll");
+    }
+    if (word_anim_item.getAttribute("data-delay")) {
+      data_delay = word_anim_item.getAttribute("data-delay");
+    }
+    if (word_anim_item.getAttribute("data-duration")) {
+      data_duration = word_anim_item.getAttribute("data-duration");
+    }
+
+    if (onscroll_value == 1) {
+      if (translateX_value && !translateY_value) {
+        let split_word = new SplitText(word_anim_item, {
+          type: "chars, words"
+        })
+        gsap.from(split_word.words, {
+          duration: data_duration,
+          x: translateX_value,
+          autoAlpha: 0,
+          stagger: stagger_value,
+          delay: data_delay,
+          scrollTrigger: {
+            trigger: word_anim_item,
+            start: 'top 90%'
+          }
+        });
+      }
+
+      if (translateY_value && !translateX_value) {
+        let split_word = new SplitText(word_anim_item, {
+          type: "chars, words"
+        })
+        gsap.from(split_word.words, {
+          duration: 1,
+          delay: data_delay,
+          y: translateY_value,
+          autoAlpha: 0,
+          stagger: stagger_value,
+          scrollTrigger: {
+            trigger: word_anim_item,
+            start: 'top 90%'
+          }
+        });
+      }
+
+      if (translateY_value && translateX_value) {
+        let split_word = new SplitText(word_anim_item, {
+          type: "chars, words"
+        })
+        gsap.from(split_word.words, {
+          duration: 1,
+          delay: data_delay,
+          x: translateX_value,
+          y: translateY_value,
+          autoAlpha: 0,
+          stagger: stagger_value,
+          scrollTrigger: {
+            trigger: word_anim_item,
+            start: 'top 90%'
+          }
+        });
+      }
+
+      if (!translateX_value && !translateY_value) {
+        let split_word = new SplitText(word_anim_item, {
+          type: "chars, words"
+        })
+        gsap.from(split_word.words, {
+          duration: 1,
+          delay: data_delay,
+          x: 20,
+          autoAlpha: 0,
+          stagger: stagger_value,
+          scrollTrigger: {
+            trigger: word_anim_item,
+            start: 'top 85%',
+          }
+        });
+      }
+    } else {
+      if (translateX_value > 0 && !translateY_value) {
+        let split_word = new SplitText(word_anim_item, {
+          type: "chars, words"
+        })
+        gsap.from(split_word.words, {
+          duration: 1,
+          delay: data_delay,
+          x: translateX_value,
+          autoAlpha: 0,
+          stagger: stagger_value
+        });
+      }
+
+      if (translateY_value > 0 && !translateX_value) {
+        let split_word = new SplitText(word_anim_item, {
+          type: "chars, words"
+        })
+        gsap.from(split_word.words, {
+          duration: 1,
+          delay: data_delay,
+          y: translateY_value,
+          autoAlpha: 0,
+          stagger: stagger_value
+        });
+      }
+
+      if (translateY_value > 0 && translateX_value > 0) {
+        let split_word = new SplitText(word_anim_item, {
+          type: "chars, words"
+        })
+        gsap.from(split_word.words, {
+          duration: 1,
+          delay: data_delay,
+          x: translateX_value,
+          y: translateY_value,
+          autoAlpha: 0,
+          stagger: stagger_value
+        });
+      }
+
+      if (!translateX_value && !translateY_value) {
+        let split_word = new SplitText(word_anim_item, {
+          type: "chars, words"
+        })
+        gsap.from(split_word.words, {
+          duration: 1,
+          delay: data_delay,
+          x: 20,
+          autoAlpha: 0,
+          stagger: stagger_value
+        });
+      }
+
+    }
+
+  });
+
 
   // Full Character Setup 
   var animation_char_come_items = document.querySelectorAll(".char-anim")

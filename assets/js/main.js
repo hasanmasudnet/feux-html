@@ -272,6 +272,36 @@
     },
   });
 
+  // testimonial 2 active
+  if (('.testimonial-2-active').length) {
+    var testimonial_slider = new Swiper(".testimonial-2-active", {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 100,
+      speed: 1800,
+      watchSlidesProgress: true,
+      navigation: {
+        prevEl: ".testimonial-button-prev",
+        nextEl: ".testimonial-button-next",
+      },
+      pagination: {
+        el: '.testimonial-pagination',
+        type: 'fraction',
+        clickable: true,
+        formatFractionCurrent: function (number) {
+          return ('0' + number).slice(-2);
+        },
+        formatFractionTotal: function (number) {
+          return ('0' + number).slice(-2);
+        },
+        renderFraction: function (currentClass, totalClass) {
+          return '<span class="' + currentClass + '"></span>' +
+            ' <span class="mid-line">/</span> ' +
+            '<span class="' + totalClass + '"></span>';
+        }
+      },
+    });
+  }
 
   /////////////////////////////////////////////////////
   // Image Reveal Animation

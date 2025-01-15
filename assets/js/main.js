@@ -132,21 +132,21 @@
   }
 
 
-  // testimonial slider
-  if (('.testimonial-slider').length) {
-    var testimonial_slider = new Swiper(".testimonial-slider", {
+  // work slider
+  if (('.work-slider').length) {
+    var work_slider = new Swiper(".work-slider", {
       loop: false,
       slidesPerView: 1,
-      spaceBetween: 100,
+      spaceBetween: 30,
       speed: 1800,
       watchSlidesProgress: true,
       navigation: {
-        prevEl: ".testimonial-button-prev",
-        nextEl: ".testimonial-button-next",
+        prevEl: ".work-button-prev",
+        nextEl: ".work-button-next",
       },
       pagination: {
-        el: '.testimonial-pagination',
-        type: 'bullets',
+        el: '.work-pagination',
+        type: "progressbar",
         clickable: true
       },
       breakpoints: {
@@ -155,16 +155,16 @@
           slidesPerView: 1,
         },
         768: {
-          slidesPerView: 1,
+          slidesPerView: 2,
         },
         992: {
-          slidesPerView: 1,
+          slidesPerView: 2,
         },
         1201: {
-          slidesPerView: 1,
+          slidesPerView: 3,
         },
         1367: {
-          slidesPerView: 1,
+          slidesPerView: 3,
         },
       }
     });

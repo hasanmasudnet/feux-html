@@ -26,6 +26,10 @@ html {
   @media #{$sm} {
     --container-max-widths: 540px;
   }
+
+  @media #{$xs} {
+    --container-max-widths: 100%;
+  }
 }
 
 
@@ -36,6 +40,7 @@ body {
 
 .body-wrapper {
   background-color: var(--white);
+  overflow: hidden;
 
   @include dark {
     background-color: var(--black);

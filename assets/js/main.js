@@ -303,7 +303,6 @@
     });
   }
 
-  /////////////////////////////////////////////////////
   // Image Reveal Animation
   let img_anim_reveal = document.querySelectorAll(".img_anim_reveal");
 
@@ -328,7 +327,7 @@
       ease: Power2.out
     });
   });
-  /////////////////////////////////////////////////////
+
 
 
   // header sticky item 

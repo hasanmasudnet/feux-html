@@ -170,6 +170,43 @@
     });
   }
 
+  // work-2 slider
+  if (('.work-2-slider').length) {
+    var work_2_slider = new Swiper(".work-2-slider", {
+      loop: false,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      speed: 1800,
+      watchSlidesProgress: true,
+      navigation: {
+        prevEl: ".work-2-button-prev",
+        nextEl: ".work-2-button-next",
+      },
+      pagination: {
+        el: '.work-2-pagination',
+        clickable: true
+      },
+      breakpoints: {
+        // when window width is >= px
+        576: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 2,
+        },
+        1201: {
+          slidesPerView: 2,
+        },
+        1367: {
+          slidesPerView: 2,
+        },
+      }
+    });
+  }
+
   // wow js activation 
   new WOW().init();
 
@@ -346,6 +383,21 @@
       navigation: {
         prevEl: ".testimonial-4-button-prev",
         nextEl: ".testimonial-4-button-next",
+      },
+    });
+  }
+
+  // testimonial 5 active
+  if (('.testimonial-5-active').length) {
+    var testimonial_5_slider = new Swiper(".testimonial-5-active", {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      speed: 1800,
+      watchSlidesProgress: true,
+      navigation: {
+        prevEl: ".testimonial-5-button-prev",
+        nextEl: ".testimonial-5-button-next",
       },
     });
   }

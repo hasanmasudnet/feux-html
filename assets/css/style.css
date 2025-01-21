@@ -4567,15 +4567,30 @@ btn-text-flip
 }
 .footer-area-3 .area-shape-1 {
   position: absolute;
-  left: 0;
-  bottom: 0;
+  right: 90%;
+  bottom: 10px;
   z-index: -1;
+  width: -moz-max-content;
+  width: max-content;
+  filter: blur(250px);
+  opacity: 0.8;
+}
+.footer-area-3 .area-shape-1 img {
+  animation: spinner 9s linear infinite;
 }
 .footer-area-3 .area-shape-2 {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  left: 91%;
+  bottom: -131px;
   z-index: -1;
+  width: -moz-max-content;
+  width: max-content;
+  filter: blur(250px);
+  opacity: 0.8;
+  transform: rotate(-123deg);
+}
+.footer-area-3 .area-shape-2 img {
+  animation: spinner 9s linear infinite;
 }
 .footer-area-3 .footer-widget-wrapper-box {
   padding-top: 90px;
@@ -5316,9 +5331,13 @@ btn-text-flip
   font-weight: 500;
 }
 .hero-area-3 .section-title .title-shape-1 {
-  width: 90px;
+  display: inline-block;
   margin-left: 40px;
-  margin-top: -28px;
+}
+.hero-area-3 .section-title .title-shape-1 img {
+  width: 90px;
+  margin-top: -20px;
+  animation: spinner 9s linear infinite;
 }
 .hero-area-3 .image-wrapper {
   border-radius: 40px;
@@ -5332,20 +5351,7 @@ btn-text-flip
 .hero-area-4-inner {
   position: relative;
   z-index: 1;
-}
-.hero-area-4-inner .area-shape-1 {
-  position: absolute;
-  top: 24px;
-  left: 0;
-  z-index: -1;
-  width: 305px;
-}
-.hero-area-4-inner .area-shape-2 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  width: 295px;
+  overflow: hidden;
 }
 .hero-area-4 .area-bg {
   position: absolute;
@@ -5371,28 +5377,58 @@ btn-text-flip
   -o-object-fit: cover;
      object-fit: cover;
 }
+.hero-area-4 .area-shape-1 {
+  position: absolute;
+  top: 110px;
+  right: 89%;
+  z-index: -1;
+  rotate: 45deg;
+  width: -moz-max-content;
+  width: max-content;
+}
+.hero-area-4 .area-shape-1 img {
+  width: 420px;
+  animation: moveOne 15s infinite ease-in-out;
+}
+@keyframes moveOne {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.hero-area-4 .area-shape-2 {
+  position: absolute;
+  bottom: -90px;
+  left: 88%;
+  z-index: -1;
+  rotate: 25deg;
+  width: -moz-max-content;
+  width: max-content;
+}
+.hero-area-4 .area-shape-2 img {
+  width: 450px;
+  animation: moveTwo 15s infinite ease-in-out;
+}
+@keyframes moveTwo {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-50px, 50px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 .hero-area-4 .section-content {
   margin-top: 155px;
   margin-bottom: 47px;
   text-align: center;
-}
-.hero-area-4 .area-shape-1 {
-  width: 305px;
-  position: absolute;
-  top: 24px;
-  left: 0;
-  z-index: -1;
-}
-.hero-area-4 .area-shape-2 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  width: 295px;
-}
-.hero-area-4 .section-content {
-  margin-top: 155px;
-  margin-bottom: 47px;
 }
 .hero-area-4 .section-content .text {
   font-size: 20px;
@@ -8364,10 +8400,15 @@ btn-text-flip
 .work-area-4 .works-wrapper-box {
   margin-top: 74px;
 }
+.work-area-4 .works-wrapper {
+  display: grid;
+  gap: 30px;
+}
 .work-area-4 .work-box {
   background-color: var(--primary);
   border-radius: 14px;
   padding: 30px 30px 32px;
+  outline: 10px solid var(--white);
 }
 .work-area-4 .work-box .tag {
   font-size: 16px;
@@ -11973,6 +12014,7 @@ btn-text-flip
 }
 .cta-area-2 .section-header .btn-wrapper .icon {
   width: 137px;
+  transition: all 0.3s;
 }
 @media only screen and (max-width: 1919px) {
   .cta-area-2 .section-header .btn-wrapper .icon {
@@ -11983,6 +12025,9 @@ btn-text-flip
   .cta-area-2 .section-header .btn-wrapper .icon {
     width: 67px;
   }
+}
+.cta-area-2 .section-header .btn-wrapper a:hover .icon {
+  fill: var(--white);
 }
 
 /* cta area 3 style  */
@@ -13043,11 +13088,9 @@ btn-text-flip
 }
 .testimonial-area-3 .testimonial-wrapper-box {
   border-top: 1px solid rgba(14, 15, 17, 0.08);
-  border-bottom: 1px solid rgba(14, 15, 17, 0.08);
   padding-top: 56px;
-  padding-bottom: 73px;
   margin-top: 58px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .testimonial-area-3 .testimonial-wrapper {
   display: grid;
@@ -13086,7 +13129,7 @@ btn-text-flip
 }
 .testimonial-area-3 .testimonial-3-nav-active .swiper-wrapper {
   height: 100%;
-  max-height: 370px;
+  max-height: 340px;
 }
 @media only screen and (max-width: 1919px) {
   .testimonial-area-3 .testimonial-3-nav-active .swiper-wrapper {

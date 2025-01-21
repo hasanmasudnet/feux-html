@@ -450,8 +450,8 @@
 
 
 
-  // header sticky item 
-  if (document.querySelectorAll(".services-wrapper-box").length > 0) {
+  // stacking item with header
+  if (document.querySelectorAll(".header-stacking-items").length > 0) {
     mm.add("(min-width: 991px)", () => {
       const items = gsap.utils.toArray(".item");
 
@@ -469,8 +469,30 @@
             pin: true,
             pinSpacing: false,
             scrub: true,
-            // markers: { indent: 150 * i },
-            // id: i + 1
+          }
+        });
+      });
+    });
+  }
+
+
+  // stacking item  with space
+  if (document.querySelectorAll(".space-stacking-items").length > 0) {
+    mm.add("(min-width: 991px)", () => {
+      const items = gsap.utils.toArray(".item");
+
+      items.forEach((item, i) => {
+        gsap.to(item, {
+          ease: "none",
+          scrollTrigger: {
+            trigger: item,
+            start: "top " + 40 * i,
+            endTrigger: ".final",
+            end: "top " + item.clientHeight * items.length,
+            pin: true,
+            pinSpacing: false,
+            scrub: true,
+            // markers: true
           }
         });
       });

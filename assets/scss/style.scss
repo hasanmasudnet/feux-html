@@ -1750,16 +1750,31 @@
 
     .area-shape-1 {
         position: absolute;
-        left: 0;
-        bottom: 0;
+        right: 90%;
+        bottom: 10px;
         z-index: -1;
+        width: max-content;
+        filter: blur(250px);
+        opacity: 0.8;
+
+        img {
+            animation: spinner 9s linear infinite;
+        }
     }
 
     .area-shape-2 {
         position: absolute;
-        right: 0;
-        bottom: 0;
+        left: 91%;
+        bottom: -131px;
         z-index: -1;
+        width: max-content;
+        filter: blur(250px);
+        opacity: 0.8;
+        transform: rotate(-123deg);
+
+        img {
+            animation: spinner 9s linear infinite;
+        }
     }
 
     .footer-widget-wrapper-box {
@@ -2623,14 +2638,21 @@
         line-height: 120px;
         letter-spacing: -0.01em;
 
+
         span {
             font-weight: 500;
         }
 
         .title-shape-1 {
-            width: 90px;
+            display: inline-block;
             margin-left: 40px;
-            margin-top: -28px;
+
+            img {
+
+                width: 90px;
+                margin-top: -20px;
+                animation: spinner 9s linear infinite;
+            }
         }
     }
 
@@ -2646,25 +2668,13 @@
 
 /* hero area 4 style  */
 .hero-area-4 {
+
+
     &-inner {
         position: relative;
         z-index: 1;
+        overflow: hidden;
 
-        .area-shape-1 {
-            position: absolute;
-            top: 24px;
-            left: 0;
-            z-index: -1;
-            width: 305px;
-        }
-
-        .area-shape-2 {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            z-index: -1;
-            width: 295px;
-        }
     }
 
     .area-bg {
@@ -2693,31 +2703,74 @@
         }
     }
 
-    .section-content {
-        margin-top: 155px;
-        margin-bottom: 47px;
-        text-align: center;
-    }
 
     .area-shape-1 {
-        width: 305px;
         position: absolute;
-        top: 24px;
-        left: 0;
+        top: 110px;
+        right: 89%;
         z-index: -1;
+        rotate: 45deg;
+        width: max-content;
+
+        img {
+            width: 420px;
+            animation: moveOne 15s infinite ease-in-out;
+        }
+    }
+
+    @keyframes moveOne {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+
+        50% {
+            -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+        }
+
+        100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
     }
 
     .area-shape-2 {
         position: absolute;
-        bottom: 0;
-        right: 0;
+        bottom: -90px;
+        left: 88%;
         z-index: -1;
-        width: 295px;
+        rotate: 25deg;
+        width: max-content;
+
+        img {
+            width: 450px;
+            animation: moveTwo 15s infinite ease-in-out;
+        }
     }
+
+    @keyframes moveTwo {
+        0% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+
+        50% {
+            -webkit-transform: translate(-50px, 50px);
+            transform: translate(-50px, 50px);
+        }
+
+        100% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+    }
+
 
     .section-content {
         margin-top: 155px;
         margin-bottom: 47px;
+        text-align: center;
 
         .text {
             font-size: 20px;
@@ -6198,10 +6251,16 @@
         margin-top: 74px;
     }
 
+    .works-wrapper {
+        display: grid;
+        gap: 30px;
+    }
+
     .work-box {
         background-color: var(--primary);
         border-radius: 14px;
         padding: 30px 30px 32px;
+        outline: 10px solid var(--white);
 
         .tag {
             font-size: 16px;
@@ -10446,6 +10505,7 @@
 
             .icon {
                 width: 137px;
+                transition: all 0.3s;
 
                 @media #{$xxl} {
                     width: 97px;
@@ -10453,6 +10513,12 @@
 
                 @media #{$md} {
                     width: 67px;
+                }
+            }
+
+            a:hover {
+                .icon {
+                    fill: var(--white);
                 }
             }
         }
@@ -11631,11 +11697,9 @@
 
     .testimonial-wrapper-box {
         border-top: 1px solid rgba(14, 15, 17, 0.08);
-        border-bottom: 1px solid rgba(14, 15, 17, 0.08);
         padding-top: 56px;
-        padding-bottom: 73px;
         margin-top: 58px;
-        margin-bottom: 20px;
+        margin-bottom: 12px;
 
     }
 
@@ -11674,7 +11738,7 @@
 
         .swiper-wrapper {
             height: 100%;
-            max-height: 370px;
+            max-height: 340px;
 
             @media #{$xxl} {
                 max-height: 310px;

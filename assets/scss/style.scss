@@ -2646,12 +2646,12 @@
         .title-shape-1 {
             display: inline-block;
             margin-left: 40px;
+            animation: spinner 9s linear infinite;
 
             img {
 
                 width: 90px;
                 margin-top: -20px;
-                animation: spinner 9s linear infinite;
             }
         }
     }
@@ -6126,6 +6126,7 @@
         padding-left: 110px;
         padding-right: 110px;
         position: relative;
+        background-image: linear-gradient(180deg, transparent, #181A1E 30%);
 
         .tag {
             font-size: 24px;
@@ -6197,10 +6198,25 @@
             bottom: 54px;
             right: -240px;
 
-            img {
+            .icon {
                 margin-left: 20px;
+                width: 34px;
+                transition: all 0.3s;
+            }
+
+            a:hover {
+                color: var(--white);
+
+                .icon {
+                    fill: var(--white);
+                }
             }
         }
+    }
+
+    .works-wrapper {
+        display: grid;
+        gap: 70px;
     }
 
 }

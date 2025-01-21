@@ -5333,11 +5333,11 @@ btn-text-flip
 .hero-area-3 .section-title .title-shape-1 {
   display: inline-block;
   margin-left: 40px;
+  animation: spinner 9s linear infinite;
 }
 .hero-area-3 .section-title .title-shape-1 img {
   width: 90px;
   margin-top: -20px;
-  animation: spinner 9s linear infinite;
 }
 .hero-area-3 .image-wrapper {
   border-radius: 40px;
@@ -8304,6 +8304,7 @@ btn-text-flip
   padding-left: 110px;
   padding-right: 110px;
   position: relative;
+  background-image: linear-gradient(180deg, transparent, #181A1E 30%);
 }
 .work-area-3 .work-box .tag {
   font-size: 24px;
@@ -8361,8 +8362,20 @@ btn-text-flip
   bottom: 54px;
   right: -240px;
 }
-.work-area-3 .works-wrapper-box .wrapper-title img {
+.work-area-3 .works-wrapper-box .wrapper-title .icon {
   margin-left: 20px;
+  width: 34px;
+  transition: all 0.3s;
+}
+.work-area-3 .works-wrapper-box .wrapper-title a:hover {
+  color: var(--white);
+}
+.work-area-3 .works-wrapper-box .wrapper-title a:hover .icon {
+  fill: var(--white);
+}
+.work-area-3 .works-wrapper {
+  display: grid;
+  gap: 70px;
 }
 
 /* work area 4 style  */

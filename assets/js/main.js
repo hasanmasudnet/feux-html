@@ -476,7 +476,7 @@
   }
 
 
-  // stacking item  with space
+  // stacking item with space
   if (document.querySelectorAll(".space-stacking-items").length > 0) {
     mm.add("(min-width: 991px)", () => {
       const items = gsap.utils.toArray(".item");
@@ -498,6 +498,33 @@
       });
     });
   }
+
+
+  // stacking item with scale
+  let tl = gsap.timeline();
+  let scaleItem = document.querySelectorAll('.portfolio-panel')
+
+  scaleItem.forEach((item, index) => {
+
+    gsap.set(scaleItem, {
+      scale: 1
+    });
+
+    tl.to(item, {
+      scale: .8,
+      scrollTrigger: {
+        trigger: item,
+        pin: item,
+        scrub: 1,
+        start: 'top 10%',
+        end: "bottom 90%",
+        endTrigger: '.work-area-3',
+        pinSpacing: false,
+        markers: false,
+      },
+    })
+  })
+
 
 
   // hover move btn 
@@ -1009,6 +1036,77 @@
       }, 150)
 
     }
+  }
+
+  // button effect
+  var mouse = { x: 0, y: 0 };
+  var pos = { x: 0, y: 0 };
+  var ratio = 0.65;
+  var active = false;
+
+  var allParalax = document.querySelectorAll('.parallax-wrap');
+
+  allParalax.forEach(function (e) {
+    e.addEventListener("mousemove", mouseMoveBtn);
+  })
+
+  function mouseMoveBtn(e) {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    mouse.x = e.pageX;
+    mouse.y = e.pageY - scrollTop;
+
+  }
+  gsap.ticker.add(updatePosition);
+
+  $(".parallax-wrap").mouseenter(function (e) {
+    gsap.to(this, { duration: 0.3, scale: 2 });
+    gsap.to($(this).children(), { duration: 0.3, scale: 0.5 });
+    active = true;
+  });
+
+  $(".parallax-wrap").mouseleave(function (e) {
+    gsap.to(this, { duration: 0.3, scale: 1 });
+    gsap.to($(this).children(), { duration: 0.3, scale: 1, x: 0, y: 0 });
+    active = false;
+  });
+
+  function updatePosition() {
+    pos.x += (mouse.x - pos.x) * ratio;
+    pos.y += (mouse.y - pos.y) * ratio;
+
+  }
+
+
+  $(".parallax-wrap").mousemove(function (e) {
+    parallaxCursorBtn(e, this, 2);
+    callParallaxBtn(e, this);
+  });
+
+  function callParallaxBtn(e, parent) {
+    parallaxItBtn(e, parent, parent.querySelector(".parallax-element"), 20);
+  }
+
+  function parallaxItBtn(e, parent, target, movement) {
+    var boundingRect = parent.getBoundingClientRect();
+    var relX = e.pageX - boundingRect.left;
+    var relY = e.pageY - boundingRect.top;
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    gsap.to(target, {
+      duration: 0.3,
+      x: (relX - boundingRect.width / 2) / boundingRect.width * movement,
+      y: (relY - boundingRect.height / 2 - scrollTop) / boundingRect.height * movement,
+      ease: Power2.easeOut
+    });
+  }
+
+  function parallaxCursorBtn(e, parent, movement) {
+    var rect = parent.getBoundingClientRect();
+    var relX = e.pageX - rect.left;
+    var relY = e.pageY - rect.top;
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    pos.x = rect.left + rect.width / 2 + (relX - rect.width / 2) / movement;
+    pos.y = rect.top + rect.height / 2 + (relY - rect.height / 2 - scrollTop) / movement;
   }
 
 

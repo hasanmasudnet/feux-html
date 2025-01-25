@@ -126,6 +126,14 @@
             display: none;
         }
     }
+
+    .t-btn-primary {
+        background-color: #F0F0F0;
+    }
+
+    .t-btn-circle {
+        background-color: #F0F0F0;
+    }
 }
 
 .body-ai-agency {
@@ -2824,22 +2832,63 @@
 
     .section-header {
         margin-top: 141px;
+
+        @media #{$xxl} {
+            margin-top: 91px;
+        }
+
+        @media #{$xl} {
+            margin-top: 71px;
+        }
+
+        @media #{$lg} {
+            margin-top: 51px;
+        }
     }
 
     .section-content {
         margin-top: 86px;
         margin-left: 558px;
 
+        @media #{$xxl} {
+            margin-top: 46px;
+            margin-left: 508px;
+        }
+
+        @media #{$lg} {
+            margin-top: 36px;
+            margin-left: 408px;
+        }
+
+        @media #{$md} {
+            margin-left: 208px;
+
+        }
+
+        @media #{$sm} {
+            margin-top: 26px;
+
+            margin-left: 0;
+        }
+
         .text {
             font-size: 24px;
             font-weight: 400;
-            line-height: 34px;
+            line-height: 1.42;
             max-width: 548px;
             opacity: 0.7;
+
+            @media #{$lg} {
+                font-size: 22px;
+            }
         }
 
         .btn-wrapper {
             margin-top: 42px;
+
+            @media #{$xxl} {
+                margin-top: 32px;
+            }
         }
     }
 
@@ -2855,14 +2904,52 @@
             right: calc(100% + 50px);
             width: 168px;
             opacity: 0.1;
+
+            @media #{$xxl} {
+                left: 0;
+                right: auto;
+                bottom: 0;
+            }
+
+            @media #{$sm} {
+                display: none;
+            }
+
+            img {
+                width: 186px;
+
+                @media #{$md} {
+                    width: 106px;
+                }
+            }
         }
     }
 
     .section-title {
         font-size: 100px;
         font-weight: 300;
-        line-height: 120px;
+        line-height: 1.2;
         letter-spacing: -0.01em;
+
+        @media #{$xxl} {
+            font-size: 90px;
+        }
+
+        @media #{$xl} {
+            font-size: 80px;
+        }
+
+        @media #{$lg} {
+            font-size: 70px;
+        }
+
+        @media #{$md} {
+            font-size: 50px;
+        }
+
+        @media #{$sm} {
+            font-size: 40px;
+        }
 
 
         span {
@@ -2874,10 +2961,38 @@
             margin-left: 40px;
             animation: spinner 9s linear infinite;
 
+            @media #{$md} {
+                margin-left: 20px;
+            }
+
+            @media #{$xs} {
+                display: none;
+            }
+
             img {
 
                 width: 90px;
                 margin-top: -20px;
+
+                @media #{$xxl} {
+                    width: 80px;
+                }
+
+                @media #{$xl} {
+                    width: 70px;
+                }
+
+                @media #{$lg} {
+                    width: 60px;
+                }
+
+                @media #{$md} {
+                    width: 40px;
+                }
+
+                @media #{$sm} {
+                    width: 35px;
+                }
             }
         }
     }
@@ -3919,6 +4034,19 @@
         display: grid;
         gap: 20px 60px;
         grid-template-columns: 380px 1fr;
+
+        @media #{$xl} {
+            grid-template-columns: 320px 1fr;
+        }
+
+        @media #{$lg} {
+            grid-template-columns: 240px 1fr;
+
+        }
+
+        @media #{$md} {
+            grid-template-columns: 1fr;
+        }
     }
 
     .subtitle-wrapper {
@@ -3941,13 +4069,35 @@
             left: -60px;
             top: 50%;
             transform: translateY(-50%);
+
+            @media #{$xl} {
+                left: -40px;
+
+            }
+
+            @media #{$lg} {
+                left: -30px;
+
+            }
+
+            @media #{$sm} {
+                display: none;
+            }
         }
 
         .number {
             font-size: 100px;
             font-weight: 400;
-            line-height: 92px;
+            line-height: 0.92;
             letter-spacing: -0.01em;
+
+            @media #{$xxl} {
+                font-size: 80px;
+            }
+
+            @media #{$lg} {
+                font-size: 70px;
+            }
         }
 
         .text {
@@ -3967,6 +4117,24 @@
         grid-template-columns: 380px 1fr;
         align-items: flex-end;
 
+        @media #{$xxl} {
+            margin-top: 48px;
+        }
+
+        @media #{$xl} {
+            grid-template-columns: 320px 1fr;
+        }
+
+        @media #{$lg} {
+            margin-top: 38px;
+            grid-template-columns: 240px 1fr;
+
+        }
+
+        @media #{$md} {
+            grid-template-columns: 1fr;
+        }
+
 
         .btn-wrapper {
             margin-bottom: 8px;
@@ -3975,9 +4143,18 @@
 
     .counter-wrapper {
         display: grid;
-        gap: 0 0;
+        gap: 25px 0;
         grid-template-columns: repeat(3, 1fr);
         justify-content: space-between;
+
+        @media #{$sm} {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media #{$xs} {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
     }
 }
 
@@ -4528,14 +4705,26 @@
     .process-wrapper-box {
         margin-top: 58px;
         margin-bottom: 20px;
+
+        @media #{$xxl} {
+            margin-top: 38px;
+        }
+
+        @media #{$lg} {
+            margin-top: 28px;
+        }
     }
 
     .process-box {
         background-color: #E4E4E4;
         border: 1px solid #E4E4E4;
         border-radius: 8px;
-        padding: 31px 30px 40px;
+        padding: 31px 30px 38px;
         transition: all 0.5s;
+
+        @media #{$lg} {
+            padding: 21px 20px 28px;
+        }
 
         &:hover {
             border-color: var(--primary);
@@ -4545,7 +4734,11 @@
         .title {
             font-size: 24px;
             font-weight: 500;
-            line-height: 34px;
+            line-height: 1.42;
+
+            @media #{$lg} {
+                font-size: 20px;
+            }
         }
 
         .text {
@@ -4559,11 +4752,23 @@
         .number {
             font-size: 124px;
             font-weight: 400;
-            line-height: 89px;
+            line-height: 0.76;
             letter-spacing: -0.01em;
-            margin-top: 92px;
+            margin-top: 90px;
             display: inline-block;
-            color: #D0D0D0;
+            color: transparent;
+            background: linear-gradient(225.52deg, #CAA473 -0.42%, #A06AC8 84.05%);
+            background-clip: text;
+
+            @media #{$xxl} {
+                font-size: 94px;
+                margin-top: 70px;
+            }
+
+            @media #{$xl} {
+                font-size: 74px;
+                margin-top: 60px;
+            }
         }
     }
 
@@ -4572,6 +4777,16 @@
         display: grid;
         gap: 30px;
         grid-template-columns: repeat(3, 1fr);
+
+        @media #{$md} {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+
+        @media #{$sm} {
+            grid-template-columns: repeat(1, 1fr);
+
+        }
     }
 }
 
@@ -5432,6 +5647,11 @@
         align-items: flex-end;
         margin-top: 13px;
 
+        @media #{$sm} {
+            grid-template-columns: 1fr;
+
+        }
+
         .btn-wrapper {
             margin-bottom: 12px;
         }
@@ -5481,9 +5701,39 @@
 
         &-inner {
             display: grid;
-            gap: 20px 60px;
+            gap: 10px 60px;
             grid-template-columns: 50px 1fr 300px;
             align-items: flex-start;
+
+            @media #{$xxl} {
+                grid-template-columns: 50px 1fr 200px;
+
+            }
+
+            @media #{$xl} {
+                grid-template-columns: 50px 1fr 180px;
+
+            }
+
+            @media #{$lg} {
+                grid-template-columns: 50px 1fr 150px;
+
+            }
+
+            @media #{$md} {
+                grid-template-columns: 50px 1fr 130px;
+
+            }
+
+            @media #{$sm} {
+                grid-template-columns: 1fr 130px;
+
+            }
+
+            @media #{$xs} {
+                grid-template-columns: 1fr;
+
+            }
         }
 
         .number {
@@ -5494,15 +5744,43 @@
             color: #5F6062;
             margin-top: 24px;
             transition: all 0.5s;
+
+            @media #{$sm} {
+                grid-column: span 2;
+            }
+
+            @media #{$xs} {
+                grid-column: auto;
+            }
         }
 
         .title {
             font-size: 100px;
             font-weight: 400;
-            line-height: 120px;
+            line-height: 1.2;
             letter-spacing: -0.01em;
             color: #5F6062;
             transition: all 0.5s;
+
+            @media #{$xxl} {
+                font-size: 90px;
+            }
+
+            @media #{$xl} {
+                font-size: 80px;
+            }
+
+            @media #{$lg} {
+                font-size: 60px;
+            }
+
+            @media #{$md} {
+                font-size: 45px;
+            }
+
+            @media #{$sm} {
+                font-size: 36px;
+            }
 
         }
 
@@ -5511,6 +5789,15 @@
             overflow: hidden;
             opacity: 0.30;
             transition: all 0.5s;
+
+            @media #{$xs} {
+                max-width: 200px;
+
+            }
+
+            video {
+                width: 100%;
+            }
 
         }
 
@@ -5732,6 +6019,11 @@
         grid-template-columns: 1fr auto;
         justify-content: space-between;
         align-items: center;
+
+        @media #{$sm} {
+            grid-template-columns: 1fr;
+
+        }
     }
 
     .services-wrapper-box {
@@ -6663,6 +6955,11 @@
         grid-template-columns: 1fr auto;
         justify-content: space-between;
         align-items: flex-end;
+
+        @media #{$sm} {
+            grid-template-columns: 1fr;
+
+        }
 
         .btn-wrapper {
             margin-bottom: 11px;
@@ -7975,6 +8272,11 @@
         align-items: flex-end;
         margin-top: 13px;
 
+        @media #{$sm} {
+            grid-template-columns: 1fr;
+
+        }
+
         .btn-wrapper {
             margin-bottom: 12px;
         }
@@ -8014,7 +8316,7 @@
         .post-on-thumb {
             font-size: 44px;
             font-weight: 400;
-            line-height: 54px;
+            line-height: 1.22;
             display: inline-block;
             writing-mode: vertical-lr;
             color: var(--white);
@@ -8026,6 +8328,22 @@
             margin-bottom: -50%;
             transition: all 0.5s;
             z-index: 1;
+
+            @media #{$xxl} {
+                font-size: 40px;
+            }
+
+            @media #{$lg} {
+                font-size: 30px;
+            }
+
+            @media #{$md} {
+                font-size: 32px;
+            }
+
+            @media #{$sm} {
+                font-size: 30px;
+            }
         }
 
         .thumb {
@@ -8110,12 +8428,30 @@
     .team-wrapper-box {
         margin-top: 58px;
         margin-bottom: 12px;
+
+        @media #{$xxl} {
+            margin-top: 38px;
+        }
+
+        @media #{$lg} {
+            margin-top: 28px;
+        }
     }
 
     .team-wrapper {
         display: grid;
-        gap: 30px;
+        gap: 40px 30px;
         grid-template-columns: repeat(3, 1fr);
+
+        @media #{$md} {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+
+        @media #{$sm} {
+            grid-template-columns: repeat(1, 1fr);
+
+        }
     }
 }
 
@@ -8283,6 +8619,11 @@
         grid-template-columns: 1fr auto;
         justify-content: space-between;
         align-items: flex-end;
+
+        @media #{$sm} {
+            grid-template-columns: 1fr;
+
+        }
 
         .btn-wrapper {
             margin-bottom: 11px;
@@ -9365,6 +9706,11 @@
         align-items: flex-end;
         margin-top: 13px;
 
+        @media #{$sm} {
+            grid-template-columns: 1fr;
+
+        }
+
         .btn-wrapper {
             margin-bottom: 12px;
         }
@@ -9377,6 +9723,14 @@
     .blogs-wrapper-box {
         margin-top: 45px;
         margin-bottom: 20px;
+
+        @media #{$xxl} {
+            margin-top: 25px;
+        }
+
+        @media #{$lg} {
+            margin-top: 15px;
+        }
     }
 
     .blog {
@@ -9387,10 +9741,32 @@
         padding-top: 25px;
         padding-bottom: 25px;
 
+        @media #{$lg} {
+            grid-template-columns: 1fr 190px 220px;
+
+        }
+
+        @media #{$md} {
+            grid-template-columns: 1fr 150px 220px;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr;
+        }
+
         &:hover,
         &.active {
             .thumb {
                 height: 150px;
+
+                @media #{$xxl} {
+                    height: 120px;
+                }
+
+                @media #{$lg} {
+                    height: auto;
+                }
+
             }
         }
 
@@ -9403,12 +9779,24 @@
             display: inline-block;
             margin-top: 1px;
 
+            @media #{$lg} {
+                grid-column: span 3;
+            }
+
+            @media #{$sm} {
+                grid-column: auto;
+            }
+
         }
 
         .title {
             font-size: 24px;
             font-weight: 500;
-            line-height: 34px;
+            line-height: 1.42;
+
+            @media #{$xl} {
+                font-size: 20px;
+            }
         }
 
         .date {
@@ -9426,6 +9814,10 @@
             margin-top: 8px;
             height: 0px;
             transition: all 0.5s;
+
+            @media #{$lg} {
+                height: auto;
+            }
 
 
             img {
@@ -9546,6 +9938,11 @@
         grid-template-columns: 1fr auto;
         justify-content: space-between;
         align-items: flex-end;
+
+        @media #{$sm} {
+            grid-template-columns: 1fr;
+
+        }
 
         .btn-wrapper {
             margin-bottom: 11px;
@@ -12304,6 +12701,11 @@
         align-items: flex-end;
         margin-top: 13px;
 
+        @media #{$sm} {
+            grid-template-columns: 1fr;
+
+        }
+
         .btn-wrapper {
             margin-bottom: 12px;
         }
@@ -12318,6 +12720,14 @@
         padding-top: 56px;
         margin-top: 58px;
         margin-bottom: 12px;
+
+        @media #{$xxl} {
+            margin-top: 38px;
+        }
+
+        @media #{$lg} {
+            margin-top: 28px;
+        }
 
     }
 
@@ -12678,6 +13088,11 @@
         grid-template-columns: 1fr auto;
         justify-content: space-between;
         align-items: flex-end;
+
+        @media #{$sm} {
+            grid-template-columns: 1fr;
+
+        }
 
         .slide-nav {
             margin-bottom: 11px;

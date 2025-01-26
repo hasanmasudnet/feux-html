@@ -131,6 +131,13 @@
     });
   }
 
+  // Magnific Video popup
+  if ($('.video-popup').length && 'magnificPopup' in jQuery) {
+    $('.video-popup').magnificPopup({
+      type: 'iframe',
+    });
+  }
+
 
   // work slider
   if (('.work-slider').length) {

@@ -9044,7 +9044,7 @@ btn-text-flip
 .service-area-5 .service-box {
   background-color: #F4F4F3;
   border-radius: 10px;
-  padding: 60px 60px 60px;
+  padding: 60px 59px 60px;
   position: relative;
   z-index: 1;
 }
@@ -9082,6 +9082,7 @@ btn-text-flip
   width: 109px;
   height: 98px;
   background-color: var(--action);
+  border: 1px solid rgba(14, 15, 17, 0.1);
   border-radius: 10px;
   padding: 14px;
   display: flex;

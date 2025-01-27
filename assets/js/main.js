@@ -508,30 +508,33 @@
 
 
   // stacking item with scale
-  let tl = gsap.timeline();
-  let scaleItem = document.querySelectorAll('.portfolio-panel')
+  if (document.querySelectorAll(".portfolio-panel").length > 0) {
+    mm.add("(min-width: 991px)", () => {
+      let tl = gsap.timeline();
+      let scaleItem = document.querySelectorAll('.portfolio-panel')
 
-  scaleItem.forEach((item, index) => {
+      scaleItem.forEach((item, index) => {
 
-    gsap.set(scaleItem, {
-      scale: 1
+        gsap.set(scaleItem, {
+          scale: 1
+        });
+
+        tl.to(item, {
+          scale: .8,
+          scrollTrigger: {
+            trigger: item,
+            pin: item,
+            scrub: 1,
+            start: 'top 10%',
+            end: "bottom 90%",
+            endTrigger: '.work-area-3',
+            pinSpacing: false,
+            markers: false,
+          },
+        })
+      })
     });
-
-    tl.to(item, {
-      scale: .8,
-      scrollTrigger: {
-        trigger: item,
-        pin: item,
-        scrub: 1,
-        start: 'top 10%',
-        end: "bottom 90%",
-        endTrigger: '.work-area-3',
-        pinSpacing: false,
-        markers: false,
-      },
-    })
-  })
-
+  }
 
 
   // hover move btn 

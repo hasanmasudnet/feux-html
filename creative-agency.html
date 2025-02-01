@@ -98,7 +98,7 @@
 
   <!-- Header area start -->
   <header class="header-area-3">
-    <div class="header-main">
+    <div class="header-main header-sticky">
       <div class="container large">
         <div class="header-area-3-inner">
           <div class="header-logo">
@@ -207,7 +207,7 @@
             </div>
           </div>
           <div class="image-wrapper parallax-view fade-anim">
-            <img class="w-100" src="assets/imgs/gallery/image-12.jpg" alt="image" data-speed="0.7">
+            <img class="w-100" src="assets/imgs/gallery/image-12.jpg" alt="image" data-speed="0.5">
           </div>
         </section>
         <!-- hero area end  -->
@@ -337,7 +337,7 @@
             </div>
             <div class="services-wrapper-box">
               <div class="services-wrapper">
-                <div class="service-box move-anim">
+                <div class="service-box fade-anim video-container">
                   <div class="container">
                     <div class="service-box-inner">
                       <div class="number">/001</div>
@@ -346,7 +346,7 @@
                         <a class="t-btn t-btn-primary" href="contact.html">See Details</a>
                       </div>
                       <div class="video">
-                        <video loop muted autoplay playsinline>
+                        <video loop class="video_on_hover">
                           <source src="https://res.cloudinary.com/dy65k4x9i/video/upload/creative_design_qtvlnf.mp4"
                             type="video/mp4">
                         </video>
@@ -354,7 +354,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="service-box move-anim">
+                <div class="service-box fade-anim video-container">
                   <div class="container">
                     <div class="service-box-inner">
                       <div class="number">/002</div>
@@ -363,7 +363,7 @@
                         <a class="t-btn t-btn-primary" href="contact.html">See Details</a>
                       </div>
                       <div class="video">
-                        <video loop muted autoplay playsinline>
+                        <video loop class="video_on_hover">
                           <source src="https://res.cloudinary.com/dy65k4x9i/video/upload/app_solutions_xr4pvo.mp4"
                             type="video/mp4">
                         </video>
@@ -371,7 +371,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="service-box move-anim">
+                <div class="service-box fade-anim video-container">
                   <div class="container">
                     <div class="service-box-inner">
                       <div class="number">/003</div>
@@ -380,7 +380,7 @@
                         <a class="t-btn t-btn-primary" href="contact.html">See Details</a>
                       </div>
                       <div class="video">
-                        <video loop muted autoplay playsinline>
+                        <video loop class="video_on_hover">
                           <source src="https://res.cloudinary.com/dy65k4x9i/video/upload/developments_fu4wli.mp4"
                             type="video/mp4">
                         </video>
@@ -388,7 +388,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="service-box move-anim">
+                <div class="service-box fade-anim video-container">
                   <div class="container">
                     <div class="service-box-inner">
                       <div class="number">/004</div>
@@ -397,7 +397,7 @@
                         <a class="t-btn t-btn-primary" href="contact.html">See Details</a>
                       </div>
                       <div class="video">
-                        <video loop muted autoplay playsinline>
+                        <video loop class="video_on_hover">
                           <source src="https://res.cloudinary.com/dy65k4x9i/video/upload/ui_ux_solutions_rdk7z8.mp4"
                             type="video/mp4">
                         </video>
@@ -864,23 +864,23 @@
         <div class="cta-area-2">
           <div class="container">
             <div class="cta-area-2-inner">
-              <div class="section-header">
-                <div class="section-title-wrapper">
-                  <div class="title-wrapper fade-anim">
-                    <h2 class="section-title">Sounds like a fit? <br>
-                      Let’s connect!</h2>
+              <a href="contact.html">
+                <div class="section-header">
+                  <div class="section-title-wrapper">
+                    <div class="title-wrapper fade-anim">
+                      <h2 class="section-title">Sounds like a fit? <br>
+                        Let’s connect!</h2>
+                    </div>
                   </div>
-                </div>
-                <div class="btn-wrapper fade-anim">
-                  <a href="contact.html">
+                  <div class="btn-wrapper fade-anim">
                     <svg class="icon" viewBox="0 0 137 136" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M19.3893 100.384L89.1716 30.6812L90.0263 29.8275L88.8182 29.8275L2.13868 29.8275L34.3877 0.500022L106.483 0.500028L136.346 0.50003L136.346 30.3275L136.346 102.493L106.983 134.709L106.983 52.5906L106.983 51.3845L106.13 52.2369L38.6574 119.63L19.3893 100.384Z"
                         stroke="white" />
                     </svg>
-                  </a>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -948,7 +948,6 @@
   <script src="assets/vendor/SplitText.min.js"></script>
   <script src="assets/vendor/jquery.meanmenu.min.js"></script>
   <script src="assets/vendor/jquery.nice-select.min.js"></script>
-  <script src="assets/vendor/wow.min.js"></script>
   <script src="assets/vendor/backToTop.js"></script>
 
   <!-- Template Main JS File -->

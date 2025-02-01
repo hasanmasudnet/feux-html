@@ -35,7 +35,6 @@
         $('.header-sticky').removeClass('sticky');
         $('.header-sticky').removeClass('transformed');
       } else {
-        // Scrolling up, remove the class
         $('.header-sticky').addClass('sticky');
         $('.header-sticky').removeClass('transformed');
       }
@@ -214,8 +213,7 @@
     });
   }
 
-  // wow js activation 
-  new WOW().init();
+
 
   // text slider 
   if ('.text-slider-active') {
@@ -287,6 +285,24 @@
 
 
 
+  // Select all parent elements that contain the video
+  var videoContainers = document.querySelectorAll(".video-container");
+
+  videoContainers.forEach(container => {
+    var video = container.querySelector(".video_on_hover");
+
+    container.addEventListener('mouseover', () => {
+      if (video) {
+        video.play();
+      }
+    });
+
+    container.addEventListener('mouseout', () => {
+      if (video) {
+        video.pause();
+      }
+    });
+  });
 
 
   // testimonial active 

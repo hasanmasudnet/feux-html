@@ -932,6 +932,14 @@
         position: relative;
         height: 110px;
 
+        @media #{$xxl} {
+            grid-template-columns: 1fr 890px 1fr;
+        }
+
+        @media #{$xl} {
+            grid-template-columns: 1fr 700px 1fr;
+        }
+
         @media #{$lg} {
             height: 70px;
         }
@@ -1153,7 +1161,7 @@
         padding: 21px 17px;
 
         &:hover {
-            color: var(--action);
+            color: var(--white);
         }
     }
 
@@ -1193,6 +1201,8 @@
 
     .sticky {
         background-image: url("../imgs/shape/shape-42.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 
@@ -1968,6 +1978,10 @@
         a {
             font-size: 22px;
             color: var(--white);
+
+            &:hover {
+                color: var(--action);
+            }
         }
 
     }
@@ -3535,6 +3549,7 @@
 /* brand area style  */
 .brand-area {
     background-color: var(--black);
+    position: relative;
 
     &-inner {
         padding-top: 81px;
@@ -3983,6 +3998,9 @@
 
 /* about area style  */
 .about-area {
+    background-color: #F2F2F2;
+    position: relative;
+
     .section-content-wrapper {
         display: grid;
         gap: 40px 60px;
@@ -4031,16 +4049,17 @@
 
     .about-thumb {
         position: relative;
-        border-radius: 8px;
 
-        >img {
+        .image {
             border-radius: 8px;
+            overflow: hidden;
         }
 
         .btn-wrapper {
             position: absolute;
             left: -80px;
             bottom: -65px;
+            z-index: 1;
 
             @media #{$xl} {
                 left: -65px;
@@ -6613,7 +6632,7 @@
 
 /* service area 5 style  */
 .service-area-5 {
-    border-top: 1px solid var(--primary);
+    border-top: 1px solid rgba(14, 15, 17, 0.1);
 
     .section-header {
         display: grid;
@@ -12897,6 +12916,10 @@
             @media #{$sm} {
                 width: 55px;
             }
+
+            img {
+                animation: spinner 9s linear infinite;
+            }
         }
     }
 
@@ -14974,6 +14997,13 @@
         }
     }
 
+    .t-btn-primary {
+        background-color: #F4F4F4;
+    }
+
+    .t-btn-circle {
+        background-color: #F4F4F4;
+    }
 }
 
 /* contact meta area style  */
@@ -15026,11 +15056,11 @@
 
         &:hover,
         &.active {
-            background-color: var(--action);
+            background-color: var(--white);
             border-color: var(--primary);
 
             .thumb {
-                background-color: var(--action);
+                background-color: var(--white);
                 border-color: var(--primary);
             }
         }

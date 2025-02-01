@@ -142,10 +142,16 @@
   if (('.work-slider').length) {
     var work_slider = new Swiper(".work-slider", {
       loop: false,
+      autoplay: {
+        delay: 2000,
+      },
       slidesPerView: 1,
       spaceBetween: 30,
       speed: 1800,
       watchSlidesProgress: true,
+      mousewheel: {
+        releaseOnEdges: true, // Allows page scrolling when Swiper reaches start/end
+      },
       navigation: {
         prevEl: ".work-button-prev",
         nextEl: ".work-button-next",
@@ -1135,9 +1141,20 @@
     pos.y = rect.top + rect.height / 2 + (relY - rect.height / 2 - scrollTop) / movement;
   }
 
-
-
-
+  // pin on bottom
+  var pin_on_bottom = document.querySelectorAll(".pin-on-bottom");
+  pin_on_bottom.forEach((el) => {
+    gsap.to(el, {
+      scrollTrigger: {
+        trigger: el,
+        pin: true,
+        start: "bottom 95%",
+        end: "bottom top",
+        pinSpacing: false,
+        // markers: true,
+      },
+    });
+  });
 
 
 })(jQuery);

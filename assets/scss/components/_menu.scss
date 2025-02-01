@@ -76,13 +76,14 @@
     transition: all 0.5s;
 
     ul {
-      background: var(--black);
+      background-color: #232529;
       padding: 18px 0px;
-      width: 300px;
+      width: 250px;
       position: absolute;
       inset-inline-start: calc(100% + 10px);
       top: 0;
       opacity: 0;
+      pointer-events: none;
       z-index: 10;
       transition: all 0.5s;
     }

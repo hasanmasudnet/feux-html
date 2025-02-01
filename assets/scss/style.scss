@@ -949,7 +949,7 @@
     }
 
 
-    .main-menu li a {
+    .main-menu>ul>li>a {
         font-size: 18px;
         font-weight: 500;
         line-height: 28px;
@@ -978,6 +978,7 @@
             transition: all 0.3s;
         }
     }
+
 
     .main-menu>ul {
         display: grid;
@@ -2466,11 +2467,10 @@
             margin-bottom: 0;
         }
 
-        img {
+        video {
             width: 100%;
-            height: 120%;
+            height: 100%;
             object-fit: cover;
-            transform: translate(0, -10%);
 
         }
     }
@@ -2727,7 +2727,8 @@
             display: inline-flex;
 
 
-            &:hover {
+            &:hover,
+            &.active {
                 img {
                     opacity: 1;
                 }
@@ -12913,7 +12914,7 @@
         font-size: 24px;
         font-weight: 400;
         line-height: 34px;
-        color: var(--white);
+        color: #AFF42B;
         border: 1px solid var(--white);
         padding: 2px 20px;
         border-radius: 40px;
@@ -12926,20 +12927,21 @@
 
 
     .section-content {
-        margin-top: 20px;
+        margin-top: 380px;
         margin-bottom: 5px;
+
+        @media #{$xxl} {
+            margin-top: 280px;
+        }
+
+        @media #{$xl} {
+            margin-top: 180px;
+        }
 
         .title-wrapper {
             margin-top: 20px;
         }
 
-        .section-title-wrapper {
-            margin-top: 170px;
-
-            @media #{$xxl} {
-                margin-top: 70px;
-            }
-        }
 
         .btn-wrapper {
             display: flex;
@@ -14966,7 +14968,7 @@
 
 .typed-out {
     overflow: hidden;
-    border-right: .11em solid var(--primary);
+    border-right: 0.04em solid var(--primary);
     white-space: nowrap;
     animation: typing 1s steps(20, end) forwards, blinking .8s infinite;
     animation-delay: 0.60s;

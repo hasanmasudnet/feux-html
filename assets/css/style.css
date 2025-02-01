@@ -3881,7 +3881,7 @@ btn-text-flip
 .header-area-3 .header-logo img {
   width: 100%;
 }
-.header-area-3 .main-menu li a {
+.header-area-3 .main-menu > ul > li > a {
   font-size: 18px;
   font-weight: 500;
   line-height: 28px;
@@ -3889,15 +3889,15 @@ btn-text-flip
   border-top: 1px solid rgba(14, 15, 17, 0.1);
   position: relative;
 }
-.header-area-3 .main-menu li a:hover {
+.header-area-3 .main-menu > ul > li > a:hover {
   color: var(--primary);
 }
-.header-area-3 .main-menu li a:hover:before {
+.header-area-3 .main-menu > ul > li > a:hover:before {
   width: 100%;
   left: 0;
   right: auto;
 }
-.header-area-3 .main-menu li a:before {
+.header-area-3 .main-menu > ul > li > a:before {
   position: absolute;
   content: "";
   width: 0%;
@@ -5203,12 +5203,11 @@ btn-text-flip
     margin-bottom: 0;
   }
 }
-.hero-area .hero-thumb img {
+.hero-area .hero-thumb video {
   width: 100%;
-  height: 120%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transform: translate(0, -10%);
 }
 
 /* hero area 2 style  */
@@ -5463,7 +5462,7 @@ btn-text-flip
   position: relative;
   display: inline-flex;
 }
-.hero-area-2 .social-links a:hover img {
+.hero-area-2 .social-links a:hover img, .hero-area-2 .social-links a.active img {
   opacity: 1;
 }
 .hero-area-2 .social-links a img {
@@ -14710,7 +14709,7 @@ btn-text-flip
   font-size: 24px;
   font-weight: 400;
   line-height: 34px;
-  color: var(--white);
+  color: #AFF42B;
   border: 1px solid var(--white);
   padding: 2px 20px;
   border-radius: 40px;
@@ -14720,19 +14719,21 @@ btn-text-flip
   display: none;
 }
 .video-area .section-content {
-  margin-top: 20px;
+  margin-top: 380px;
   margin-bottom: 5px;
+}
+@media only screen and (max-width: 1919px) {
+  .video-area .section-content {
+    margin-top: 280px;
+  }
+}
+@media only screen and (max-width: 1399px) {
+  .video-area .section-content {
+    margin-top: 180px;
+  }
 }
 .video-area .section-content .title-wrapper {
   margin-top: 20px;
-}
-.video-area .section-content .section-title-wrapper {
-  margin-top: 170px;
-}
-@media only screen and (max-width: 1919px) {
-  .video-area .section-content .section-title-wrapper {
-    margin-top: 70px;
-  }
 }
 .video-area .section-content .btn-wrapper {
   display: flex;
@@ -16569,7 +16570,7 @@ btn-text-flip
 
 .typed-out {
   overflow: hidden;
-  border-right: 0.11em solid var(--primary);
+  border-right: 0.04em solid var(--primary);
   white-space: nowrap;
   animation: typing 1s steps(20, end) forwards, blinking 0.8s infinite;
   animation-delay: 0.6s;

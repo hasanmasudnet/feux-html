@@ -3847,6 +3847,9 @@ btn-text-flip
 .header-area-2 .sticky {
   background-color: #FFFAF4;
 }
+.body-inner-page .header-area-2 .sticky {
+  background-color: #FFFFFF;
+}
 
 /* header area 3 style  */
 .header-area-3 {
@@ -4079,6 +4082,9 @@ btn-text-flip
 }
 .header-area-5 .header-offcanvas i {
   font-size: 22px;
+}
+.header-area-5 .sticky {
+  background-image: url("../imgs/shape/shape-42.jpg");
 }
 
 .header-sticky {
@@ -4596,6 +4602,10 @@ btn-text-flip
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+}
+.footer-area-2 .social-links a:hover {
+  background-color: var(--white);
+  color: var(--primary);
 }
 
 /* footer area 3 style  */

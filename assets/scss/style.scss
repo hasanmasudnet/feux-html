@@ -909,6 +909,10 @@
 
     .sticky {
         background-color: #FFFAF4;
+
+        .body-inner-page & {
+            background-color: #FFFFFF;
+        }
     }
 }
 
@@ -1187,7 +1191,11 @@
         }
     }
 
+    .sticky {
+        background-image: url("../imgs/shape/shape-42.jpg");
+    }
 }
+
 
 
 // sticky header style
@@ -1786,6 +1794,11 @@
             justify-content: center;
             align-items: center;
             border-radius: 50%;
+
+            &:hover {
+                background-color: var(--white);
+                color: var(--primary);
+            }
         }
 
     }

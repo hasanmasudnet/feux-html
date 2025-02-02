@@ -144,6 +144,7 @@
       loop: false,
       autoplay: {
         delay: 2000,
+        disableOnInteraction: false,
       },
       slidesPerView: 1,
       spaceBetween: 30,
@@ -186,10 +187,17 @@
   if (('.work-2-slider').length) {
     var work_2_slider = new Swiper(".work-2-slider", {
       loop: false,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
       slidesPerView: 1,
       spaceBetween: 30,
       speed: 1800,
       watchSlidesProgress: true,
+      mousewheel: {
+        releaseOnEdges: true, // Allows page scrolling when Swiper reaches start/end
+      },
       navigation: {
         prevEl: ".work-2-button-prev",
         nextEl: ".work-2-button-next",
@@ -1145,14 +1153,32 @@
   var pin_on_bottom = document.querySelectorAll(".pin-on-bottom");
   pin_on_bottom.forEach((el) => {
     gsap.to(el, {
+      paddingBottom: "500px",
       scrollTrigger: {
         trigger: el,
         pin: true,
-        start: "bottom 95%",
+        start: "bottom 90%",
         end: "bottom top",
         pinSpacing: false,
         // markers: true,
       },
+    });
+  });
+
+
+  // gsap nav 
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1); // Get section ID
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: 'smooth',
+        });
+      }
     });
   });
 

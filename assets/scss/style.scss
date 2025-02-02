@@ -755,7 +755,7 @@
         }
     }
 
-    .main-menu li a {
+    .main-menu>ul>li>a {
         font-size: 16px;
         font-weight: 500;
         line-height: 24px;
@@ -1203,6 +1203,8 @@
         background-image: url("../imgs/shape/shape-42.jpg");
         background-repeat: no-repeat;
         background-size: cover;
+        background-color: transparent;
+
     }
 }
 
@@ -3068,8 +3070,20 @@
         border-radius: 40px;
         overflow: hidden;
 
+        @media #{$lg} {
+            border-radius: 20px;
+        }
+
         img {
             border-radius: 40px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-height: 400px;
+
+            @media #{$lg} {
+                border-radius: 20px;
+            }
         }
     }
 }
@@ -3259,6 +3273,12 @@
                 margin-top: 32px;
             }
 
+        }
+
+        .t-btn-primary:hover {
+            color: var(--white);
+            background-color: var(--black);
+            border-color: transparent;
         }
     }
 
@@ -4572,6 +4592,8 @@
 
         img {
             width: 100%;
+            border-radius: 10px;
+
         }
     }
 
@@ -5816,6 +5838,11 @@
                 align-items: flex-start;
                 align-self: flex-start;
 
+                @media #{$lg} {
+                    font-size: 16px;
+                    gap: 7px;
+                }
+
                 &:hover {
                     span {
                         opacity: 0.7;
@@ -5837,7 +5864,11 @@
                     width: 123px;
 
                     @media #{$lg} {
-                        width: 113px;
+                        width: 93px;
+                    }
+
+                    @media #{$xs} {
+                        width: 73px;
                     }
 
                     >* {
@@ -6141,6 +6172,10 @@
 
             @media #{$sm} {
                 display: none;
+            }
+
+            img {
+                animation: spinner 9s linear infinite;
             }
         }
     }
@@ -6524,6 +6559,7 @@
         border-radius: 100px;
         padding: 30px 50px;
         transition: all 0.5s;
+        cursor: pointer;
 
         @media #{$md} {
             border-radius: 100px;
@@ -14521,8 +14557,8 @@
             overflow: hidden;
             border: 10px solid #F0F2F4;
             position: absolute;
-            right: 0;
-            bottom: 0;
+            right: 26px;
+            bottom: 20px;
 
             @media #{$xl} {
                 width: 80px;
@@ -15157,7 +15193,7 @@
     overflow: hidden;
     border-right: 0.04em solid var(--primary);
     white-space: nowrap;
-    animation: typing 1s steps(20, end) forwards, blinking .8s infinite;
+    animation: typing 1s steps(20, end) forwards, blinking 1s infinite;
     animation-delay: 0.60s;
     width: 0;
     padding-right: 10px;

@@ -1449,6 +1449,7 @@ section {
 }
 .t-btn-primary.bg-active:hover {
   background-color: var(--primary);
+  border-color: transparent;
   color: white;
 }
 .dir-rtl .t-btn-primary i {
@@ -3729,13 +3730,13 @@ btn-text-flip
     font-size: 14px;
   }
 }
-.header-area .main-menu li a {
+.header-area .main-menu > ul > li > a {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   padding: 0;
 }
-.header-area .main-menu li a:hover {
+.header-area .main-menu > ul > li > a:hover {
   color: var(--action);
 }
 .header-area .social-links li:not(:first-child) {
@@ -4098,6 +4099,7 @@ btn-text-flip
   background-image: url("../imgs/shape/shape-42.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: transparent;
 }
 
 .header-sticky {
@@ -5788,8 +5790,23 @@ btn-text-flip
   border-radius: 40px;
   overflow: hidden;
 }
+@media only screen and (max-width: 1199px) {
+  .hero-area-3 .image-wrapper {
+    border-radius: 20px;
+  }
+}
 .hero-area-3 .image-wrapper img {
   border-radius: 40px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 400px;
+}
+@media only screen and (max-width: 1199px) {
+  .hero-area-3 .image-wrapper img {
+    border-radius: 20px;
+  }
 }
 
 /* hero area 4 style  */
@@ -5955,6 +5972,11 @@ btn-text-flip
   .hero-area-4 .section-content .btn-wrapper {
     margin-top: 32px;
   }
+}
+.hero-area-4 .section-content .t-btn-primary:hover {
+  color: var(--white);
+  background-color: var(--black);
+  border-color: transparent;
 }
 .hero-area-4 .section-title {
   font-size: 90px;
@@ -7139,6 +7161,7 @@ btn-text-flip
 }
 .about-area-5 .counter-thumb img {
   width: 100%;
+  border-radius: 10px;
 }
 .about-area-5 .counter-item:not(:first-child) {
   margin-top: 64px;
@@ -8298,6 +8321,12 @@ btn-text-flip
   align-items: flex-start;
   align-self: flex-start;
 }
+@media only screen and (max-width: 1199px) {
+  .service-area .service-box .btn-wrapper .t-btn {
+    font-size: 16px;
+    gap: 7px;
+  }
+}
 .service-area .service-box .btn-wrapper .t-btn:hover span {
   opacity: 0.7;
 }
@@ -8313,7 +8342,12 @@ btn-text-flip
 }
 @media only screen and (max-width: 1199px) {
   .service-area .service-box .btn-wrapper .t-btn svg {
-    width: 113px;
+    width: 93px;
+  }
+}
+@media (max-width: 575px) {
+  .service-area .service-box .btn-wrapper .t-btn svg {
+    width: 73px;
   }
 }
 .service-area .service-box .btn-wrapper .t-btn svg > * {
@@ -8601,6 +8635,9 @@ btn-text-flip
   .service-area-2 .service-box .shape-1 {
     display: none;
   }
+}
+.service-area-2 .service-box .shape-1 img {
+  animation: spinner 9s linear infinite;
 }
 
 /* service area 3 style  */
@@ -8943,6 +8980,7 @@ btn-text-flip
   border-radius: 100px;
   padding: 30px 50px;
   transition: all 0.5s;
+  cursor: pointer;
 }
 @media only screen and (max-width: 991px) {
   .service-area-4 .service-name {
@@ -16167,8 +16205,8 @@ btn-text-flip
   overflow: hidden;
   border: 10px solid #F0F2F4;
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 26px;
+  bottom: 20px;
 }
 @media only screen and (max-width: 1399px) {
   .testimonial-area-5 .testimonial-item .avatar {
@@ -16726,7 +16764,7 @@ btn-text-flip
   overflow: hidden;
   border-right: 0.04em solid var(--primary);
   white-space: nowrap;
-  animation: typing 1s steps(20, end) forwards, blinking 0.8s infinite;
+  animation: typing 1s steps(20, end) forwards, blinking 1s infinite;
   animation-delay: 0.6s;
   width: 0;
   padding-right: 10px;

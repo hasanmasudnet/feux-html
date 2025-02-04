@@ -96,6 +96,11 @@
     meanMenuContainer: '.mobile-menu',
     meanMenuCloseSize: '28px',
   });
+  $('.main-menu').meanmenu({
+    meanScreenWidth: "5000",
+    meanMenuContainer: '.mobile-menu.always-open',
+    meanMenuCloseSize: '28px',
+  });
 
 
   // Register GSAP Plugins
@@ -1154,12 +1159,14 @@
   pin_on_bottom.forEach((el) => {
     gsap.to(el, {
       paddingBottom: "500px",
+      ease: "none",
       scrollTrigger: {
         trigger: el,
         pin: true,
         start: "bottom 90%",
         end: "bottom top",
         pinSpacing: false,
+        scrub: 2,
         // markers: true,
       },
     });

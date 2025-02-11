@@ -78,6 +78,12 @@
         line-height: 28px;
         text-transform: uppercase;
 
+        @media #{$lg} {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px;
+        }
+
         &:before {
             content: url(../imgs/shape/shape-14.png);
             margin-inline-end: 14px;
@@ -532,6 +538,22 @@
         margin-top: 6px;
     }
 
+    .t-btn-group {
+        margin-top: 20px;
+
+        @media (min-width:576px) {
+            display: none;
+        }
+
+        .t-btn-primary {
+            background-color: var(--white);
+        }
+
+        .t-btn-circle {
+            background-color: var(--white);
+        }
+    }
+
     .post-image {
         display: grid;
         gap: 14px;
@@ -933,6 +955,12 @@
 
     }
 
+    .header-button {
+        @media #{$xs} {
+            display: none;
+        }
+    }
+
     .header-offcanvas {
         margin-top: 6px;
     }
@@ -1023,6 +1051,12 @@
 
         }
 
+    }
+
+    .header-button {
+        @media #{$xs} {
+            display: none;
+        }
     }
 
     .header-offcanvas {
@@ -1135,6 +1169,12 @@
         font-size: 14px;
     }
 
+    .header-button {
+        @media #{$xs} {
+            display: none;
+        }
+    }
+
     .header-offcanvas {
         text-align: right;
     }
@@ -1166,6 +1206,7 @@
 
         @media #{$lg} {
             height: 70px;
+            padding: 24px 24px;
         }
 
         &>*:first-child {
@@ -1221,6 +1262,12 @@
 
         }
 
+    }
+
+    .header-button {
+        @media #{$xs} {
+            display: none;
+        }
     }
 
     .header-offcanvas {
@@ -1319,9 +1366,16 @@
 
     }
 
+    .header-button {
+        @media #{$xs} {
+            display: none;
+        }
+    }
+
     .header-offcanvas {
         i {
             font-size: 22px;
+            color: var(--white);
         }
     }
 
@@ -2465,6 +2519,10 @@
 
         @media #{$sm} {
             font-size: 50px;
+        }
+
+        @media #{$xs} {
+            font-size: 46px;
         }
     }
 
@@ -7878,7 +7936,7 @@
         line-height: 1.11;
         letter-spacing: -0.01em;
         text-align: center;
-        color: #5F6062;
+        color: var(--white);
 
         @media #{$xxl} {
             font-size: 160px;
@@ -8044,7 +8102,7 @@
     .works-wrapper-box {
         position: relative;
         margin-bottom: 12px;
-        margin-top: 20px;
+        margin-top: 30px;
 
         @media #{$md} {
             margin-top: 20px;
@@ -8550,6 +8608,8 @@
         flex-wrap: wrap;
         align-items: center;
         gap: 10px 30px;
+        position: relative;
+        z-index: 1;
     }
 
     .nice-select {
@@ -8844,6 +8904,8 @@
         flex-wrap: wrap;
         align-items: center;
         gap: 10px 30px;
+        position: relative;
+        z-index: 1;
     }
 
     .nice-select {
@@ -9067,6 +9129,8 @@
         flex-wrap: wrap;
         align-items: center;
         gap: 10px 30px;
+        position: relative;
+        z-index: 1;
     }
 
     .nice-select {

@@ -69,7 +69,7 @@
   $(document).ready(function () {
     $('#container').addClass('loaded');
     if ($('#container').hasClass('loaded')) {
-      $('#preloader').delay(1000).queue(function () {
+      $('#preloader').delay(300).queue(function () {
         $(this).remove();
       });
     }
@@ -96,11 +96,7 @@
     meanMenuContainer: '.mobile-menu',
     meanMenuCloseSize: '28px',
   });
-  $('.main-menu').meanmenu({
-    meanScreenWidth: "5000",
-    meanMenuContainer: '.mobile-menu.always-open',
-    meanMenuCloseSize: '28px',
-  });
+
 
 
   // Register GSAP Plugins
@@ -1154,6 +1150,21 @@
     pos.y = rect.top + rect.height / 2 + (relY - rect.height / 2 - scrollTop) / movement;
   }
 
+  // 11. Pin Active
+  var pin_fixed = document.querySelector('.pin-element');
+  if (pin_fixed && device_width > 991) {
+
+    gsap.to(".pin-element", {
+      scrollTrigger: {
+        trigger: ".pin-area",
+        pin: ".pin-element",
+        start: "top top",
+        end: "bottom bottom",
+        pinSpacing: false,
+      }
+    });
+  }
+
   // pin on bottom
   var pin_on_bottom = document.querySelectorAll(".pin-on-bottom");
   pin_on_bottom.forEach((el) => {
@@ -1166,7 +1177,7 @@
         start: "bottom 90%",
         end: "bottom top",
         pinSpacing: false,
-        scrub: 2,
+        scrub: 3,
         // markers: true,
       },
     });

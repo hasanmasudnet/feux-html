@@ -18,11 +18,17 @@
     .spinner {
       animation: spinner 1s infinite linear;
       border-radius: 50%;
-      height: 9em;
-      width: 9em;
-      border: 10px solid var(--primary);
+      height: 6em;
+      width: 6em;
+      border: 7px solid var(--primary);
       border-top-color: var(--white);
       margin: 0 auto 3.5em auto;
+
+      @media #{$lg} {
+        height: 4em;
+        width: 4em;
+        border-width: 5px;
+      }
 
       @media #{$sm} {
         margin: 0 auto .2em auto;

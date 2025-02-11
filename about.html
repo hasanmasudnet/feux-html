@@ -139,7 +139,13 @@
                   </ul>
                 </li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li class="menu-item-has-children">
+                  <a href="services.html">Service</a>
+                  <ul class="dp-menu">
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="service-details.html">Service Details</a></li>
+                  </ul>
+                </li>
                 <li class="menu-item-has-children">
                   <a href="blog.html">Blog</a>
                   <ul class="dp-menu">
@@ -152,7 +158,13 @@
                   <a href="#">Pages</a>
                   <ul class="dp-menu">
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
+                    <li class="menu-item-has-children">
+                      <a href="services.html">Service</a>
+                      <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="service-details.html">Service Details</a></li>
+                      </ul>
+                    </li>
                     <li class="menu-item-has-children">
                       <a href="#">Portfolio Pages</a>
                       <ul>
@@ -230,14 +242,14 @@
                 <div class="section-content">
                   <div class="section-title-wrapper">
                     <div class="title-wrapper">
-                      <h1 class="section-title">ABOUT</h1>
+                      <h1 class="section-title char-anim">ABOUT</h1>
                     </div>
                     <div class="subtitle-wrapper">
-                      <span class="section-subtitle">Agency</span>
+                      <span class="section-subtitle char-anim" data-delay="0.75">Agency</span>
                     </div>
                   </div>
                 </div>
-                <div class="breadcrumb-wrapper">
+                <div class="breadcrumb-wrapper fade-anim" data-direction="left" data-offset="100" data-delay="0.90">
                   <ul class="breadcrumb">
                     <li><a href="index.html">HOME</a></li>
                     <li>ABOUT AGENCY</li>
@@ -250,7 +262,7 @@
         <!-- page title area end  -->
 
         <!-- about area start  -->
-        <section class="about-area page-services">
+        <section class="about-area page-about">
           <div class="container">
             <div class="about-area-inner section-spacing">
               <div class="section-content-wrapper btn-move">
@@ -283,12 +295,14 @@
                 </div>
                 <div class="about-thumb fade-anim">
                   <div class="btn-wrapper">
-                    <a href="about.html" class="circle-text btn-item">
+                    <a href="#awards" class="circle-text btn-item">
                       <img src="assets/imgs/shape/shape-2.png" alt="image" class="text">
                       <img src="assets/imgs/shape/shape-3.png" alt="image" class="icon">
                     </a>
                   </div>
-                  <img src="assets/imgs/gallery/image-2.jpg" alt="image">
+                  <div class="image img_anim_reveal">
+                    <img src="assets/imgs/gallery/image-2.jpg" alt="image">
+                  </div>
                 </div>
               </div>
               <div class="counter-wrapper-box">
@@ -317,7 +331,7 @@
         <!-- about area end  -->
 
         <!-- video area start  -->
-        <section class="video-area">
+        <section class="video-area fade-anim">
           <div class="area-bg">
             <video loop muted autoplay playsinline>
               <source
@@ -329,10 +343,10 @@
             <div class="video-area-inner section-spacing">
               <div class="section-content">
                 <div class="section-title-wrapper">
-                  <div class="subtitle-wrapper">
+                  <div class="subtitle-wrapper fade-anim">
                     <span class="section-subtitle">as a creative studio</span>
                   </div>
-                  <div class="title-wrapper">
+                  <div class="title-wrapper fade-anim ">
                     <h2 class="section-title">We specialize in transforming bold ideas into captivating visual
                       experiences.</h2>
                   </div>
@@ -349,12 +363,12 @@
             <div class="brand-area-6-inner section-spacing-top">
               <div class="section-header">
                 <div class="section-title-wrapper">
-                  <div class="title-wrapper">
+                  <div class="title-wrapper fade-anim">
                     <h2 class="section-title">300+ Trusted Partner All Over The World</h2>
                   </div>
                 </div>
               </div>
-              <div class="brands-wrapper-box">
+              <div class="brands-wrapper-box fade-anim">
                 <div class="brands-wrapper">
                   <div class="swiper brand-slider-active">
                     <div class="swiper-wrapper">
@@ -413,14 +427,14 @@
             <div class="container">
               <div class="section-header">
                 <div class="section-title-wrapper">
-                  <div class="subtitle-wrapper">
+                  <div class="subtitle-wrapper fade-anim">
                     <span class="section-subtitle fade-anim">Our Team Members</span>
                   </div>
-                  <div class="title-wrapper">
+                  <div class="title-wrapper fade-anim">
                     <h2 class="section-title fade-anim">Meet our professionals</h2>
                   </div>
                 </div>
-                <div class="btn-wrapper">
+                <div class="btn-wrapper fade-anim">
                   <div class="t-btn-group fade-anim">
                     <a class="t-btn t-btn-circle" href="team.html">
                       <i class="fa-solid fa-arrow-right"></i>
@@ -433,7 +447,7 @@
                 </div>
               </div>
             </div>
-            <div class="team-wrapper-box">
+            <div class="team-wrapper-box fade-anim">
               <div class="container">
                 <div class="team-wrapper team-hover-active fade-anim">
                   <div class="team-box">
@@ -485,7 +499,7 @@
         <!-- text slider area start  -->
         <div class="text-slider-area">
           <div class="text-slider-box">
-            <div class="text-slider">
+            <div class="text-slider fade-anim">
               <div class="swiper text-slider-active">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -526,15 +540,15 @@
             <div class="container">
               <div class="section-header">
                 <div class="section-title-wrapper">
-                  <div class="subtitle-wrapper">
-                    <span class="section-subtitle fade-anim">Our Blogs & News</span>
+                  <div class="subtitle-wrapper fade-anim">
+                    <span class="section-subtitle">Our Blogs & News</span>
                   </div>
-                  <div class="title-wrapper">
-                    <h2 class="section-title fade-anim">Latest insights</h2>
+                  <div class="title-wrapper fade-anim">
+                    <h2 class="section-title">Latest insights</h2>
                   </div>
                 </div>
-                <div class="btn-wrapper">
-                  <div class="t-btn-group fade-anim">
+                <div class="btn-wrapper fade-anim">
+                  <div class="t-btn-group">
                     <a class="t-btn t-btn-circle" href="blog.html">
                       <i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -546,7 +560,7 @@
                 </div>
               </div>
             </div>
-            <div class="blogs-wrapper-box">
+            <div class="blogs-wrapper-box fade-anim">
               <div class="container">
                 <div class="blogs-wrapper">
                   <article class="blog fade-anim" data-delay="0.30" data-direction="right">

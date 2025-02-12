@@ -472,19 +472,25 @@
     padding: 0px 0px;
     overflow-y: scroll;
     transition: all 0.5s;
-    overflow-y: scroll;
     overscroll-behavior-y: contain;
-    scrollbar-width: auto;
+
 
     @media #{$xs} {
         width: 100%;
     }
 
+    &::-webkit-scrollbar {
+        width: 0;
+    }
 
 }
 
 .side-info.info-open {
     inset-inline-end: 0;
+}
+
+.side-info-content {
+    position: relative;
 }
 
 .offset {
@@ -2565,6 +2571,10 @@
 
     .section-header {
         margin-top: 150px;
+
+        @media #{$sm} {
+            margin-top: 80px;
+        }
     }
 
     .section-content-wrapper {
@@ -3597,6 +3607,7 @@
         font-weight: 250;
         line-height: 1.18;
         color: var(--white);
+        display: inline-block;
 
         @media #{$xxl} {
             font-size: 34px;
@@ -3615,7 +3626,7 @@
         font-size: 180px;
         font-weight: 250;
         line-height: 1.07;
-        letter-spacing: -0.01em;
+        letter-spacing: 0;
         color: var(--white);
 
         @media #{$xxl} {
@@ -4683,6 +4694,10 @@
     .thumb {
         opacity: 0.5;
         margin-bottom: 38px;
+
+        @media #{$md} {
+            text-align: center;
+        }
     }
 
     .section-content {
@@ -4912,6 +4927,10 @@
                 position: relative;
                 overflow: hidden;
                 z-index: 1;
+
+                img {
+                    width: 100%;
+                }
 
 
             }
@@ -9444,6 +9463,7 @@
             img {
                 transform: scale(1.05);
                 transition: all 0.5s;
+                width: 100%;
             }
         }
 
@@ -10218,6 +10238,10 @@
             grid-template-columns: 1fr auto;
         }
 
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+
         .name {
             font-size: 30px;
             font-weight: 400;
@@ -10251,6 +10275,9 @@
                 order: 3;
             }
 
+            @media #{$xs} {
+                order: unset;
+            }
 
             &:before {
                 content: "";
@@ -10271,6 +10298,21 @@
             color: rgba(14, 15, 17, 0.1);
             transition: all 0.5s;
 
+            @media #{$lg} {
+                grid-row: span 2;
+            }
+
+            @media #{$md} {
+                grid-row: auto;
+            }
+
+            @media #{$sm} {
+                grid-row: span 2;
+            }
+
+            @media #{$xs} {
+                grid-row: auto;
+            }
         }
     }
 

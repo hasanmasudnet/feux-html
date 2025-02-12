@@ -57,7 +57,10 @@
         smooth: 0.9,
         effects: device_width < 1025 ? false : true,
         smoothTouch: 0.1,
-        normalizeScroll: true,
+        // normalizeScroll: true,
+        normalizeScroll: {
+          allowNestedScroll: true,
+        },
         ignoreMobileResize: true,
       });
     }

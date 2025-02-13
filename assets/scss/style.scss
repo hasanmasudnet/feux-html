@@ -1308,7 +1308,12 @@
         }
 
         &>*:first-child {
-            margin-inline-end: auto;
+            margin-inline-end: 60px;
+
+            @media #{$xxl} {
+                margin-inline-end: 30px;
+
+            }
         }
     }
 
@@ -1330,14 +1335,18 @@
     }
 
     .header-nav {
-        margin-right: -50%;
+        margin-right: auto;
     }
 
     .main-menu>ul>li>a {
         font-size: 18px;
-        font-weight: 500;
+        font-weight: 400;
         color: var(--white);
         padding: 21px 17px;
+
+        @media #{$xl} {
+            font-size: 17px;
+        }
 
         &:hover {
             color: var(--white);
@@ -3559,7 +3568,7 @@
 
 /* hero area 5 style  */
 .hero-area-5 {
-    background-color: var(--primary);
+    background-color: #010001;
     position: relative;
     z-index: 3;
 
@@ -3632,6 +3641,7 @@
         line-height: 1.07;
         letter-spacing: 0;
         color: var(--white);
+        letter-spacing: -0.01em;
 
         @media #{$xxl} {
             font-size: 140px;
@@ -3651,7 +3661,7 @@
 
         span {
             font-weight: 500;
-            background: linear-gradient(236.85deg, #FFFFFF 13.97%, #FF9292 53.87%, #FF48E7 79.9%, #8800FF 104.89%);
+            background-image: linear-gradient(235.28deg, #FFD7D7 -1.14%, #FF9292 40.74%, #FF48E7 68.06%, #BA1EF5 94.29%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;

@@ -1475,6 +1475,7 @@
             font-size: 20px;
             line-height: 28px;
             color: var(--white);
+            opacity: 0.74;
 
             @media #{$xl} {
                 font-size: 18px;
@@ -1511,6 +1512,7 @@
 
                     &::placeholder {
                         color: currentColor;
+                        opacity: 0.74;
                     }
                 }
 
@@ -1618,6 +1620,7 @@
             font-weight: 400;
             line-height: 28px;
             color: var(--white);
+            opacity: 0.74;
 
             &:not(:first-child) {
                 margin-top: 9px;
@@ -1731,6 +1734,7 @@
             font-weight: 400;
             line-height: 28px;
             color: var(--white);
+            opacity: 0.74;
             text-align: center;
 
             a:hover {
@@ -4280,6 +4284,7 @@
     .section-content {
         .text {
             max-width: 530px;
+            opacity: 0.7;
         }
 
         .title-wrapper {
@@ -5269,6 +5274,7 @@
 
         .text {
             margin-top: 21px;
+            opacity: 0.7;
         }
 
         .content {
@@ -6062,7 +6068,8 @@
             font-size: 18px;
             font-weight: 400;
             line-height: 28px;
-            color: rgba(255, 255, 255, 0.7);
+            color: var(--white);
+            opacity: 0.7;
             max-width: 478px;
         }
 
@@ -10770,6 +10777,10 @@
             grid-template-columns: 1fr;
         }
 
+        .text {
+            opacity: 0.7;
+        }
+
         .title-wrapper {
             margin-top: 7px;
         }
@@ -11173,6 +11184,13 @@
                     transform: scale(1.1);
                 }
             }
+
+            .title {
+                a {
+                    background-size: 100% 100%;
+
+                }
+            }
         }
 
         .thumb {
@@ -11225,6 +11243,17 @@
 
             @media #{$lg} {
                 font-size: 20px;
+            }
+
+            a {
+                width: 100%;
+                background-image: linear-gradient(transparent calc(100% - 1px), var(--primary) 1px);
+                background-repeat: no-repeat;
+                background-size: 0% 100%;
+                transition: background-size 1s;
+                background-position: 0 0px;
+
+
             }
         }
 
@@ -14238,6 +14267,7 @@
             display: block;
             padding-inline-start: 58px;
             margin-top: 4px;
+            opacity: 0.7;
 
             @media #{$lg} {
                 font-size: 16px;

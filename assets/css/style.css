@@ -741,6 +741,7 @@ body {
 .body-wrapper {
   background-color: var(--white);
   overflow: hidden;
+  scroll-behavior: smooth !important;
 }
 .dark .body-wrapper {
   background-color: var(--black);
@@ -3784,7 +3785,6 @@ btn-text-flip
   top: 0;
   left: 0;
   width: 100%;
-  border-top: 1px solid rgba(14, 15, 17, 0.08);
   margin-top: 20px;
 }
 .header-area-inner {
@@ -3818,6 +3818,7 @@ btn-text-flip
 .header-area .header-main {
   padding-top: 14px;
   padding-bottom: 14px;
+  border-top: 1px solid rgba(14, 15, 17, 0.08);
 }
 .header-area .header-main .main-menu {
   display: block !important;
@@ -5208,6 +5209,7 @@ btn-text-flip
   font-weight: 500;
   line-height: 1.41;
   letter-spacing: 0.2em;
+  display: inline-block;
 }
 @media only screen and (max-width: 1919px) {
   .hero-area .section-subtitle {
@@ -8912,6 +8914,7 @@ btn-text-flip
 .services-area-3 {
   background-color: #181A1E;
   border-radius: 40px 40px 0 0;
+  position: relative;
 }
 @media only screen and (max-width: 1199px) {
   .services-area-3 {

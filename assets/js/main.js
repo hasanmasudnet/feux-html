@@ -23,7 +23,7 @@
 
   //  sticky header
   function pinned_header() {
-    var lastScrollTop = 0;
+    var lastScrollTop = 500;
 
     windowOn.on('scroll', function () {
       var currentScrollTop = $(this).scrollTop();
@@ -42,6 +42,7 @@
     });
   }
   pinned_header();
+
 
 
 

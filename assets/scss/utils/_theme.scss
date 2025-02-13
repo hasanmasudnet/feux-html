@@ -41,6 +41,7 @@ body {
 .body-wrapper {
   background-color: var(--white);
   overflow: hidden;
+  scroll-behavior: smooth !important;
 
   @include dark {
     background-color: var(--black);

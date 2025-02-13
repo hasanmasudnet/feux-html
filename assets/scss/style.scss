@@ -810,7 +810,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    border-top: 1px solid rgba(14, 15, 17, 0.08);
     margin-top: 20px;
 
 
@@ -843,6 +842,8 @@
     .header-main {
         padding-top: 14px;
         padding-bottom: 14px;
+        border-top: 1px solid rgba(14, 15, 17, 0.08);
+
 
         .main-menu {
             display: block !important;
@@ -2489,6 +2490,7 @@
         font-weight: 500;
         line-height: 1.41;
         letter-spacing: 0.2em;
+        display: inline-block;
 
         @media #{$xxl} {
             font-size: 20px;
@@ -6484,6 +6486,8 @@
 .services-area-3 {
     background-color: #181A1E;
     border-radius: 40px 40px 0 0;
+    position: relative;
+
 
     @media #{$lg} {
         border-radius: 20px 20px 0 0;

@@ -740,8 +740,6 @@ body {
 
 .body-wrapper {
   background-color: var(--white);
-  overflow: hidden;
-  scroll-behavior: smooth !important;
 }
 .dark .body-wrapper {
   background-color: var(--black);
@@ -10392,7 +10390,7 @@ btn-text-flip
 @media only screen and (max-width: 991px) {
   .work-area-3 .work-box .content {
     position: static;
-    margin-top: 10px;
+    margin-top: 20px;
   }
 }
 .work-area-3 .work-box .year {

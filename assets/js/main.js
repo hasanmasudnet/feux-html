@@ -2,15 +2,46 @@
 ==================== JS INDEX ======================
 ****************************************************
 
-// sticky header 
-// Smooth active
-// Preloader
-// Side Info Js
-// meanmenu activation 
-// Register GSAP Plugins
-// Counter active
-// testimonial slider
-// wow js activation 
+  // sticky header
+  // Smooth active
+  // Preloader
+  // nice select activation 
+  // Side Info Js
+  // meanmenu activation 
+  // Register GSAP Plugins
+  // Counter active
+  // Magnific Video popup
+  // work slider
+  // work-2 slider
+  // text slider 
+  // text slider 2
+  // brand slider 
+  // faq number active 
+  // team hover active 
+  // blog hover active 
+  // service hover active 
+  // process hover active 
+  // Play video on hover
+  // testimonial active 
+  // testimonial 2 active
+  // testimonial 3 active 
+  // testimonial 4 active
+  // testimonial 5 active
+  // Image Reveal Animation
+  // stacking item with header
+  // stacking item with space
+  // stacking item with scale
+  // hover move btn 
+  // GSAP Fade Animation 
+  // Animation Word
+  // Animation Character
+  // typewritter text 
+  // button effect
+  // Pin Active
+  // pin on bottom
+  // gsap nav 
+
+
 
 
 ****************************************************/
@@ -21,7 +52,7 @@
   var windowOn = $(window);
   let mm = gsap.matchMedia();
 
-  //  sticky header
+  // sticky header
   function pinned_header() {
     var lastScrollTop = 500;
 
@@ -247,7 +278,7 @@
     });
   }
 
-  // text slider 
+  // text slider 2
   if ('.text-slider-active-2') {
     var text_slider_active_2 = new Swiper(".text-slider-active-2", {
       slidesPerView: 'auto',
@@ -303,7 +334,7 @@
 
 
 
-  // Select all parent elements that contain the video
+  // Play video on hover
   var videoContainers = document.querySelectorAll(".video-container");
 
   videoContainers.forEach(container => {
@@ -876,7 +907,7 @@
   });
 
 
-  // Full Character Setup 
+  // Animation Character
   var animation_char_come_items = document.querySelectorAll(".char-anim")
   animation_char_come_items.forEach((item) => {
 
@@ -1153,7 +1184,7 @@
     pos.y = rect.top + rect.height / 2 + (relY - rect.height / 2 - scrollTop) / movement;
   }
 
-  // 11. Pin Active
+  // Pin Active
   var pin_fixed = document.querySelector('.pin-element');
   if (pin_fixed && device_width > 991) {
 

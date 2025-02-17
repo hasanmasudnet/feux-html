@@ -3635,6 +3635,10 @@
             font-size: 26px;
         }
 
+        @media #{$xs} {
+            font-size: 22px;
+        }
+
         &:before {
             display: none;
         }
@@ -3661,7 +3665,7 @@
         }
 
         @media #{$xs} {
-            font-size: 70px;
+            font-size: 60px;
         }
 
         span {
@@ -3751,7 +3755,7 @@
             position: absolute;
             top: -36px;
             right: 127px;
-            transform: rotate(175deg);
+            transform: rotate(185deg);
             width: 600px;
             max-width: 600px;
             z-index: -1;
@@ -3771,6 +3775,25 @@
                 top: 0;
                 right: 77px;
 
+            }
+
+            @media #{$md} {
+                top: auto;
+                right: 77px;
+                bottom: 0;
+            }
+
+            @media #{$sm} {
+                width: 200px;
+                top: 0;
+                right: 0;
+
+            }
+
+            @media #{$xs} {
+                width: 150px;
+                top: 0;
+                right: 70px;
             }
 
             img {
@@ -3805,6 +3828,9 @@
         gap: 34px;
         margin-top: 171px;
 
+        @media #{$xl} {
+            margin-top: 121px;
+        }
 
         @media #{$md} {
             flex-direction: row;

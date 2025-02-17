@@ -657,6 +657,11 @@
         @media #{$lg} {
             width: 293px;
         }
+
+        @media #{$xs} {
+            width: 193px;
+
+        }
     }
 }
 
@@ -2027,6 +2032,7 @@
     position: relative;
     z-index: 1;
     border-radius: 40px 40px 0 0;
+    overflow: hidden;
 
     @media #{$xl} {
         border-radius: 20px 20px 0 0;
@@ -2250,8 +2256,9 @@
 
     .copyright-nav-list {
         display: flex;
-        gap: 48px;
+        gap: 10px 48px;
         align-items: center;
+        flex-wrap: wrap;
 
         li {
             font-size: 18px;
@@ -3942,7 +3949,7 @@
             font-weight: 600;
             line-height: 0.7;
             color: #5F6062;
-            opacity: 0.3;
+            opacity: 0.6;
 
             @media #{$xxl} {
                 font-size: 150px;
@@ -6151,6 +6158,10 @@
             margin-top: 26px;
             margin-right: calc((100vw - (var(--container-max-widths) - 30px)) / -2);
 
+            @media #{$xs} {
+                margin-right: 0;
+            }
+
             li {
                 font-size: 26px;
                 font-weight: 600;
@@ -7088,6 +7099,10 @@
 
         @media #{$md} {
             grid-template-columns: 1fr;
+        }
+
+        @media #{$xs} {
+            padding: 20px 15px 10px 15px;
         }
 
         .area-bg {
@@ -13631,6 +13646,10 @@
         left: 0;
         z-index: -1;
 
+        @media #{$sm} {
+            display: none;
+        }
+
         .line-1 {
             position: absolute;
             content: "";
@@ -15079,9 +15098,16 @@
 
         .avatar {
             width: 80px;
+            min-width: 80px;
             height: 80px;
             border-radius: 50%;
             overflow: hidden;
+
+            @media #{$lg} {
+                width: 70px;
+                min-width: 70px;
+                height: 70px;
+            }
         }
 
         .author {
@@ -15176,6 +15202,7 @@
         border-radius: 10px;
         padding: 26px 30px 26px;
         position: relative;
+        z-index: 1;
 
         .text {
             font-size: 24px;
@@ -15239,6 +15266,7 @@
             position: absolute;
             right: 26px;
             bottom: 20px;
+            z-index: -1;
 
             @media #{$xl} {
                 width: 80px;

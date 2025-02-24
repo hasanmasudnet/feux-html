@@ -429,7 +429,7 @@
 
 }
 
-// side info style
+/* side info style */
 .offcanvas-overlay {
     position: fixed;
     height: 100%;
@@ -1223,10 +1223,13 @@
         border-radius: 100px;
         padding: 24px 44px;
 
+        @media #{$xxl} {
+            height: 80px;
+            padding: 24px 24px;
+        }
 
         @media #{$lg} {
             height: 70px;
-            padding: 24px 24px;
         }
 
         &>*:first-child {
@@ -1420,7 +1423,7 @@
 
 
 
-// sticky header style
+/* sticky header style */
 .header-sticky {
     transition: all 0.5s;
 }
@@ -3496,13 +3499,12 @@
         text-align: center;
 
         @media #{$xxl} {
-            margin-top: 35px;
+            margin-top: 25px;
             margin-bottom: 27px;
 
         }
 
         @media #{$lg} {
-            margin-top: 25px;
             margin-bottom: 17px;
 
         }
@@ -9315,7 +9317,7 @@
 
 }
 
-/* work area 2 style  */
+/* work area 9 style  */
 .work-area-9 {
 
     .section-header {

@@ -8888,6 +8888,7 @@ btn-text-flip
   border-bottom: 1px solid rgba(95, 96, 98, 0.3);
   padding-top: 20px;
   padding-bottom: 20px;
+  position: relative;
 }
 .services-area-3 .service-box:hover .number {
   color: var(--white);

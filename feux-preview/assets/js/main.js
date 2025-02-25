@@ -29,7 +29,7 @@
   // testimonial 5 active
   // Image Reveal Animation
   // stacking item with header
-  // stacking item with space
+  // stacking item with top space
   // stacking item with scale
   // hover move btn 
   // GSAP Fade Animation 
@@ -185,9 +185,6 @@
       spaceBetween: 30,
       speed: 1800,
       watchSlidesProgress: true,
-      mousewheel: {
-        releaseOnEdges: true, // Allows page scrolling when Swiper reaches start/end
-      },
       navigation: {
         prevEl: ".work-button-prev",
         nextEl: ".work-button-next",
@@ -230,9 +227,6 @@
       spaceBetween: 30,
       speed: 1800,
       watchSlidesProgress: true,
-      mousewheel: {
-        releaseOnEdges: true, // Allows page scrolling when Swiper reaches start/end
-      },
       navigation: {
         prevEl: ".work-2-button-prev",
         nextEl: ".work-2-button-next",
@@ -313,22 +307,22 @@
   });
 
   // team hover active 
-  $('.team-hover-active .team-box').on("mouseover", function () {
+  $('.team-hover-active .team-box-1').on("mouseover", function () {
     $(this).addClass('active').siblings().removeClass('active');
   });
 
   // blog hover active 
-  $('.blog-hover-active .blog').on("mouseover", function () {
+  $('.blog-hover-active .blog-3').on("mouseover", function () {
     $(this).addClass('active').siblings().removeClass('active');
   });
 
   // service hover active 
-  $('.service-hover-active .service-box').on("mouseover", function () {
+  $('.service-hover-active .service-box-2').on("mouseover", function () {
     $(this).addClass('active').siblings().removeClass('active');
   });
 
   // process hover active 
-  $('.process-hover-active .process-box').on("mouseover", function () {
+  $('.process-hover-active .process-box-2').on("mouseover", function () {
     $(this).addClass('active').siblings().removeClass('active');
   });
 
@@ -548,26 +542,26 @@
   }
 
 
-  // stacking item with space
-  if (document.querySelectorAll(".space-stacking-items").length > 0) {
+  // stacking item with top space
+  if (document.querySelectorAll(".work-panel").length > 0) {
     mm.add("(min-width: 991px)", () => {
-      const items = gsap.utils.toArray(".item");
+      let tl = gsap.timeline();
+      let scaleItem = document.querySelectorAll('.work-panel')
 
-      items.forEach((item, i) => {
-        gsap.to(item, {
-          ease: "none",
+      scaleItem.forEach((item, index) => {
+        tl.to(item, {
           scrollTrigger: {
             trigger: item,
-            start: "top " + 40 * i,
-            endTrigger: ".final",
-            end: "top " + item.clientHeight * items.length,
-            pin: true,
+            pin: item,
+            scrub: 1,
+            start: 'top 10%',
+            end: "bottom 90%",
+            endTrigger: '.work-area-4',
             pinSpacing: false,
-            scrub: true,
-            // markers: true
-          }
-        });
-      });
+            markers: false,
+          },
+        })
+      })
     });
   }
 
